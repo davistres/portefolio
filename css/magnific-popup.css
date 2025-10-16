@@ -246,7 +246,7 @@ button::-moz-focus-inner {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     background: #000; }
 
-/* Main image in popup */
+/* L'image dans le main de la popup */
 img.mfp-img {
   width: auto;
   max-width: 100%;
@@ -257,7 +257,7 @@ img.mfp-img {
   padding: 40px 0 40px;
   margin: 0 auto; }
 
-/* The shadow behind the image */
+/* L'ombre derrière l'image */
 .mfp-figure {
   line-height: 0; }
   .mfp-figure:after {
@@ -309,7 +309,7 @@ img.mfp-img {
   cursor: pointer; }
 
 
-/* overlay at start */
+/* overlay du début */
 .mfp-fade.mfp-bg {
   opacity: 0;
 
@@ -317,16 +317,16 @@ img.mfp-img {
   -moz-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-/* overlay animate in */
+/* Animation d'apparition du overlay */
 .mfp-fade.mfp-bg.mfp-ready {
   opacity: 0.8;
 }
-/* overlay animate out */
+/* Disparition du overlay */
 .mfp-fade.mfp-bg.mfp-removing {
   opacity: 0;
 }
 
-/* content at start */
+/* Contenu au début */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
 
@@ -334,19 +334,16 @@ img.mfp-img {
   -moz-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-/* content animate it */
+/* Le contenu qui apparait */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
   opacity: 1;
 }
-/* content animate out */
+/* qui disparait */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-  /**
-       * Remove all paddings around the image on small screen
-       */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0; }

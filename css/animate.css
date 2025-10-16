@@ -3,7 +3,7 @@
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Sous licence MIT - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2016 Daniel Eden
  */
@@ -121,7 +121,7 @@
   animation-name: flash;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
 
 @-webkit-keyframes pulse {
   from {
@@ -471,7 +471,7 @@
   animation-name: tada;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
 
 @-webkit-keyframes wobble {
   from {
@@ -2631,7 +2631,6 @@
   animation-name: hinge;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollIn {
   from {
@@ -2666,7 +2665,6 @@
   animation-name: rollIn;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollOut {
   from {

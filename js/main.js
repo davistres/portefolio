@@ -1,14 +1,7 @@
-/*
-* Template Name: Unique - Responsive vCard Template
-* Author: lmpixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 2.1.0
-*/
-
 (function($) {
 "use strict";
     
-    // Portfolio subpage filters
+    // Filtre de la page portfolio
     function portfolio_init() {
         var portfolio_grid = $('#portfolio_grid'),
             portfolio_filter = $('#portfolio_filters');
@@ -35,9 +28,8 @@
 
         }
     }
-    // /Portfolio subpage filters
 
-    // Contact form validator
+    // Validation du formulaire de contact
     $(function () {
 
         $('#contact-form').validator();
@@ -66,28 +58,24 @@
             }
         });
     });
-    // /Contact form validator
 
-    // Hide Mobile menu
+    // Cacher le menu mobile
     function mobileMenuHide() {
         var windowWidth = $(window).width();
         if (windowWidth < 1024) {
             $('#site_header').addClass('mobile-menu-hide');
         }
     }
-    // /Hide Mobile menu
 
-    // Custom scroll
+    // Rendre la scrollbar responsive. Elle applique une barre de défilement personnalisée (=> via le plugin mCustomScrollbar) sur les grands écrans et laisse la barre native du navigateur pour les petits écrans (plus adaptée au tactile).
     function customScroll() {
         var windowWidth = $(window).width();
         if (windowWidth > 991) {
-            // Custom Subpage Scroll
             $(".pt-page").mCustomScrollbar({
                 scrollInertia: 8,
                 documentTouchScroll: false
             });
 
-            // Custom Header Scroll
             $("#site_header").mCustomScrollbar({
                 scrollInertia: 8,
                 documentTouchScroll: false
@@ -98,15 +86,14 @@
             $("#site_header").mCustomScrollbar('destroy');
         }
     }
-    // /Custom scroll
 
-    //On Window load & Resize
+    // Chargement complet de la page et le redimensionnement de la fenêtre du navigateur
     $(window)
-        .on('load', function() { //Load
-            // Animation on Page Loading
+        .on('load', function() {
+            // Animation au chargement de la page
             $(".preloader").fadeOut("slow");
 
-            // initializing page transition.
+            // Initialisation de la transition des pages
             var ptPage = $('.subpages');
             if (ptPage[0]) {
                 PageTransitions.init({
@@ -115,15 +102,15 @@
             }
             customScroll();
         })
-        .on('resize', function() { //Resize
+        .on('resize', function() {
              mobileMenuHide();
              customScroll();
         });
 
 
-    // On Document Load
+    // Tout le code ne s'exécutera que quand la page sera totalement chargée
     $(document).on('ready', function() {
-        // Initialize Portfolio grid
+        // Init de la grille du Portfolio
         var $portfolio_container = $("#portfolio-grid");
 
         $portfolio_container.imagesLoaded(function () {
@@ -132,46 +119,21 @@
             }, 500);
         });
 
-        // Portfolio hover effect init
+        // Init de l'effet au survol des images du portfolio
         $(' #portfolio_grid > figure > a ').each( function() { $(this).hoverdir(); } );
 
-        // Mobile menu
+        // Menu mobile
         $('.menu-toggle').on("click", function () {
             $('#site_header').toggleClass('mobile-menu-hide');
         });
 
-        // Mobile menu hide on main menu item click
+        // Ferme (hide=cache) le menu mobile quand on clique sur un lien du menu
         $('.site-main-menu').on("click", "a", function (e) {
             mobileMenuHide();
         });
 
-        // Testimonials Slider
-        $(".testimonials.owl-carousel").owlCarousel({
-            nav: true, // Show next/prev buttons.
-            items: 3, // The number of items you want to see on the screen.
-            loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
-            navText: false,
-            margin: 10,
-            responsive : {
-                // breakpoint from 0 up
-                0 : {
-                    items: 1,
-                },
-                // breakpoint from 480 up
-                480 : {
-                    items: 1,
-                },
-                // breakpoint from 768 up
-                768 : {
-                    items: 2,
-                },
-                1200 : {
-                    items: 3,
-                }
-            }
-        });
 
-        // Text rotation
+        // Init du plugin Owl Carousel pour transformer le texte de la page d'accueil en un diaporama
         $('.text-rotation').owlCarousel({
             loop: true,
             dots: false,
@@ -185,16 +147,14 @@
             animateIn: 'zoomIn'
         });
 
-        // Lightbox init
+        // Init lightbox
         $('.lightbox').magnificPopup({
             type: 'image',
             removalDelay: 300,
 
-            // Class that is added to popup wrapper and background
-            // make it unique to apply your CSS animations just to this exact popup
+            // Class que l'on applique au popup pour appliquer un fondu (=fade)
             mainClass: 'mfp-fade',
             image: {
-                // options for image content type
                 titleSrc: 'title',
                 gallery: {
                     enabled: true
@@ -206,18 +166,17 @@
                         '<div class="mfp-close"></div>'+
                         '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
                         '<div class="mfp-title mfp-bottom-iframe-title"></div>'+
-                      '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+                      '</div>', // SYSTEME DE GABARIT => Structure HTML de la popup : mfp-close sera remplacé par le bouton de fermeture.
 
                 patterns: {
                     youtube: {
-                      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+                      index: 'youtube.com/', // Text (chaine de carctère) permettant de détecter le type de vidéo (ici, YouTube). La détection se fait via la fonction url.indexOf(index).
 
-                      id: 'v=', // String that splits URL in a two parts, second part should be %id%
-                      // Or null - full URL will be returned
-                      // Or a function that should return %id%, for example:
-                      // id: function(url) { return 'parsed id'; }
+                      id: 'v=', // Chaîne de caractères qui sépare l'URL en deux parties
+                      // La première partie de l'URL est la chaîne de caractères avant l'identifiant (%id%). Exemple : https://www.youtube.com/watch?v=VIDEO_ID => la première partie est 'https://www.youtube.com/watch?' et l'identifiant est 'VIDEO_ID'.
+                      // la seconde partie étant soit l'identifiant (%id%), soit null : dans ce cas, l'URL complète est utilisée comme identifiant. Ou une fonction qui doit retourner l'identifiant (%id%), par exemple : id: function(url) { return 'parsed id'; }
 
-                      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+                      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL qui sera assignée à l'attribut src de l'iframe.
                     },
                     vimeo: {
                       index: 'vimeo.com/',
@@ -230,7 +189,8 @@
                     }
                 },
 
-                srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+                srcAction: 'iframe_src', // Clé pour le système de gabarit. La première partie définit le sélecteur CSS, la seconde l'attribut.
+                // Par exemple, "iframe_src" signifie : trouve l'élément <iframe> et définit son attribut src.
             },
 
             callbacks: {

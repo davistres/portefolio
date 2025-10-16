@@ -1,21 +1,16 @@
-/**
- * Owl Carousel v2.2.0
- * Copyright 2013-2016 David Deutsch
- * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
- */
-/*
- *  Owl Carousel - Core
- */
+/** Owl Carousel v2.2.0 - Copyright David Deutsch - Sous licence MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE) */
 .owl-carousel {
   display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
-  /* position relative and z-index fix webkit rendering fonts issue */
+  /* L'utilisation de position: relative et de z-index corrige un problème de rendu des polices sur WebKit. */
   position: relative;
   z-index: 1; }
+
   .owl-carousel .owl-stage {
     position: relative;
     -ms-touch-action: pan-Y; }
+
   .owl-carousel .owl-stage:after {
     content: ".";
     display: block;
@@ -23,11 +18,13 @@
     visibility: hidden;
     line-height: 0;
     height: 0; }
+
   .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
-    /* fix for flashing background */
+    /* Correction pour le scintillement de l'arrière-plan. */
     -webkit-transform: translate3d(0px, 0px, 0px); }
+
   .owl-carousel .owl-item {
     position: relative;
     min-height: 1px;
@@ -35,13 +32,16 @@
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; }
+
   .owl-carousel .owl-item img {
     display: block;
     width: 100%;
     -webkit-transform-style: preserve-3d; }
+
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }
+
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
@@ -52,35 +52,40 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+
   .owl-carousel.owl-loaded {
     display: block; }
+
   .owl-carousel.owl-loading {
     opacity: 0;
     display: block; }
+
   .owl-carousel.owl-hidden {
     opacity: 0; }
+
   .owl-carousel.owl-refresh .owl-item {
     visibility: hidden; }
+
   .owl-carousel.owl-drag .owl-item {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+
   .owl-carousel.owl-grab {
     cursor: move;
     cursor: grab; }
+
   .owl-carousel.owl-rtl {
     direction: rtl; }
+
   .owl-carousel.owl-rtl .owl-item {
     float: right; }
 
-/* No Js */
 .no-js .owl-carousel {
   display: block; }
 
-/*
- *  Owl Carousel - Animate Plugin
- */
+/* Pour l'animation d'entrée, je demande à Owl Carousel de ne pas utiliser son animation de base, mais d'utiliser l'animation fadeIn de Animate.css. Et pour l'animation de sortie, utilise fadeOut. */
 .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
@@ -109,15 +114,8 @@
   100% {
     opacity: 0; } }
 
-/*
- * 	Owl Carousel - Auto Height Plugin
- */
-.owl-height {
-  transition: height 500ms ease-in-out; }
 
-/*
- * 	Owl Carousel - Lazy Load Plugin
- */
+/* Lazy Load Plugin de Owl Carousel est vraiment TOP!!!! Le temps de chargement initial de la page est beaucoup plus rapide. Et on économise de la bande passante, car seules les images vues sont téléchargées.*/
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
   transition: opacity 400ms ease; }
@@ -126,9 +124,7 @@
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d; }
 
-/*
- * 	Owl Carousel - Video Plugin
- */
+/* Video Plugin de Owl Carousel permet d'intégrer des vidéos directement dans les "slides" du carrousel => AVANTAGES: Afficher une image de prévisualisation (thumbnail) de la vidéo, et ne charger le lecteur vidéo que lorsque l'utilisateur clique dessus. + Gérer la lecture automatiquement (si une vidéo est en cours de lecture et que l'utilisateur passe au slide suivant, le plugin mettra automatiquement la vidéo en pause) */
 .owl-carousel .owl-video-wrapper {
   position: relative;
   height: 100%;

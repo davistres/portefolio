@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>Unique - Responsive vCard Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David D'AMORE - Développeur Full Stack</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Unique - Responsive vCard Template" />
-    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Unique, portfolio" />
-    <meta name="author" content="lmtheme" />
+    <meta name="description" content="Développeur full stack spécialisé en JavaScript/TypeScript avec NestJS (pour le back), je maîtrise aussi React avec Next.js (côté front)." />
+    <meta name="keywords" content="développeur, full stack, javascript, typescript, nestjs, react, nextjs, portfolio, david d'amore" />
+    <meta name="author" content="David D'AMORE" />
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -24,38 +24,37 @@
   </head>
 
   <body>
-    <!-- Loading animation -->
+    <!-- Animation de chargement -->
     <div class="preloader">
       <div class="preloader-animation">
         <div class="dot1"></div>
         <div class="dot2"></div>
       </div>
     </div>
-    <!-- /Loading animation -->
 
     <div id="page" class="page">
-      <!-- Header -->
+      <!-- En-tête -->
       <header id="site_header" class="header mobile-menu-hide header-color-light">
         <div class="my-photo tilt-effect">
-          <img src="images/main_photo.jpg" alt="image">
+          <img src="images/main_photo.webp" alt="Photo de David D'AMORE">
         </div>
 
         <div class="site-title-block">
-          <h1 class="site-title">Alex Smith</h1>
+          <h1 class="site-title">David D'AMORE</h1>
         </div>
 
         <!-- Navigation -->
         <div class="site-nav">
-          <!-- Main menu -->
+          <!-- Menu principal -->
           <ul id="nav" class="site-main-menu">
             <li>
-              <a class="pt-trigger" href="#home" data-animation="21"><i class="menu-icon pe-7s-icon pe-7s-home"></i>Home</a><!-- href value = data-id without # of .pt-page. -->
+              <a class="pt-trigger" href="#home" data-animation="21"><i class="menu-icon pe-7s-icon pe-7s-home"></i>Accueil</a><!-- La valeur de href doit correspondre au data-id de la section, sans le # -->
             </li>
             <li>
-              <a class="pt-trigger" href="#about_me" data-animation="17"><i class="menu-icon pe-7s-icon pe-7s-user"></i>About me</a>
+              <a class="pt-trigger" href="#about_me" data-animation="17"><i class="menu-icon pe-7s-icon pe-7s-user"></i>À propos</a>
             </li>
             <li>
-              <a class="pt-trigger" href="#resume" data-animation="18"><i class="menu-icon pe-7s-icon pe-7s-id"></i>Resume</a>
+              <a class="pt-trigger" href="#resume" data-animation="18"><i class="menu-icon pe-7s-icon pe-7s-id"></i>CV</a>
             </li>
             <li>
               <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
@@ -64,442 +63,282 @@
               <a class="pt-trigger" href="#contact" data-animation="20"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
             </li>
           </ul>
-          <!-- /Main menu -->
         </div>
-        <!-- Navigation -->
       </header>
-      <!-- /Header -->
 
-      <!-- Mobile Header -->
+
+      <!-- En-tête mobile -->
       <div class="mobile-header mobile-visible">
         <div class="mobile-logo-container">
-          <div class="mobile-site-title">Alex Smith</div>
+          <div class="mobile-site-title">David D'AMORE</div>
         </div>
 
         <a class="menu-toggle mobile-visible">
           <i class="fa fa-bars"></i>
         </a>
       </div>
-      <!-- /Mobile Header -->
 
-      <!-- Arrows Nav -->
-      <div class="lmpixels-arrows-nav">
-        <div class="lmpixels-arrow-left"><i class="pe-7s-icon pe-7s-angle-left"></i></div>
-        <div class="lmpixels-arrow-right"><i class="pe-7s-icon pe-7s-angle-right"></i></div>
+      <!-- Flèches de navigation -->
+      <div class="fleches-nav">
+        <div class="fleche-left"><i class="pe-7s-icon pe-7s-angle-left"></i></div>
+        <div class="fleche-right"><i class="pe-7s-icon pe-7s-angle-right"></i></div>
       </div>
-      <!-- /Arrows Nav -->
 
-      <!-- Main Content -->
+      <!-- Contenu principal -->
       <div id="main" class="site-main">
-        <!-- Page changer wrapper -->
+        <!-- Conteneur pour le changement de page -->
         <div class="pt-wrapper" style="background-image: url(images/main_bg_light.jpg);">
-          <!-- Subpages -->
+          <!-- Les autres pages que j'ai appelé: Sous-pages -->
           <div class="subpages">
 
-            <!-- Home Subpage -->
+            <!-- Sous-page d'accueil -->
             <section class="pt-page pt-page-1 section-without-bg section-paddings-0 table" data-id="home">
               <div class="section-inner">
                 <div class="home-page-block">
-                  <h2>Alex Smith</h2>
-                  <div class="owl-carousel text-rotation">                                    
+                  <h2>David D'AMORE</h2>
+                  <div class="owl-carousel text-rotation">
                     <div class="item">
-                      <p class="home-page-description">Web Designer</p>
+                      <p class="home-page-description">Développeur Full Stack</p>
                     </div>
                     <div class="item">
-                      <p class="home-page-description">Frontend-developer</p>
+                      <p class="home-page-description">NestJS / React (Next.js)</p>
+                    </div>
+                    <div class="item">
+                      <p class="home-page-description">JavaScript / TypeScript</p>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <!-- End of Home Subpage -->
 
-            <!-- About Me Subpage -->
+            <!-- Sous-page "À propos de moi" -->
             <section class="pt-page pt-page-2" data-id="about_me">
               <div class="border-block-top-110"></div>
               <div class="section-inner">
                 <div class="section-title-block">
                   <div class="section-title-wrapper clearfix">
-                    <h2 class="section-title">About Me</h2>
-                    <h5 class="section-description">Artist, Thinker, Creative Doer</h5>
+                    <h2 class="section-title">À propos de moi</h2>
+                    <h5 class="section-description">Développeur, Passionné, Créateur de solutions</h5>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
                     <div class="my-photo-block tilt-effect">
-                      <img src="images/main_photo.jpg" alt="">
+                      <img src="images/main_photo.webp" alt="David D'AMORE">
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-6 col-lg-4">
-                    <h3>I am Web Designer @ Company.com</h3>
-                    <p>Praesent ut tortor consectetur, semper sapien non, lacinia augue. Aenean arcu libero, facilisis et nisi non, tempus faucibus tortor. Mauris vel nulla aliquam, pellentesque enim ac, faucibus tortor. Nulla odio nibh, cursus sit amet urna id, dignissim euismod augue.</p>
-                    <p>Duis sollicitudin, libero porttitor rutrum ultrices, turpis lorem fermentum justo, quis ornare augue tortor non est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    <h3>Développeur Full-Stack passionné</h3>
+                    <p class="align">Développeur Full-Stack expert de l'écosystème JavaScript / TypeScript, je suis passionné par l'architecture et la réalisation de solutions web end-to-end, alliant robustesse back-end et expériences utilisateur front-end fluides et performantes.</p>
+                    <p class="align">Ma spécialisation s'articule autour de NestJS pour la conception d'API RESTful/GraphQL scalables et maintenables, et de React avec Next.js pour construire des interfaces utilisateur dynamiques et optimisées.</p>
                   </div>
 
                   <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
                     <ul class="info-list">
-                      <li><span class="title">Age</span><span class="value">29</span></li>
-                      <li><span class="title">Residence</span><span class="value">Australia</span></li>
-                      <li><span class="title">Address</span><span class="value">88 Some Street, Some Town</span></li>
-                      <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@example.com">email@example.com</a></span></li>
-                      <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li>
-                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
+                      <li><span class="title">Résidence</span><span class="value">France</span></li>
+                      <li><span class="title">Ville</span><span class="value">Orléans (45000)</span></li>
+                      <li><span class="title">E-mail</span><span class="value"><a href="mailto:csfwebdesign@gmail.com">csfwebdesign@gmail.com</a></span></li>
+                      <li><span class="title">Téléphone</span><span class="value">06 75 81 14 55</span></li>
+                      <li><span class="title">Statut</span><span class="value available">Disponible</span></li>
+                      <li><span class="title">Spécialité</span><span class="value">NestJS / React</span></li>
                     </ul>
 
                     <ul class="social-links">
-                      <li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li> <!-- Full list of social icons: http://fontawesome.io/icons/#brand -->
-                      <li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                      <li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-                      <li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>
-                      <li><a class="tip social-button" href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                      <!--<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>-->
-                      <!--<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>-->
+                      <li><a class="tip social-button" href="https://www.linkedin.com/in/david-d-amore-362307107/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a class="tip social-button" href="https://github.com/davistres" title="GitHub" target="_blank"><i class="fa fa-github"></i></a></li>
+                      <li><a class="tip social-button" href="https://www.youtube.com/@CSFWebdesign" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                   </div>
                 </div>
 
-                <!-- Services block -->
+                <!-- Bloc de compétences -->
                 <div class="block-title">
-                  <h3>Services</h3>
+                  <h3>Compétences</h3>
                 </div>
 
                 <div class="row">
                   <div class="col-sm-6 col-md-3 subpage-block">
-                    <div class="service-block"> 
+                    <div class="service-block">
+                      <div class="service-info">
+                        <i class="service-icon pe-7s-icon pe-7s-server"></i>
+                        <h4>Développement Back-End</h4>
+                        <p>Conception d'API RESTful/GraphQL avec NestJS, architecture modulaire et TypeScript pour des back-ends robustes et scalables.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3 subpage-block">
+                    <div class="service-block">
                       <div class="service-info">
                         <i class="service-icon pe-7s-icon pe-7s-browser"></i>
-                        <h4>Web Design</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <h4>Développement Front-End</h4>
+                        <p>Interfaces utilisateur dynamiques avec React et Next.js, optimisées pour le SEO et les performances grâce au SSR/SSG.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-3 subpage-block">
-                    <div class="service-block"> 
+                    <div class="service-block">
                       <div class="service-info">
-                        <i class="service-icon pe-7s-icon pe-7s-pen"></i>
-                        <h4>Copywriter</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <i class="service-icon pe-7s-icon pe-7s-tools"></i>
+                        <h4>Expertise IA & Automatisation</h4>
+                        <p>Maîtrise des outils IA (LLM, Augment), Prompt Engineering et automatisation avec n8n pour optimiser les workflows.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-3 subpage-block">
-                    <div class="service-block"> 
+                    <div class="service-block">
                       <div class="service-info">
-                        <i class="service-icon pe-7s-icon pe-7s-cart"></i>
-                        <h4>E-Commerce</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6 col-md-3 subpage-block">
-                    <div class="service-block"> 
-                      <div class="service-info">
-                        <i class="service-icon pe-7s-icon pe-7s-graph1"></i>
-                        <h4>Marketing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <i class="service-icon pe-7s-icon pe-7s-paint-bucket"></i>
+                        <h4>Design & Créativité</h4>
+                        <p>Maîtrise de la suite Adobe Creative Cloud (Photoshop, Illustrator, Premiere Pro) et design d'interface avec Figma.</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- End of Services block -->
-
-                <!-- Clients block -->
-                <div class="block-title">
-                  <h3>Clients</h3>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-4 col-md-2 subpage-block">
-                    <div class="client-block">
-                      <a href="#" target="_blank"><img src="images/clients/client_1.png" alt="image"></a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4 col-md-2 subpage-block">
-                    <div class="client-block">
-                      <a href="#" target="_blank"><img src="images/clients/client_2.png" alt="image"></a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4 col-md-2 subpage-block">
-                    <div class="client-block">
-                      <a href="#" target="_blank"><img src="images/clients/client_3.png" alt="image"></a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4 col-md-2 subpage-block">
-                    <div class="client-block">
-                      <a href="#" target="_blank"><img src="images/clients/client_4.png" alt="image"></a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4 col-md-2 subpage-block">
-                    <div class="client-block">
-                      <a href="#" target="_blank"><img src="images/clients/client_5.png" alt="image"></a>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4 col-md-2 subpage-block">
-                    <div class="client-block">
-                      <a href="#" target="_blank"><img src="images/clients/client_6.png" alt="image"></a>
-                    </div>
-                  </div>
-                </div>
-                <!-- End of Clients block -->
-
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 subpage-block">
-                    <div class="block-title">
-                      <h3>Testimonials</h3>
-                    </div>
-                    <div class="testimonials owl-carousel">
-                      <!-- Testimonial 1 -->
-                      <div class="testimonial-item">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-content">
-                          <div class="testimonial-text">
-                            <p>"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros. Sed sed ipsum sed massa."</p>
-                          </div>
-                        </div>            
-                        <!-- /Testimonial Content -->  
-                        <!-- Testimonial Author -->
-                        <div class="testimonial-credits">
-                          <!-- Picture -->
-                          <div class="testimonial-picture">
-                            <img src="images/testimonials/testimonial_photo_1.jpg" alt="">
-                          </div>              
-                          <!-- /Picture -->
-                          <!-- Testimonial author information -->
-                          <div class="testimonial-author-info">
-                            <p class="testimonial-author">Maria Richardson</p>
-                            <p class="testimonial-firm">Lindsley's Lumber</p>
-                          </div>
-                        </div>
-                        <!-- /Testimonial author information -->               
-                      </div>
-                      <!-- End of Testimonial 1 -->
-
-                      <!-- Testimonial 2 -->
-                      <div class="testimonial-item">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-content">
-                          <div class="testimonial-text">
-                            <p>"Vivamus porta dapibus tristique. Suspendisse et arcu eget nisi convallis eleifend nec ac lorem."</p>
-                          </div>
-                        </div>            
-                        <!-- /Testimonial Content -->  
-                        <!-- Testimonial Author -->
-                        <div class="testimonial-credits">
-                          <!-- Picture -->
-                          <div class="testimonial-picture">
-                            <img src="images/testimonials/testimonial_photo_2.jpg" alt="">
-                          </div>              
-                          <!-- /Picture -->
-                          <!-- Testimonial author information -->
-                          <div class="testimonial-author-info">
-                            <p class="testimonial-author">John Doe</p>
-                            <p class="testimonial-firm">Apple Inc.</p>
-                          </div>
-                        </div>
-                        <!-- /Testimonial author information -->               
-                      </div>
-                      <!-- End of Testimonial 2 -->
-
-                      <!-- Testimonial 3 -->
-                      <div class="testimonial-item">
-                        <!-- Testimonial Content -->
-                        <div class="testimonial-content">
-                          <div class="testimonial-text">
-                            <p>"Aliquam congue auctor lectus sed fermentum. Nulla ultricies tellus quis sapien lacinia egestas."</p>
-                          </div>
-                        </div>            
-                        <!-- /Testimonial Content -->  
-                        <!-- Testimonial Author -->
-                        <div class="testimonial-credits">
-                          <!-- Picture -->
-                          <div class="testimonial-picture">
-                            <img src="images/testimonials/testimonial_photo_3.jpg" alt="">
-                          </div>              
-                          <!-- /Picture -->
-                          <!-- Testimonial author information -->
-                          <div class="testimonial-author-info">
-                            <p class="testimonial-author">George McQueen</p>
-                            <p class="testimonial-firm">Harmony House</p>
-                          </div>
-                        </div>
-                        <!-- /Testimonial author information -->               
-                      </div>
-                      <!-- End of Testimonial 3 -->
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Fun facts block -->
-                <div class="block-title">
-                  <h3>Fun Facts</h3>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-6 col-md-3 subpage-block">
-                    <div class="fun-fact-block gray-bg tilt-effect">
-                      <i class="pe-7s-icon pe-7s-smile"></i>
-                      <h4>Happy Clients</h4>
-                      <span class="fun-value">1,024</span>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6 col-md-3 subpage-block tilt-effect">
-                    <div class="fun-fact-block">
-                      <i class="pe-7s-icon pe-7s-alarm"></i>
-                      <h4>Working Hours</h4>
-                      <span class="fun-value">6,256</span>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6 col-md-3 subpage-block tilt-effect">
-                    <div class="fun-fact-block gray-bg">
-                      <i class="pe-7s-icon pe-7s-medal"></i>
-                      <h4>Awards Won</h4>
-                      <span class="fun-value">21</span>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6 col-md-3 subpage-block tilt-effect">
-                    <div class="fun-fact-block">
-                      <i class="pe-7s-icon pe-7s-coffee"></i>
-                      <h4>Coffee Consumed</h4>
-                      <span class="fun-value">20,000</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- End of Fun fucts block -->
               </div>
             </section>
-            <!-- End of About Me Subpage -->
 
-            <!-- Resume Subpage -->
+            <!-- Sous-page CV -->
             <section class="pt-page pt-page-3" data-id="resume">
               <div class="border-block-top-110"></div>
               <div class="section-inner">
                 <div class="section-title-block">
                   <div class="section-title-wrapper">
-                    <h2 class="section-title">Resume</h2>
-                    <h5 class="section-description">6 Years of Experience</h5>
+                    <h2 class="section-title">CV</h2>
+                    <h5 class="section-description">Plus de 12 ans d'expérience</h5>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-sm-6 col-md-4 subpage-block">
                     <div class="block-title">
-                      <h3>Education</h3>
+                      <h3>Formation</h3>
                     </div>
                     <div class="timeline">
-                      <!-- Single event -->
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">2010</h5>
-                        <h4 class="event-name">Specialization Course</h4>
-                        <span class="event-description">University of Studies</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h4 class="event-name">Développeur Full-Stack</h4>
+                        <span class="event-description">Galileo Global Education</span>
+                        <p>Titre RNCP "Développeur web et web mobile" niveau 5. Formation complète en développement front-end et back-end.</p>
                       </div>
-                      <!-- Single event -->
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">2009</h5>
-                        <h4 class="event-name">Specialization Course</h4>
-                        <span class="event-description">University of Studies</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h5 class="event-date">2013-2014</h5>
+                        <h4 class="event-name">Maîtrise des outils P.A.O.</h4>
+                        <span class="event-description">Learnfactory (Toulouse)</span>
+                        <p>Formation approfondie sur Photoshop, Illustrator, Flash, InDesign, Dreamweaver et autres outils créatifs.</p>
                       </div>
-                      <!-- Single event -->
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">2008</h5>
-                        <h4 class="event-name">Specialization Course</h4>
-                        <span class="event-description">University of Studies</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h5 class="event-date">2004-2007</h5>
+                        <h4 class="event-name">Licence A.G.E.S.</h4>
+                        <span class="event-description">Université de la Méditerranée</span>
+                        <p>Administration, Gestion, Économie et Sociale - Formation en gestion et économie.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-4 subpage-block">
                     <div class="block-title">
-                      <h3>Experience</h3>
+                      <h3>Expérience</h3>
                     </div>
                     <div class="timeline">
-                      <!-- Single event -->
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">Dec 2012 - Current</h5>
-                        <h4 class="event-name">Frontend-developer</h4>
-                        <span class="event-description">Web Agency</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h5 class="event-date">2018 - 2024</h5>
+                        <h4 class="event-name">Responsable Marketing Digital</h4>
+                        <span class="event-description">SARL NANAKOROBI YAOKI</span>
+                        <p>Pilotage stratégie de marque, développement full-stack site e-commerce (Symfony), gestion plateforme web et community management.</p>
                       </div>
-                      <!-- Single event -->
                       <div class="timeline-event te-primary">
-                        <h5 class="event-date">Dec 2011 - Nov 2012</h5>
-                        <h4 class="event-name">Web Designer</h4>
-                        <span class="event-description">Apple Inc.</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                      </div>
-                      <!-- Single event -->
-                      <div class="timeline-event te-primary">
-                        <h5 class="event-date">Jan 2010 - Dec 2011</h5>
-                        <h4 class="event-name">Graphic Designer</h4>
-                        <span class="event-description">Web Agency</span>
-                        <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                        <h5 class="event-date">2012 - 2018</h5>
+                        <h4 class="event-name">Webdesigner & Développeur Front-End</h4>
+                        <span class="event-description">Auto-entrepreneur</span>
+                        <p>Conception et développement de solutions web, intégration responsive, optimisation SEO et création d'identités visuelles.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-4 subpage-block">
                     <div class="block-title">
-                      <h3>Design Skills</h3>
+                      <h3>Compétences Techniques</h3>
                     </div>
                     <div class="skills-info">
-                      <h4>Web Design</h4>                               
+
+                      <h4>HTML5 / CSS3</h4>
                       <div class="skill-container">
                         <div class="skill-percentage skill-1"></div>
                       </div>
 
-                      <h4>Graphic Design</h4>
+                      <h4>Bootstrap</h4>
                       <div class="skill-container">
-                        <div class="skill-percentage skill-2"></div>
+                        <div class="skill-percentage skill-2-1"></div>
                       </div>
 
-                      <h4>Print Design</h4>
+                      <h4>Tailwind CSS</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-2-2"></div>
+                      </div>
+
+                      <h4>JavaScript / TypeScript</h4>
                       <div class="skill-container">
                         <div class="skill-percentage skill-3"></div>
-                      </div> 
-                    </div>
+                      </div>
 
-                    <div class="block-title">
-                      <h3>Coding Skills</h3>
-                    </div>
-                    <div class="skills-info">
-                      <h4>HML5</h4>                               
+                      <h4>React / Next.js</h4>
                       <div class="skill-container">
                         <div class="skill-percentage skill-4"></div>
                       </div>
 
-                      <h4>CSS3</h4>
+                      
+                      <h4>NestJS</h4>
                       <div class="skill-container">
                         <div class="skill-percentage skill-5"></div>
                       </div>
 
-                      <h4>jQuery</h4>
+                      <h4>Laravel</h4>
                       <div class="skill-container">
-                        <div class="skill-percentage skill-6"></div>
+                        <div class="skill-percentage skill-6-1"></div>
                       </div>
 
-                      <h4>Wordpress</h4>
+                      <h4>Symfony</h4>
+                        <div class="skill-container">
+                        <div class="skill-percentage skill-6-2"></div>
+                      </div>
+
+                      <h4>SQL</h4>
                       <div class="skill-container">
                         <div class="skill-percentage skill-7"></div>
                       </div>
+                    </div>
 
-                      <h4>PHP</h4>
+                    <div class="block-title">
+                      <h3>Compétences Créatives</h3>
+                    </div>
+                    <div class="skills-info">
+                      <h4>Figma</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-10"></div>
+                      </div>
+
+                      <h4>Adobe Photoshop</h4>
                       <div class="skill-container">
                         <div class="skill-percentage skill-8"></div>
+                      </div>
+
+                      <h4>Adobe Illustrator</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-9"></div>
+                      </div>
+
+                      <h4>Premiere Pro</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-11"></div>
+                      </div>
+
+                      <h4>After Effects</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-12"></div>
                       </div>
                     </div>
                   </div>
@@ -507,30 +346,29 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12">
                     <div class="download-cv-block">
-                      <a class="button" target="_blank" href="#">Download CV</a>
+                      <a class="button" target="_blank" href="0/CV/index.html">Télécharger CV</a>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <!-- End Resume Subpage -->
 
 
-            <!-- Portfolio Subpage -->
+            <!-- Sous-page Portfolio -->
             <section class="pt-page pt-page-4" data-id="portfolio">
               <div class="border-block-top-110"></div>
               <div class="section-inner">
                 <div class="section-title-block">
                   <div class="section-title-wrapper">
                     <h2 class="section-title">Portfolio</h2>
-                    <h5 class="section-description">My Best Works</h5>
+                    <h5 class="section-description">Un échantillon de mes projets</h5>
                   </div>
                 </div>
 
-                <!-- Portfolio Content -->
+                <!-- Contenu du Portfolio -->
                 <div class="portfolio-content">
                               
-                  <!-- Portfolio filter -->
+                  <!-- Filtres du Portfolio -->
                   <ul id="portfolio_filters" class="portfolio-filters">
                     <li class="active">
                       <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
@@ -545,12 +383,11 @@
                       <a class="filter btn btn-sm btn-link" data-group="video">Video</a>
                     </li>
                   </ul>
-                  <!-- End of Portfolio filter -->
 
-                  <!-- Portfolio Grid -->
+                  <!-- Grille du Portfolio -->
                   <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
 
-                    <!-- Portfolio Item 1 -->
+                    <!-- Élément Portfolio 1 -->
                     <figure class="item" data-groups='["all", "media"]'>
                       <a class="ajax-page-load" href="portfolio-1.html">
                         <img src="images/portfolio/1.jpg" alt="">
@@ -561,11 +398,10 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 1 -->
 
-                    <!-- Portfolio Item 2 -->
+                    <!-- Élément Portfolio 2 -->
                     <figure class="item" data-groups='["all", "video"]'>
-                      <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Praesent Dolor Ex" class="lightbox mfp-iframe">
+                      <a class="ajax-page-load" href="portfolio-2.html">
                         <img src="images/portfolio/2.jpg" alt="">
                         <div>
                           <h5 class="name">Project Name</h5>
@@ -574,11 +410,10 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 2 -->
 
-                    <!-- Portfolio Item 3 -->
+                    <!-- Élément Portfolio 3 -->
                     <figure class="item" data-groups='["all","illustration"]'>
-                      <a href="images/portfolio/full/3.jpg" class="lightbox" title="Duis Eu Eros Viverra">
+                      <a class="ajax-page-load" href="portfolio-3.html">
                         <img src="images/portfolio/3.jpg" alt="">
                         <div>
                           <h5 class="name">Project Name</h5>
@@ -587,11 +422,10 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 3 -->
 
-                    <!-- Portfolio Item 4 -->
+                    <!-- Élément Portfolio 4 -->
                     <figure class="item" data-groups='["all", "media"]'>
-                      <a class="ajax-page-load" href="portfolio-2.html">
+                      <a class="ajax-page-load" href="portfolio-4.html">
                         <img src="images/portfolio/4.jpg" alt="">
                         <div>
                           <h5 class="name">Project Name</h5>
@@ -600,11 +434,10 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 4 -->
 
-                    <!-- Portfolio Item 5 -->
+                    <!-- Élément Portfolio 5 -->
                     <figure class="item" data-groups='["all", "illustration"]'>
-                      <a href="images/portfolio/full/5.jpg" class="lightbox" title="Aliquam Condimentum Magna Rhoncus">
+                      <a class="ajax-page-load" href="portfolio-5.html">
                         <img src="images/portfolio/5.jpg" alt="">
                         <div>
                           <h5 class="name">Project Name</h5>
@@ -613,9 +446,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 5 -->
 
-                    <!-- Portfolio Item 6 -->
+                    <!-- Élément Portfolio 6 -->
                     <figure class="item" data-groups='["all", "media"]'>
                       <a class="ajax-page-load" href="portfolio-3.html">
                         <img src="images/portfolio/6.jpg" alt="">
@@ -626,9 +458,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 6 -->
 
-                    <!-- Portfolio Item 7 -->
+                    <!-- Élément Portfolio 7 -->
                     <figure class="item" data-groups='["all", "video"]'>
                       <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Nulla Facilisi" class="lightbox mfp-iframe">
                         <img src="images/portfolio/7.jpg" alt="">
@@ -639,9 +470,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 7 -->
 
-                    <!-- Portfolio Item 8 -->
+                    <!-- Élément Portfolio 8 -->
                     <figure class="item" data-groups='["all",  "media"]'>
                       <a class="ajax-page-load" href="portfolio-4.html">
                         <img src="images/portfolio/8.jpg" alt="">
@@ -652,9 +482,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 8 -->
 
-                    <!-- Portfolio Item 9 -->
+                    <!-- Élément Portfolio 9 -->
                     <figure class="item" data-groups='["all","illustration"]'>
                       <a href="images/portfolio/full/9.jpg" class="lightbox" title="Mauris Neque Dolor">
                         <img src="images/portfolio/9.jpg" alt="">
@@ -665,9 +494,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 9 -->
 
-                    <!-- Portfolio Item 10 -->
+                    <!-- Élément Portfolio 10 -->
                     <figure class="item" data-groups='["all", "video"]'>
                       <a href="https://player.vimeo.com/video/97102654?autoplay=1" title="Donec Lectus Arcu" class="lightbox mfp-iframe">
                         <img src="images/portfolio/10.jpg" alt="">
@@ -678,9 +506,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 10 -->
 
-                    <!-- Portfolio Item 11 -->
+                    <!-- Élément Portfolio 11 -->
                     <figure class="item" data-groups='["all","illustration"]'>
                       <a href="images/portfolio/full/11.jpg" class="lightbox" title="Duis Eu Eros Viverra">
                         <img src="images/portfolio/11.jpg" alt="">
@@ -691,9 +518,8 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 11 -->
 
-                    <!-- Portfolio Item 12 -->
+                    <!-- Élément Portfolio 12 -->
                     <figure class="item" data-groups='["all","media"]'>
                       <a class="ajax-page-load" href="portfolio-5.html">
                         <img src="images/portfolio/12.jpg" alt="">
@@ -704,39 +530,35 @@
                         </div>
                       </a>
                     </figure>
-                    <!-- /Portfolio Item 12 -->
                   </div>
-                  <!-- /Portfolio Grid -->
 
                 </div>
-                <!-- /Portfolio Content -->
               </div>
             </section>
-            <!-- /Portfolio Subpage -->
 
-            <!-- Contact Subpage -->
+            <!-- Sous-page Contact -->
             <section class="pt-page pt-page-5" data-id="contact">
               <div class="border-block-top-110"></div>
               <div class="section-inner">
                 <div class="section-title-block">
                   <div class="section-title-wrapper">
                     <h2 class="section-title">Contact</h2>
-                    <h5 class="section-description">Get in Touch</h5>
+                    <h5 class="section-description">Restons en contact</h5>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-sm-6 col-md-6 subpage-block">
                     <div class="block-title">
-                      <h3>Get in Touch</h3>
+                      <h3>Mes coordonnées</h3>
                     </div>
-                    <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum egestas. Integer ultrices libero sed justo vehicula, eget tincidunt tortor tempus.</p>
+                    <p>Développeur Full-Stack passionné et toujours à l'écoute de nouveaux défis techniques. N'hésitez pas à me contacter pour discuter de vos projets ou pour toute collaboration.</p>
                     <div class="contact-info-block">
                       <div class="ci-icon">
                         <i class="pe-7s-icon pe-7s-map-marker"></i>
                       </div>
                       <div class="ci-text">
-                        <h5>Los Angeles, USA</h5>
+                        <h5>Orléans, France (45000)</h5>
                       </div>
                     </div>
                     <div class="contact-info-block">
@@ -744,7 +566,7 @@
                         <i class="pe-7s-icon pe-7s-mail"></i>
                       </div>
                       <div class="ci-text">
-                        <h5>alexsmith@example.com</h5>
+                        <h5>csfwebdesign@gmail.com</h5>
                       </div>
                     </div>
                     <div class="contact-info-block">
@@ -752,7 +574,7 @@
                         <i class="pe-7s-icon pe-7s-call"></i>
                       </div>
                       <div class="ci-text">
-                        <h5>+123 654 78900</h5>
+                        <h5>06 75 81 14 55</h5>
                       </div>
                     </div>
                     <div class="contact-info-block">
@@ -760,14 +582,14 @@
                         <i class="pe-7s-icon pe-7s-check"></i>
                       </div>
                       <div class="ci-text">
-                        <h5>Freelance Available</h5>
+                        <h5>Disponible pour missions</h5>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-md-6 subpage-block">
                     <div class="block-title">
-                      <h3>Contact Form</h3>
+                      <h3>Formulaire de contact</h3>
                     </div>
                     <form id="contact-form" method="post" action="contact_form/contact_form.php">
 
@@ -775,40 +597,36 @@
 
                       <div class="controls">
                         <div class="form-group">
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Nom complet" required="required" data-error="Le nom est requis.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon pe-7s-user"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Adresse e-mail" required="required" data-error="Une adresse e-mail valide est requise.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon pe-7s-mail"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Votre message" rows="4" required="required" data-error="Merci de laisser un message."></textarea>
                             <div class="form-control-border"></div>
                             <i class="form-control-icon pe-7s-comment"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
-                        <input type="submit" class="button btn-send" value="Send message">
+                        <input type="submit" class="button btn-send" value="Envoyer le message">
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
             </section>
-            <!-- End Contact Subpage -->
 
           </div>
-        </div>
-        <!-- /Page changer wrapper -->
-      </div>
-      <!-- /Main Content -->
+
     </div>
 
     <script src="js/bootstrap.min.js"></script>

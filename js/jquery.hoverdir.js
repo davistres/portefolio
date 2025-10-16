@@ -8,6 +8,8 @@
  * Copyright 2012, Codrops
  * http://www.codrops.com
  */
+
+/* Ce plugin est utilisé pour détecter la direction depuis laquelle le curseur de la souris entre ou sort d'un élément, afin de déclencher une animation.*/
 ;( function( $, window, undefined ) {
 	
 	'use strict';

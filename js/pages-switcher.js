@@ -1,10 +1,3 @@
-/*
-* Template Name: Unique - Responsive vCard Template
-* Author: lmpixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 2.1.0
-*/
-
 var PageTransitions = (function ($, options) {
 "use strict";
     var defaultStartPage = "home",
@@ -19,28 +12,28 @@ var PageTransitions = (function ($, options) {
             'animation'         : 'animationend'
         },
 
-        // animation end event name
+        // Détermine dynamiquement le nom correct de l'événement de fin d'animation CSS pour le navigateur de l'utilisateur et le sauvegarde dans la variable `animEndEventName`
         animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
 
-        // support css animations
+        // support des animations css
         support = Modernizr.cssanimations;
 
     function init(options) {
 
-        // Get all the .pt-page sections.
+        // Pour avoir toutes les sections .pt-page.
         $('.pt-page').each( function() {
             var $page = $(this);
             $page.data('originalClassList', $page.attr('class'));
         });
 
-        // Get all the .pt-wrapper div which is the parent for all pt-div
+        // Pour avoir toutes les div .pt-wrapper qui sont le parent de toutes les pt-div
         sectionsContainer.each( function() {
             if (location.hash === "") {
                 $('section[data-id='+ pageStart +']').addClass('pt-page-current');
             }
         });
 
-        // Adding click event to main menu link
+        // Ajout de l'événement de clic au lien du menu principal
         $('.pt-trigger').on("click", function (e) {
             e.preventDefault();
             if (isAnimating) {
@@ -79,7 +72,7 @@ var PageTransitions = (function ($, options) {
 
         Animate(menuLink);
 
-        $(".lmpixels-arrow-right").click(function() {
+        $(".fleche-right").click(function() {
             var activeItem = $('.site-main-menu li.active');
             activeItem.next("li").children("a").click();
             if ( activeItem.is(':last-child') ) {
@@ -87,7 +80,7 @@ var PageTransitions = (function ($, options) {
             }
         });
 
-        $(".lmpixels-arrow-left").click(function() {
+        $(".fleche-left").click(function() {
             var activeItem = $('.site-main-menu li.active');
             activeItem.prev("li").children("a").click();
             if ( activeItem.is(':first-child') ) {
@@ -99,6 +92,7 @@ var PageTransitions = (function ($, options) {
         ajaxLoader();
     }
 
+    // Récupérer la section active
     function getActiveSection() {
         if(location.hash === "") {
             return location.hash = defaultStartPage;
@@ -108,6 +102,7 @@ var PageTransitions = (function ($, options) {
         }
     }
 
+    // Activer l'élément de menu
     function activeMenuItem(item) {
         if ( !item ) {
             return false;
@@ -123,8 +118,9 @@ var PageTransitions = (function ($, options) {
         }
     }
 
+    // Chargement des pages en Ajax
     function ajaxLoader() {
-        // Check for hash value in URL
+        // Vérifie la valeur du hachage dans l'URL
         var ajaxLoadedContent = $('#page-ajax-loaded');
 
         function showContent() {
@@ -151,12 +147,12 @@ var PageTransitions = (function ($, options) {
         });
 
         $(document)
-            .on("click",".site-main-menu, #ajax-page-close-button", function (e) { // Hide Ajax Loaded Page on Navigation cleck and Close button
+            .on("click",".site-main-menu, #ajax-page-close-button", function (e) { // Cacher la page chargée en Ajax lors du clic sur la navigation ou sur le bouton de fermeture
                 e.preventDefault();
                 hideContent();
                 location.hash = location.hash.split('/')[0];
             })
-            .on("click",".ajax-page-load", function () { // Show Ajax Loaded Page
+            .on("click",".ajax-page-load", function () { // Afficher la page chargée en Ajax
                 var hash = location.hash.split('/')[0] + '/' + $(this).attr('href').substr(0,$(this).attr('href').length-5);
                 location.hash = hash;
                 showContent();
@@ -167,7 +163,7 @@ var PageTransitions = (function ($, options) {
 
     function Animate($pageTrigger, gotoPage) {
 
-        // Checking for 'data-animation' attribute.
+        // Vérification de l'attribut 'data-animation'.
         if (!($pageTrigger.attr('data-animation'))) {
             var animNumber = parseInt(Math.floor(Math.random() * 67) + 1);
             $pageTrigger.data('animation',animNumber);
@@ -176,7 +172,7 @@ var PageTransitions = (function ($, options) {
         var animation = $pageTrigger.data('animation').toString(),
             gotoPage, inClass, outClass, selectedAnimNumber;
 
-         // Check if the delimiter '-' is present then create an animation array list.
+         // Vérifier si le délimiteur '-' est présent, puis créer un tableaux d'animation qui contiendra les numéros d'animation.
         if(animation.indexOf('-') != -1) {
             var randomAnimList = animation.split('-');
             selectedAnimNumber = parseInt(randomAnimList[(Math.floor(Math.random() * randomAnimList.length))]);
@@ -185,9 +181,9 @@ var PageTransitions = (function ($, options) {
             selectedAnimNumber = parseInt(animation);
         }
 
-        // Checking if the animation number is out of bound, max allowed value is 1 to 67.
+        // Vérifie si le numéro de l'animation dépasse la limite maximale autorisée (67).
         if (selectedAnimNumber > 67) {
-            alert("Transition.js : Invalid 'data-animation' attribute configuration. Animation number should not be greater than 67");
+            alert("Transition.js : Configuration invalide de l'attribut 'data-animation'. Le numéro d'animation ne doit pas être supérieur à 67");
             return false;
         }
 
@@ -462,7 +458,7 @@ var PageTransitions = (function ($, options) {
                 break;
         }
 
-        // This will get the pt-trigger elements parent wrapper div
+        // Obtenir la div parente des éléments pt-trigger
         var $pageWrapper = sectionsContainer,
             currentPageId = $pageWrapper.data('current'), tempPageIndex,
             linkhref = $pageTrigger.attr('href').split("#"),
@@ -470,20 +466,20 @@ var PageTransitions = (function ($, options) {
             
             tempPageIndex = currentPageId;
 
-            // Current page to be removed.
+            // Page actuelle à supprimer.
             var $currentPage = $('section[data-id="' + currentPageId + '"]');
 
-            // NEXT PAGE
+            // Définir la nouvelle page comme étant la page actuelle
             currentPageId = gotoPage;
 
-            // Check if the current page is same as the next page then do not do the animation
-            // else reset the 'isAnimatiing' flag
+            // Vérifie si la page actuelle est la même que la page suivante, alors ne pas faire l'animation
+            // sinon réinitialiser isAnimating
             if (tempPageIndex != currentPageId) {
                 isAnimating = true;
 
                 $pageWrapper.data('current', currentPageId);
 
-                // Next page to be animated.
+                // Page suivante à animer.
 
                 var $nextPage = $('section[data-id='+currentPageId+']').addClass('pt-page-current');
 
@@ -512,7 +508,7 @@ var PageTransitions = (function ($, options) {
             }
 
 
-        // Check if the animation is supported by browser and reset the pages.
+        // Vérifie si l'animation est prise en charge par le navigateur et réinitialiser les pages.
         if(!support) {
             onEndAnimation($currentPage, $nextPage);
         }

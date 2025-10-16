@@ -1,7 +1,6 @@
-/* animation sets */
+/* Pour les animation de transition des pages */
 
-/* move from / to  */
-
+/* Déplacement des pages */
 .pt-page-moveToLeft {
 	-webkit-animation: moveToLeft .6s ease both;
 	animation: moveToLeft .6s ease both;
@@ -42,14 +41,14 @@
 	animation: moveFromBottom .6s ease both;
 }
 
-/* fade */
+/* Animation fade (=fondu) */
 
 .pt-page-fade {
 	-webkit-animation: fade .7s ease both;
 	animation: fade .7s ease both;
 }
 
-/* move from / to and fade */
+/* Déplacement des pages avec l'animation fade */
 
 .pt-page-moveToLeftFade {
 	-webkit-animation: moveToLeftFade .7s ease both;
@@ -91,7 +90,7 @@
 	animation: moveFromBottomFade .7s ease both;
 }
 
-/* move to with different easing */
+/* Déplacement des pages avec l'animation easing */
 
 .pt-page-moveToLeftEasing {
 	-webkit-animation: moveToLeft .7s ease-in-out both;
@@ -110,10 +109,8 @@
 	animation: moveToBottom .7s ease-in-out both;
 }
 
-/********************************* keyframes **************************************/
-
-/* move from / to  */
-
+/* keyframes */
+/* Déplacement des pages */
 @-webkit-keyframes moveToLeft {
 	from { }
 	to { -webkit-transform: translateX(-100%); }
@@ -178,8 +175,7 @@
 	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
 }
 
-/* fade */
-
+/* Animation fade */
 @-webkit-keyframes fade {
 	from { }
 	to { opacity: 0.3; }
@@ -189,7 +185,7 @@
 	to { opacity: 0.3; }
 }
 
-/* move from / to and fade */
+/* Déplacement des pages avec l'animation fade */
 
 @-webkit-keyframes moveToLeftFade {
 	from { }
@@ -255,7 +251,7 @@
 	from { opacity: 0.3; -webkit-transform: translateY(100%); transform: translateY(100%); }
 }
 
-/* scale and fade */
+/* Animations: scale and fade => Mise à l'échelle et fondu*/
 
 .pt-page-scaleDown {
 	-webkit-animation: scaleDown .7s ease both;
@@ -286,10 +282,6 @@
 	-webkit-animation: scaleUpCenter .4s ease-out both;
 	animation: scaleUpCenter .4s ease-out both;
 }
-
-/********************************* keyframes **************************************/
-
-/* scale and fade */
 
 @-webkit-keyframes scaleDown {
 	from { }
@@ -339,7 +331,7 @@
 	from { opacity: 0; -webkit-transform: scale(.7); transform: scale(.7); }
 }
 
-/* rotate sides first and scale */
+/* Animations: rotate sides en premier et ensuite scale (Rotation sur le côté puis, mise à l'échelle) */
 
 .pt-page-rotateRightSideFirst {
 	-webkit-transform-origin: 0% 50%;
@@ -366,8 +358,8 @@
 	animation: rotateBottomSideFirst .8s both ease-in;
 }
 
-/* flip */
 
+/* Animations: flip (Retourner) */
 .pt-page-flipOutRight {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
@@ -417,8 +409,7 @@
 	animation: flipInTop .5s both ease-out;
 }
 
-/* rotate fall */
-
+/* Animations: rotate fall (Rotation vers le bas) */
 .pt-page-rotateFall {
 	-webkit-transform-origin: 0% 0%;
 	transform-origin: 0% 0%;
@@ -426,7 +417,7 @@
 	animation: rotateFall 1s both ease-in;
 }
 
-/* rotate newspaper */
+/* Animations: rotate newspaper (tourne sur elle même en devenant plus grand) */
 .pt-page-rotateOutNewspaper {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
@@ -440,7 +431,7 @@
 	animation: rotateInNewspaper .5s both ease-out;
 }
 
-/* push */
+/* Animations: push (pousser) */
 .pt-page-rotatePushLeft {
 	-webkit-transform-origin: 0% 50%;
 	transform-origin: 0% 50%;
@@ -466,7 +457,7 @@
 	animation: rotatePushBottom .8s both ease;
 }
 
-/* pull */
+/* Animations: pull (tirer) */
 .pt-page-rotatePullRight {
 	-webkit-transform-origin: 100% 50%;
 	transform-origin: 100% 50%;
@@ -492,7 +483,7 @@
 	animation: rotatePullBottom .5s both ease;
 }
 
-/* fold */
+/* Animations: fold (plier) */
 .pt-page-rotateFoldRight {
 	-webkit-transform-origin: 0% 50%;
 	transform-origin: 0% 50%;
@@ -518,7 +509,7 @@
 	animation: rotateFoldBottom .7s both ease;
 }
 
-/* unfold */
+/* Animations: unfold (déplier) */
 .pt-page-rotateUnfoldLeft {
 	-webkit-transform-origin: 100% 50%;
 	transform-origin: 100% 50%;
@@ -544,7 +535,8 @@
 	animation: rotateUnfoldBottom .7s both ease;
 }
 
-/* room walls */
+/* Animations: room walls (murs de la pièce) */
+/* => C'est comme si on était au centre d'une pièce cubique et quand on clique pour changer de page, l'animation donne l'impression que toute la pièce pivote sur elle-même (vers la gauche ou la droite). */
 .pt-page-rotateRoomLeftOut {
 	-webkit-transform-origin: 100% 50%;
 	transform-origin: 100% 50%;
@@ -594,7 +586,7 @@
 	animation: rotateRoomBottomIn .8s both ease;
 }
 
-/* cube */
+/* Animations: cube */
 .pt-page-rotateCubeLeftOut {
 	-webkit-transform-origin: 100% 50%;
 	transform-origin: 100% 50%;
@@ -644,7 +636,7 @@
 	animation: rotateCubeBottomIn .6s both ease-in;
 }
 
-/* carousel */
+/* Animations: carousel */
 .pt-page-rotateCarouselLeftOut {
 	-webkit-transform-origin: 100% 50%;
 	transform-origin: 100% 50%;
@@ -694,7 +686,7 @@
 	animation: rotateCarouselBottomIn .8s both ease;
 }
 
-/* sides */
+/* Animations: sides (côtés => animation dont le mouvement s'effectue principalement sur un axe horizontal) */
 .pt-page-rotateSidesOut {
 	-webkit-transform-origin: -50% 50%;
 	transform-origin: -50% 50%;
@@ -708,7 +700,7 @@
 	animation: rotateSidesIn .5s both ease-out;
 }
 
-/* slide */
+/* Animations: slide (slide => animation dont le mouvement s'effectue principalement sur un axe vertical) */
 .pt-page-rotateSlideOut {
 	-webkit-animation: rotateSlideOut 1s both ease;
 	animation: rotateSlideOut 1s both ease;
@@ -718,10 +710,8 @@
 	animation: rotateSlideIn 1s both ease;
 }
 
-/********************************* keyframes **************************************/
 
-/* rotate sides first and scale */
-
+/* Les keyframes de toutes ses animations */
 @-webkit-keyframes rotateRightSideFirst {
 	0% { }
 	40% { -webkit-transform: rotateY(15deg); opacity: .8; -webkit-animation-timing-function: ease-out; }
@@ -766,7 +756,6 @@
 	100% { -webkit-transform: scale(0.8) translateZ(-200px); transform: scale(0.8) translateZ(-200px); opacity:0; }
 }
 
-/* flip */
 
 @-webkit-keyframes flipOutRight {
 	from { }
@@ -832,8 +821,6 @@
 	from { -webkit-transform: translateZ(-1000px) rotateX(90deg); transform: translateZ(-1000px) rotateX(90deg); opacity: 0.2; }
 }
 
-/* fall */
-
 @-webkit-keyframes rotateFall {
 	0% { -webkit-transform: rotateZ(0deg); }
 	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
@@ -849,7 +836,6 @@
 	100% { -webkit-transform: translateY(100%) rotateZ(17deg); transform: translateY(100%) rotateZ(17deg); }
 }
 
-/* newspaper */
 
 @-webkit-keyframes rotateOutNewspaper {
 	from { }
@@ -867,7 +853,6 @@
 	from { -webkit-transform: translateZ(-3000px) rotateZ(-360deg); transform: translateZ(-3000px) rotateZ(-360deg); opacity: 0; }
 }
 
-/* push */
 
 @-webkit-keyframes rotatePushLeft {
 	from { }
@@ -905,8 +890,6 @@
 	to { opacity: 0; -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
 }
 
-/* pull */
-
 @-webkit-keyframes rotatePullRight {
 	from { opacity: 0; -webkit-transform: rotateY(-90deg); }
 }
@@ -935,7 +918,6 @@
 	from { opacity: 0; -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
 }
 
-/* fold */
 
 @-webkit-keyframes rotateFoldRight {
 	from { }
@@ -973,7 +955,6 @@
 	to { opacity: 0; -webkit-transform: translateY(100%) rotateX(-90deg); transform: translateY(100%) rotateX(-90deg); }
 }
 
-/* unfold */
 
 @-webkit-keyframes rotateUnfoldLeft {
 	from { opacity: 0; -webkit-transform: translateX(-100%) rotateY(-90deg); }
@@ -1002,8 +983,6 @@
 @keyframes rotateUnfoldBottom {
 	from { opacity: 0; -webkit-transform: translateY(100%) rotateX(-90deg); transform: translateY(100%) rotateX(-90deg); }
 }
-
-/* room walls */
 
 @-webkit-keyframes rotateRoomLeftOut {
 	from { }
@@ -1068,8 +1047,6 @@
 @keyframes rotateRoomBottomIn {
 	from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg); transform: translateY(-100%) rotateX(-90deg); }
 }
-
-/* cube */
 
 @-webkit-keyframes rotateCubeLeftOut {
 	0% { }
@@ -1151,7 +1128,6 @@
 	50% { -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg); transform: translateY(-50%) translateZ(-200px) rotateX(45deg); }
 }
 
-/* carousel */
 
 @-webkit-keyframes rotateCarouselLeftOut {
 	from { }
@@ -1217,7 +1193,6 @@
 	from { opacity: .3; -webkit-transform: translateY(-200%) scale(.4) rotateX(65deg); transform: translateY(-200%) scale(.4) rotateX(65deg); }
 }
 
-/* sides */
 
 @-webkit-keyframes rotateSidesOut {
 	from { }
@@ -1234,8 +1209,6 @@
 @keyframes rotateSidesIn {
 	from { opacity: 0; -webkit-transform: translateZ(-500px) rotateY(-90deg); transform: translateZ(-500px) rotateY(-90deg); }
 }
-
-/* slide */
 
 @-webkit-keyframes rotateSlideOut {
 	0% { }
@@ -1260,8 +1233,6 @@
 	75% { opacity: .5; -webkit-transform: translateZ(-500px); transform: translateZ(-500px); }
 	100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); transform: translateZ(0) translateX(0); }
 }
-
-/* animation delay classes */
 
 .pt-page-delay100 {
 	-webkit-animation-delay: .1s;

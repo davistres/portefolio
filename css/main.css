@@ -1,50 +1,10 @@
-/*
-* Template Name: Unique - Responsive vCard Template
-* Author: lmpixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 2.1.0
-*/
-
-/* =============================================================================
-
-1. Fonts
-2. General styles (Buttons, Inputs, Typography)
-3. Page loading animation
-4. Subpages changer
-5. Site header (Panel with logo & navigation)
-6. Site content
-7. Subpages
-  7.1. Home subpage
-  7.2. About Me subpage
-  7.3. Resume subpage
-  7.4. Portfolio subpage
-  7.5. Contact subpage
-8. Sliders (testimonials & portfolio carousels)
-9. Portfolio Full info page
-10. Media Queries
-11. Template Customization (Light or Dark style, Header background color, Header position)
-12. Updates
-
-============================================================================= */
-
-
-/* ============================================================================= 
-1. Fonts
-============================================================================= */
-/* 7 stroke icons font by Pixeden */
-@import url('pe-icon-7-stroke.css'); /* Full icons list: http://themes-pixeden.com/font-demos/7-stroke/index.html */
-
-/* Font awesome icons font */
-@import url('font-awesome.css'); /* Full icons list: http://fontawesome.io/icons/ */
-
-/* Google fonts */
+/* Import font et icons */
+@import url('pe-icon-7-stroke.css');
+@import url('font-awesome.css');
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Oxygen:300,400,700");
 
 
-/* ============================================================================= 
-2. General styles
-============================================================================= */
-
+/* Style général */
 html {
   height: 100%;
 }
@@ -121,7 +81,7 @@ img {
   visibility: visible;
 }
 
-/* Buttons */
+/* Les boutons */
 input[type=submit], input[type=button], button, a.button {
   display: inline-block;
   position: relative;
@@ -146,9 +106,8 @@ input[type=submit]:hover, input[type=submit]:focus, input[type=button]:focus, bu
   color: #fff;
   background-color: #ff724c;
 }
-/* /Buttons */
 
-/* Custom Scroll */
+/* Pour le scroll */
 .mCSB_inside>.mCSB_container {
   margin-right: 0;
 }
@@ -168,9 +127,8 @@ input[type=submit]:hover, input[type=submit]:focus, input[type=button]:focus, bu
 .mCSB_scrollTools .mCSB_draggerRail {
   background-color: #e5e5e5;
 }
-/* /Custom Scroll */
 
-/* Form controls */
+/* Formulaire */
 .form-group {
   position: relative;
   margin: 0 0 20px;
@@ -244,20 +202,6 @@ textarea.form-control, textarea.form-control:focus {
   color: #ff724c;
 }
 
-/* Placeholders */
-.form-control::-moz-placeholder {
-  color: #aaa;
-}
-
-.form-control:-ms-input-placeholder {
-  color: #aaa;
-}
-
-.form-control::-webkit-input-placeholder {
-  color: #aaa;
-}
-/* /Placeholders */
-
 .form-group .help-block {
   position: absolute;
   display: inline-block;
@@ -282,7 +226,20 @@ textarea.form-control, textarea.form-control:focus {
 .form-group .help-block:empty {
   display: none;
 }
-/* /Form controls */
+
+/* Placeholders */
+.form-control::-moz-placeholder {
+  color: #aaa;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #aaa;
+}
+
 
 .no-padding {
   padding: 0;
@@ -349,9 +306,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 
-/* ============================================================================= 
-3. Page loadig animation
-============================================================================= */
+/* Animation de chargement de la page */
 .no-js .preloader { display: none;  }
 .preloader {
   position: fixed;
@@ -430,9 +385,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 
-/* ============================================================================= 
-4. Subpages changer
-============================================================================= */
+/* Chargement des autres pages */
 .pt-wrapper {
   position: relative;
   width: 100%;
@@ -524,7 +477,7 @@ textarea.form-control, textarea.form-control:focus {
   overflow: auto;
 }
 
-/*No Animation Support Message Style*/
+/*Style du message pour les navigateurs ne supportant pas les animations*/
 .pt-message {
   display: none;
   position: absolute;
@@ -569,11 +522,9 @@ textarea.form-control, textarea.form-control:focus {
 .section-paddings-0 {
   padding: 0;
 }
-/* /Page changer */
 
-/* ============================================================================= 
-5. Site header (Panel with logo & navigation)
-============================================================================= */
+
+/* Header (logo & navigation) */
 .header {
   position: fixed;
   width: 150px;
@@ -626,7 +577,26 @@ p.site-description {
   margin: 5px 0;
 }
 
-/* Social links */
+
+.menu-toggle {
+  display: block;
+  width: 50px;
+  margin: 0 4px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  float: right;
+}
+
+.menu-toggle i {
+  color: #ff724c;
+  font-size: 21px;
+  line-height: 50px;
+}
+
+/* Lien vers les réseaux sociaux */
 ul.social-links {
   display: block;
   list-style: none;
@@ -666,33 +636,11 @@ ul.social-links li a i {
 ul.social-links li:last-child a {
   margin-right: 0;
 }
-/* /Social links */
-
-.menu-toggle {
-  display: block;
-  width: 50px;
-  margin: 0 4px;
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
-  cursor: pointer;
-  overflow: hidden;
-  float: right;
-}
-
-.menu-toggle i {
-  color: #ff724c;
-  font-size: 21px;
-  line-height: 50px;
-}
-
-/* ----- Header ----- */
 
 
 
-/* ============================================================================= 
-6. Site content
-============================================================================= */
+
+/* main */
 .site-main {
   height: 100%;
   margin-left: 150px;
@@ -700,7 +648,7 @@ ul.social-links li:last-child a {
   background-color: #fff;
 }
 
-/* Main menu */
+/* Menu */
 .site-nav {
   display: block;
   padding: 25px 0 30px;
@@ -773,128 +721,9 @@ ul.social-links li:last-child a {
   margin-bottom: 3px;
   text-align: center;
 }
-/* /Main menu */
 
 
-/* Main menu Top or Bottom Layout Styles*/
-@media only screen and (min-width: 992px) {
-  .layout-menu-top,
-  .layout-menu-bottom {
-    overflow: hidden;
-  }
-
-  .layout-menu-top .header,
-  .layout-menu-bottom .header {
-    top: 0;
-    height: 80px;
-    width: 100%;
-    padding: 0 20px;
-  }
-
-  .layout-menu-top .site-main,
-  .layout-menu-bottom .site-main {
-    margin-top: 80px;
-    margin-left: 0;
-    height: calc(100% - 80px);
-  }
-
-  .layout-menu-top .my-photo,
-  .layout-menu-bottom .my-photo {
-    display: inline-block;
-    float: left;
-    margin: 10px 25px 10px 0;
-    width: 60px;
-  }
-
-  .layout-menu-top .site-title-block,
-  .layout-menu-bottom .site-title-block {
-    position: relative;
-    float: left;
-    z-index: 1;
-    text-align: center;
-    margin: 0;
-  }
-
-  .layout-menu-top .site-title-block h1,
-  .layout-menu-bottom .site-title-block h1 {
-    line-height: 80px;
-  }
-
-  .layout-menu-top div.site-nav,
-  .layout-menu-bottom div.site-nav {
-    float: left;
-    padding: 0 0 0 40px;
-  }
-
-  .layout-menu-top .site-main-menu li,
-  .layout-menu-bottom .site-main-menu li {
-    display: inline-block;
-    float: left;
-  }
-
-  .layout-menu-top .site-main-menu li a,
-  .layout-menu-bottom .site-main-menu li a {
-    height: 80px;
-    padding: 18px 20px;
-    border-top: 0;
-    border-bottom: 0;
-  }
-
-  .layout-menu-top .site-main-menu li a:after,
-  .layout-menu-bottom .site-main-menu li a:after,
-  .layout-menu-top .site-main-menu li.active a:after,
-  .layout-menu-bottom .site-main-menu li.active a:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      width: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0 auto;
-      background-color: #ff724c;
-      height: 2px;
-      -webkit-transition: width 0.3s ease-in-out;
-      -moz-transition: width 0.3s ease-in-out;
-      -o-transition: width 0.3s ease-in-out;
-      -ms-transition: width 0.3s ease-in-out;
-      transition: width 0.3s ease-in-out;
-  }
-
-  .layout-menu-top .site-main-menu li a:hover:after,
-  .layout-menu-bottom .site-main-menu li a:hover:after {
-    background-color: #ff724c;
-    width: 100%;
-    height: 2px;
-  }
-
-  .layout-menu-top .site-main-menu li.active a:after,
-  .layout-menu-bottom .site-main-menu li.active a:after {
-    background-color: #ff724c;
-    width: 100%;
-    height: 2px;
-  }
-
-  /* Main Menu Bottom Layout */
-  .layout-menu-bottom .header {
-    top: auto;
-    bottom: 0;
-  }
-
-  .layout-menu-bottom .site-main {
-    margin-top: 0;
-    margin-bottom: 80px;
-  }
-
-  .layout-menu-bottom .site-main-menu li a:after,
-  .layout-menu-bottom .site-main-menu li a:hover:after,
-  .layout-menu-bottom .site-main-menu li.active a:after {
-    top: 0;
-  }
-}
-
-
-/* Section title */
+/* Titre de la section */
 .section-title-block {
   position: relative;
   margin-bottom: 40px;
@@ -916,6 +745,7 @@ ul.social-links li:last-child a {
   line-height: 1.1em;
   color: #eee;
   z-index: 1;
+  text-align: center;
 }
 
 .section-description {
@@ -950,13 +780,7 @@ ul.social-links li:last-child a {
 }
 
 
-
-/* ============================================================================= 
-7. Subpages
-============================================================================= */
-/* =======================================
-7.1. Home subpage
-======================================= */
+/* La page d'accueil */
 .table {
   display: table;
   table-layout: fixed;
@@ -998,15 +822,16 @@ ul.social-links li:last-child a {
 
 
 
-
-/* =======================================
-7.2. About Me subpage
-======================================= */
+/* Page A propos */
 .my-photo-block {
   position: relative;
 }
 
-/* About me list */
+.align {
+text-align: justify;
+}
+
+/* La liste des infos sur moi (ville, email, téléphone, etc.) */
 .info-list {
   list-style: none;
   margin: 0;
@@ -1043,9 +868,8 @@ ul.social-links li:last-child a {
   font-family: 'PT Sans', Helvetica, sans-serif;
   min-width: 250px;
 }
-/* /About me list */
 
-/* Services */
+/* Compétences dans la page A propos */
 .service-block {
   text-align: center;
 }
@@ -1061,147 +885,11 @@ ul.social-links li:last-child a {
   color: #ff724c;
   margin: 5px 0 18px;
 }
-/* /Services */
-
-/* Clients */
-.client-block {
-  text-align: center;
-  padding: 5px 0;
-  opacity: 0.4;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.client-block:hover {
-  opacity: 1;
-}
-
-.client-block img {
-  max-width: 80px;
-}
-/* /Clients */
-
-/* Fun Facts */
-.fun-fact-block {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  display: block;
-  margin: 0;
-  background: #fff;
-  padding: 20px 10px 15px;
-}
-
-.fun-fact-block.gray-bg {
-  background-color: #fafafa;
-}
-
-.fun-fact-block h4 {
-  margin-top: 10px;
-}
-
-.fun-fact-block .pe-7s-icon {
-  position: relative;
-  font-size: 56px;
-  color: #888;
-}
-
-.fun-fact-block .fun-value {
-  font-size: 24px;
-  font-weight: 300;
-  display: block;
-  margin: 10px 0;
-  color: #ff724c;
-}
-/* /Fun Facts */
-
-/* Testimonials */
-.testimonials {
-  width: 100%;
-}
-
-.testimonial-item {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.testimonial-credits {
-  display: table;
-  position: relative;
-  margin: -15px auto 0;
-  text-align: center;
-}
-
-.testimonial-author {
-  display: inline-block;
-  font-size: 15px;
-  font-family: 'Oxygen', Helvetica, sans-serif;
-  color: #222;
-  margin: 0;
-  font-weight: 400;
-}
-
-.testimonial-author-info {
-  display: table-cell;
-  position: relative;
-  padding-left: 12px;
-  vertical-align: bottom;
-  text-align: left;
-}
-
-.testimonial-content {
-  width: 100%;
-  height: auto;
-}
-
-.testimonial-content .testimonial-text {
-  padding: 1em 1.2em 1.6em;
-  font-style: italic;
-  background-color: #fcfcfc;
-  border: 1px solid #e5e5e5;
-  width: 100%;
-  position: relative;
-  margin: 0;
-  z-index: -1;
-}
-
-.testimonial-content .testimonial-text p {
-  margin: 0;
-}
-
-.testimonial-picture {
-  display: table-cell;
-  width: 60px;
-  height: 60px;
-  background-color: #fcfcfc;
-  overflow: hidden;
-  margin: 0;
-  z-index: 1;
-}
-
-.testimonial-picture img {
-  width: 100%;
-  border: 1px solid #d5d5d5;
-}
-
-.testimonial-firm {
-  font-size: 10px;
-  line-height: 1.5em;
-  margin: 0;
-  text-transform: uppercase;
-  font-style: italic;
-  font-weight: lighter
-}
-/* /Testimonials */
 
 
-/* =======================================
-7.3. Resume subpage
-======================================= */
-/* Timeline  */
+
+/* Page CV */
+/* Timeline Formation & Expérience */
 .timeline {
   position: relative;
   border-left: 1px solid #f5f5f5;
@@ -1296,7 +984,7 @@ ul.social-links li:last-child a {
   height: 10px;
   padding: 0;
 }
-/* Animate skills on subpage load */
+/* Animation des skilles au chargement de la page */
 .pt-page .skill-percentage {
   -webkit-transition: all 2s ease-in-out;
   -moz-transition: all 2s ease-in-out;
@@ -1308,44 +996,53 @@ ul.social-links li:last-child a {
   width: 0;
 }
 
-/*Skill 1*/
+/*Liste des skills*/
 .skill-percentage.skill-1 {
-  width: 88%;
-}
-/*Skill 2*/
-.skill-percentage.skill-2 {
-  width: 75%;
-}
-/*Skill 3*/
-.skill-percentage.skill-3 {
-  width: 60%;
-}
-/*Skill 4*/
-.skill-percentage.skill-4 {
   width: 95%;
 }
-/*Skill 5*/
-.skill-percentage.skill-5 {
-  width: 85%;
-}
-/*Skill 6*/
-.skill-percentage.skill-6 {
-  width: 72%;
-}
-/*Skill 7*/
-.skill-percentage.skill-7 {
+.skill-percentage.skill-2-1 {
   width: 60%;
 }
-/*Skill 8*/
-.skill-percentage.skill-8 {
-  width: 77%;
+.skill-percentage.skill-2-2 {
+  width: 80%;
 }
-/* Skills */
+.skill-percentage.skill-3 {
+  width: 78%;
+}
+.skill-percentage.skill-4 {
+  width: 70%;
+}
+.skill-percentage.skill-5 {
+  width: 65%;
+}
+.skill-percentage.skill-6-1 {
+  width: 85%;
+}
+.skill-percentage.skill-6-2 {
+  width: 65%;
+}
+.skill-percentage.skill-7 {
+  width: 80%;
+}
+.skill-percentage.skill-8 {
+  width: 85%;
+}
+.skill-percentage.skill-9 {
+  width: 95%;
+}
+.skill-percentage.skill-10 {
+  width: 95%;
+}
+.skill-percentage.skill-11 {
+  width: 75%;
+}
+.skill-percentage.skill-12 {
+  width: 70%;
+}
 
 
-/* =======================================
-7.4. Portfolio subpage
-======================================= */
+
+/* Page Portfolio */
 .portfolio-grid {
   margin-left: -0.5em;
   margin-right: -0.5em;
@@ -1389,7 +1086,7 @@ ul.social-links li:last-child a {
   color: #fff;
 }
 
-/* Direction-Aware Hover Effect */
+/* Effet au survol qui dépendra de la direction de la souris (dans quel sens on entre) */
 .portfolio-grid figure a div {
   top: 0px;
   left: -100%;
@@ -1466,14 +1163,11 @@ ul.social-links li:last-child a {
   -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
   box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
 }
-/* End of Direction-Aware Hover Effect */
 
 
 
-/* =======================================
-7.5. Contact subpage
-======================================= */
-/* Contact info */
+/* Page Contact */
+/* Les infos de contact */
 .contact-info-block {
   position: relative;
   text-align: left;
@@ -1507,65 +1201,11 @@ ul.social-links li:last-child a {
   font-size: 30px;
   color: #ff724c;
 }
-/* /Contact info */
 
 
-/* ============================================================================= 
-8. Sliders
-============================================================================= */
-/* Testimonials Carousel */
-.testimonials.owl-carousel .owl-nav {
-  position: absolute;
-  text-align: right;
-  right: 0;
-  top: -48px;
-}
+/* Les sliders*/
 
-.testimonials.owl-carousel .owl-nav .owl-prev {
-  margin-right: 3px;
-}
-
-.testimonials.owl-carousel .owl-nav .owl-prev,
-.testimonials.owl-carousel .owl-nav .owl-next {
-  display: inline-block;
-  background-color: #eee;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.testimonials.owl-carousel .owl-nav .owl-prev:hover,
-.testimonials.owl-carousel .owl-nav .owl-next:hover {
-  color: #fff;
-  background-color: #ff724c;
-}
-
-.testimonials.owl-carousel .owl-nav .owl-prev:before,
-.testimonials.owl-carousel .owl-nav .owl-next:before {
-  position: relative;
-  margin: 2px;
-  width: 22px;
-  height: 22px;
-  font-family: FontAwesome;
-  font-size: 21px;
-  line-height: 22px;
-  text-align: center;
-  display: block;
-  cursor: pointer;
-}
-
-.testimonials.owl-carousel .owl-nav .owl-prev:before {
-  content: "\f104";
-}
-
-.testimonials.owl-carousel .owl-nav .owl-next:before {
-  content: "\f105";
-}
-/* /Testimonials Carousel */
-
-/* Portfolio Carousel */
+/* Le carousel page portefolio*/
 .portfolio-page-carousel {
   overflow: hidden;
 }
@@ -1657,12 +1297,9 @@ ul.social-links li:last-child a {
   transition: opacity 200ms ease;
   border-radius: 30px;
 }
-/* Portfolio Carousel */
 
 
-/* ============================================================================= 
-9. Portfolio Full info page
-============================================================================= */
+/* pages-switcher.js */
 .page-ajax-loaded {
   position: absolute;
   background-color: #fff;
@@ -1792,7 +1429,7 @@ ul.social-links li:last-child a {
   line-height: 26px;
 }
 
-/* Tags Block */
+/* Liste de la stack utilisée pour un projet dans le portefolio */
 .tags-block {
   margin: 25px 0 0;
 }
@@ -1815,14 +1452,11 @@ ul.social-links li:last-child a {
   background-color: #fff;
   border: 1px solid #e5e5e5;
 }
-/* /Tags Block */
 
 
 
 
-/* ============================================================================= 
-10. Media Queries 
-============================================================================= */
+/* Media Queries */
 
 @media only screen and (max-width: 1320px) {
   .portfolio-grid figure {
@@ -2017,137 +1651,7 @@ ul.social-links li:last-child a {
 
 
 
-/* ============================================================================= 
-11. Template Customization
-============================================================================= */
-/* Dark Template Style */
-.template-style-dark .pt-page {
-  background-color: #222;
-}
-
-.template-style-dark .pt-page.section-without-bg {
-  background-color: transparent;
-}
-
-.template-style-dark h1,
-.template-style-dark h2,
-.template-style-dark h3,
-.template-style-dark h4,
-.template-style-dark h5,
-.template-style-dark h6 {
-  color: #fff;
-}
-
-.template-style-dark p {
-  color: #e5e5e5;
-}
-
-.template-style-dark .section-title {
-  color: #555;
-}
-
-.template-style-dark input[type=submit],
-.template-style-dark input[type=button],
-.template-style-dark button,
-.template-style-dark a.button {
-  color: #fff;
-}
-
-.template-style-dark .form-control,
-.template-style-dark .form-control:focus,
-.template-style-dark .has-error .form-control,
-.template-style-dark .has-error .form-control:focus {
-  color: #eee;
-  border-color: #555;
-}
-
-.template-style-dark .contact-info-block .pe-7s-icon {
-  color: #aaa;
-}
-
-.template-style-dark .home-page-block h2 {
-  color: #ff724c;
-}
-
-.template-style-dark .home-page-description {
-  color: #222;
-}
-
-.template-style-dark .info-list li .title {
-  color: #fff;
-}
-
-.template-style-dark .info-list li .value {
-  color: #eee;
-}
-
-.template-style-dark ul.social-links li a {
-    display: inline-block;
-    margin: 0 1px;
-    width: 34px;
-    height: 34px;
-    color: #e5e5e5;
-    background-color: transparent;
-    border: 1px solid #555;
-    text-align: center;
-}
-
-.template-style-dark ul.social-links li a:hover {
-    color: #fff;
-    background-color: #ff724c;
-    border-color: transparent;
-}
-
-.template-style-dark .testimonial-content .testimonial-text {
-  background-color: #282828;
-  border-color: #444;
-}
-
-.template-style-dark .testimonial-picture img {
-  border-color: #444;
-}
-
-/* Invert Clients Logo Images (Black to White) */
-.template-style-dark .client-block img {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}
-
-.template-style-dark .fun-fact-block {
-  background-color: transparent;
-}
-
-.template-style-dark .fun-fact-block.gray-bg {
-  background-color: #282828;
-}
-
-.template-style-dark .skill-percentage {
-  border-color: #222;
-}
-
-.template-style-dark .timeline {
-  border-color: #282828;
-}
-
-.template-style-dark .ajax-page-nav > div.nav-item a {
-  color: #aaa;
-}
-
-.template-style-dark .mobile-header {
-  background-color: #222;
-  border-color: #444;
-}
-
-.template-style-dark .mobile-header .mobile-site-title {
-  color: #fff;
-}
-
-.template-style-dark .page-ajax-loaded,
-.template-style-dark .ajax-page-content {
-  background-color: #222;
-}
-
-/* Header Light Color BG */
+/* La couleur du header */
 .header.header-color-light {
   background-color: #fff;
 }
@@ -2178,41 +1682,17 @@ ul.social-links li:last-child a {
 .header.header-color-light .site-main-menu li.active a:after {
   background-color: #ff724c;
 }
-/* Header Light Color BG */
-
-/* Header Dark Color BG */
-.header.header-color-dark {
-  background-color: #222;
-}
-
-.header.header-color-dark .my-photo .border-block-bottom-40 {
-  border-color: #ff724c;
-}
-/* /Header Dark Color */
-
-/* Header Main Color BG */
-.header-color-main .site-main-menu li a:after,
-.header-color-main .site-main-menu li a:hover:after,
-.header-color-main  .site-main-menu li.active a:after {
-  background-color: #fff;
-}
-/* /Header Main Color BG */
 
 
-
-/* ============================================================================= 
-12. Updates
-============================================================================= */
-/*===== v2.0.0 - 23 November 2018 =====*/
-/* Arrows Nav */
-.lmpixels-arrows-nav {
+/* Les fléches de navigation */
+.fleches-nav {
   position: absolute;
   bottom: 10px;
   right: 15px;
   z-index: 100;
 }
 
-.lmpixels-arrows-nav > div {
+.fleches-nav > div {
   display: inline-block;
   padding: 0;
   background-color: #fff;
@@ -2231,17 +1711,17 @@ ul.social-links li:last-child a {
   box-shadow: 0 0 14px 0 rgba(0,0,0,.12);
 }
 
-.lmpixels-arrows-nav > div:hover {
+.fleches-nav > div:hover {
   -webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,.22);
   -moz-box-shadow: 0 0 25px 0 rgba(0,0,0,.22);
   box-shadow: 0 0 25px 0 rgba(0,0,0,.22);
 }
 
-.lmpixels-arrows-nav > div:first-child {
+.fleches-nav > div:first-child {
   margin-right: 1px;
 }
 
-.lmpixels-arrows-nav > div i {
+.fleches-nav > div i {
   line-height: 40px;
   height: 40px;
   margin-top: -1px;
@@ -2254,17 +1734,17 @@ ul.social-links li:last-child a {
   transition: all 0.3s ease-in-out;
 }
 
-.lmpixels-arrows-nav > div:hover i {
+.fleches-nav > div:hover i {
   color: #ff724c;
 }
-/* /Arrows Nav */
+
 @media only screen and (max-width: 768px) {
-  .lmpixels-arrows-nav > div {
+  .fleches-nav > div {
     height: 32px;
     width: 32px;
   }
 
-  .lmpixels-arrows-nav > div i {
+  .fleches-nav > div i {
     line-height: 32px;
     height: 32px;
     font-size: 32px;
@@ -2277,4 +1757,3 @@ ul.social-links li:last-child a {
     -webkit-transform: translateZ(0);
   }
 }
-/*===== /v2.0.0 - 23 November 2018 =====*/
