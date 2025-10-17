@@ -955,6 +955,10 @@ text-align: justify;
   line-height: 1.45em;
 }
 
+.sub-item {
+  margin-top: 0px;
+}
+
 /* Skills */
 .skills-info {
   margin-bottom: 30px;
