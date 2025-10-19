@@ -11,25 +11,33 @@
         </div>
 
         <div class="ajax-page-title">
-            <h1>Portfolio Project 3</h1>
+            <h1>Exercices Variés - HTML/CSS/JavaScript</h1>
         </div>
 
         <div class="row">
-            <div class="col-sm-7 col-md-7 portfolio-block">
-                <div class="owl-carousel portfolio-page-carousel">
-                    <div class="item">
-                        <img src="images/portfolio/full/4.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/5.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/6.jpg" alt="">
-                    </div>
+            <div class="col-sm-12 col-md-9 portfolio-block">
+                <!-- Exercice 1: Tableau des Planètes -->
+                <h3 style="margin-top: 20px; margin-bottom: 15px; color: #ff724c;">1. Tableau des Planètes du Système Solaire</h3>
+                <div class="portfolio-page-video" style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; min-height: 400px; margin-bottom: 30px;">
+                  <iframe class="embed-responsive-item" src="0/3- Excercices/1- tableau/index.html" title="Tableau des Planètes" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ddd;"></iframe>
                 </div>
 
-                <div class="portfolio-page-video embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97102654?autoplay=0"></iframe>
+                <!-- Exercice 2: Formulaire Dynamique -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: #ff724c;">2. Formulaire Dynamique avec JavaScript</h3>
+                <div class="portfolio-page-video" style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; min-height: 400px; margin-bottom: 30px;">
+                  <iframe class="embed-responsive-item" src="0/3- Excercices/2- formulaire dynamique/html/formulaire.html" title="Formulaire Dynamique" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ddd;"></iframe>
+                </div>
+
+                <!-- Exercice 3: Captcha -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: #ff724c;">3. Système de Captcha</h3>
+                <div class="portfolio-page-video" style="position: relative; padding-bottom: 40%; height: 0; overflow: hidden; min-height: 350px; margin-bottom: 30px;">
+                  <iframe class="embed-responsive-item" src="0/3- Excercices/3- Captcha/index.html" title="Captcha" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ddd;"></iframe>
+                </div>
+
+                <!-- Exercice 4: To-do List -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: #ff724c;">4. Application To-Do List</h3>
+                <div class="portfolio-page-video" style="position: relative; padding-bottom: 50%; height: 0; overflow: hidden; min-height: 400px; margin-bottom: 30px;">
+                  <iframe class="embed-responsive-item" src="0/3- Excercices/4- To-do list/index.html" title="To-Do List" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ddd;"></iframe>
                 </div>
 
 
@@ -49,21 +57,8 @@
                     }
 
                     jQuery(document).ready(function($){
-
                         // Scroll de la page chargée en Ajax
                         customAjaxScroll();
-
-
-                        $('.portfolio-page-carousel').owlCarousel({
-                            smartSpeed:1200,
-                            items: 1,
-                            loop: true,
-                            dots: true,
-                            nav: true,
-                            navText: false,
-                            margin: 10
-                        });
-
                     });
 
                     jQuery(window).on('resize', function() {
@@ -72,19 +67,19 @@
                 </script>
             </div>
 
-            <div class="col-sm-5 col-md-5 portfolio-block">
+            <div class="col-sm-12 col-md-3 portfolio-block">
                 <!-- Description du projet -->
                 <div class="block-title">
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> Alex Smith</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">www.project-site.com</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 25 december, 2016</p></li>
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
                 </ul>
 
-                <p class="text-justify">Aliquam euismod aliquam massa, quis eleifend dui sodales vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                
+                <p class="text-justify">Collection de 4 exercices pratiques réalisés durant ma formation en développement web. Ces exercices démontrent ma maîtrise progressive des technologies front-end : (1) Tableau HTML/CSS des planètes du système solaire avec mise en forme avancée, (2) Formulaire dynamique avec validation JavaScript et manipulation du DOM, (3) Système de Captcha interactif pour la sécurité, (4) Application To-Do List complète avec gestion d'état et localStorage. Chaque exercice illustre des compétences spécifiques en HTML, CSS et JavaScript.</p>
+
 
                 <!-- Technologies -->
                 <div class="tags-block">
@@ -94,21 +89,22 @@
                     <ul class="tags">
                         <li><a>HTML5</a></li>
                         <li><a>CSS3</a></li>
-                        <li><a>jQuery</a></li>
-                        <li><a>Ajax</a></li>
-                        <li><a>PHP5</a></li>
+                        <li><a>JavaScript</a></li>
+                        <li><a>DOM Manipulation</a></li>
+                        <li><a>LocalStorage</a></li>
+                        <li><a>Validation</a></li>
                     </ul>
                 </div>
-                
+
 
                 <!-- Boutons de partage -->
                 <div class="btn-group share-buttons">
                     <div class="block-title">
                         <h3>Share</h3>
                     </div>
-                    <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>
-                    <a href="#" target="_blank" class="btn"><i class="fa fa-twitter"></i> </a>
-                    <a href="#" target="_blank" class="btn"><i class="fa fa-dribbble"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a>
                 </div>
             </div>
         </div>

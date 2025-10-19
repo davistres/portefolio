@@ -35,7 +35,6 @@
 
   .owl-carousel .owl-item img {
     display: block;
-    width: 100%;
     -webkit-transform-style: preserve-3d; }
 
   .owl-carousel .owl-nav.disabled,

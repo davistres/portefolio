@@ -2,7 +2,7 @@
     <div class="ajax-page-wrapper">
         <div class="ajax-page-nav">
             <div class="nav-item ajax-page-prev-next">
-                <a class="ajax-page-load" href="portfolio-4.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-11.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
                 <a class="ajax-page-load" href="portfolio-1.html"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
             </div>
             <div class="nav-item ajax-page-close-button">
@@ -11,25 +11,43 @@
         </div>
 
         <div class="ajax-page-title">
-            <h1>Portfolio Project 12</h1>
+            <h1>Ibaraki Discovery - Tourisme au Japon</h1>
         </div>
 
         <div class="row">
-            <div class="col-sm-7 col-md-7 portfolio-block">
+            <div class="col-sm-12 col-md-8 portfolio-block">
+                <!-- Captures d'écran du site -->
                 <div class="owl-carousel portfolio-page-carousel">
                     <div class="item">
-                        <img src="images/portfolio/full/7.jpg" alt="">
+                        <img src="images/portfolio/full/1- accueil_mobile.png" alt="Ibaraki Discovery - Page d'Accueil - Mobile">
                     </div>
                     <div class="item">
-                        <img src="images/portfolio/full/8.jpg" alt="">
+                        <img src="images/portfolio/full/2- decouvrez_mobile.png" alt="Ibaraki Discovery - Page Découverte - Mobile">
                     </div>
                     <div class="item">
-                        <img src="images/portfolio/full/9.jpg" alt="">
+                        <img src="images/portfolio/full/3- festival_mobile.png" alt="Ibaraki Discovery - Festivals - Mobile">
                     </div>
-                </div>
-
-                <div class="portfolio-page-video embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97102654?autoplay=0"></iframe>
+                    <div class="item">
+                        <img src="images/portfolio/full/4- personnalise_mobile.png" alt="Ibaraki Discovery - Constructeur d'Itinéraire - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/5- about_mobile.png" alt="Ibaraki Discovery - A propos - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/6- accueil.png" alt="Ibaraki Discovery - Page d'Accueil">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/7- decouvrez.png" alt="Ibaraki Discovery - Page Découverte">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/8- festival.png" alt="Ibaraki Discovery - Festivals">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/9- personnalise.png" alt="Ibaraki Discovery - Constructeur d'Itinéraire">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/10- about.png" alt="Ibaraki Discovery - A propos">
+                    </div>
                 </div>
 
 
@@ -49,11 +67,10 @@
                     }
 
                     jQuery(document).ready(function($){
-
                         // Scroll de la page chargée en Ajax
                         customAjaxScroll();
 
-
+                        // Initialiser le carousel Owl
                         $('.portfolio-page-carousel').owlCarousel({
                             smartSpeed:1200,
                             items: 1,
@@ -63,7 +80,6 @@
                             navText: false,
                             margin: 10
                         });
-
                     });
 
                     jQuery(window).on('resize', function() {
@@ -72,19 +88,29 @@
                 </script>
             </div>
 
-            <div class="col-sm-5 col-md-5 portfolio-block">
+            <div class="col-sm-12 col-md-4 portfolio-block">
                 <!-- Description du projet -->
                 <div class="block-title">
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> Alex Smith</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">www.project-site.com</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 25 december, 2016</p></li>
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
                 </ul>
 
-                <p class="text-justify">Aliquam euismod aliquam massa, quis eleifend dui sodales vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                
+                <p class="text-justify"><strong>Ibaraki Discovery</strong> est une plateforme web innovante de promotion du tourisme durable dans la préfecture d'Ibaraki, Japon. Ce projet ambitieux vise à rediriger une partie du flux touristique des destinations surpeuplées (Tokyo, Kyoto) vers cette région authentique située à seulement 1h-1h30 de Tokyo.</p>
+
+                <p class="text-justify">Le site propose un <strong>système de filtrage avancé</strong> (par activités, régions, villes, saisons, accessibilité), une base de données de <strong>10+ lieux touristiques</strong> et <strong>8+ festivals</strong>, et surtout un <strong>constructeur d'itinéraire personnalisé intelligent</strong> qui génère des circuits sur mesure en fonction des centres d'intérêt, du budget, de la durée et de la saison choisie. L'algorithme prend en compte les floraisons saisonnières, les festivals et événements spécifiques pour proposer l'expérience optimale.</p>
+
+                <p class="text-justify">L'application utilise <strong>React Router</strong> pour une navigation fluide, <strong>Framer Motion</strong> pour des animations élégantes, et <strong>Tailwind CSS</strong> pour un design moderne et responsive. Le projet référence une vaste gamme d'activités : nature & aventure (Mont Tsukuba, Hitachi Seaside Park), culture & histoire (Kashima Jingu, Grand Bouddha d'Ushiku), expériences authentiques (ateliers de poterie, dégustation de saké), et détente (onsen, gastronomie locale).</p>
+
+                <!-- Note sur React -->
+                <div class="alert" style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 20px;">
+                    <p style="margin: 0;"><strong>Note technique :</strong> Cette application React nécessite un build de production (<code>npm run build</code>) ou un serveur de développement (<code>npm run dev</code>) pour fonctionner. Les captures d'écran ci-dessus présentent les principales fonctionnalités de la plateforme.</p>
+                    <p style="margin: 10px 0 0 0;"><em>Ce projet est toujours en cours de développement actif.</em></p>
+                </div>
+
 
                 <!-- Technologies -->
                 <div class="tags-block">
@@ -92,23 +118,25 @@
                         <h3>Technology</h3>
                     </div>
                     <ul class="tags">
-                        <li><a>HTML5</a></li>
-                        <li><a>CSS3</a></li>
-                        <li><a>jQuery</a></li>
-                        <li><a>Ajax</a></li>
-                        <li><a>PHP5</a></li>
+                        <li><a>React 18</a></li>
+                        <li><a>Vite</a></li>
+                        <li><a>React Router</a></li>
+                        <li><a>Tailwind CSS</a></li>
+                        <li><a>Framer Motion</a></li>
+                        <li><a>Lucide Icons</a></li>
+                        <li><a>Responsive Design</a></li>
                     </ul>
                 </div>
-                
+
 
                 <!-- Boutons de partage -->
                 <div class="btn-group share-buttons">
                     <div class="block-title">
                         <h3>Share</h3>
                     </div>
-                    <a href="#" target="_blank" class="btn"><i class="fa fa-facebook"></i> </a>
-                    <a href="#" target="_blank" class="btn"><i class="fa fa-twitter"></i> </a>
-                    <a href="#" target="_blank" class="btn"><i class="fa fa-dribbble"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a>
                 </div>
             </div>
         </div>
