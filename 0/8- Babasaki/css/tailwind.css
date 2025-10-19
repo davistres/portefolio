@@ -1,0 +1,142 @@
+/* Tailwind CSS précompilé */
+
+/* Couleurs personnalisées */
+:root {
+  --color-brown: #8B4513;
+  --color-green: #228B22;
+  --color-beige: #F5F5DC;
+  --color-light-beige: #F8F7F2;
+  /* Nouvelles couleurs pour l'harmonisation du header */
+  --color-header-start: #EDE9E0;
+  --color-header-light: #F0EFE8;
+  --color-header-mid: #F3F2EC;
+}
+
+/* Réinitialisation des styles de base */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.mt-auto { margin-top: auto; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-0\.5 { margin-bottom: 0.125rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.ml-4 { margin-left: 1rem; }
+.mr-1 { margin-right: 0.25rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mx-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.pt-4 { padding-top: 1rem; }
+.pt-6 { padding-top: 1.5rem; }
+.pb-8 { padding-bottom: 2rem; }
+.pb-10 { padding-bottom: 2.5rem; }
+.p-4 { padding: 1rem; }
+
+/* Flexbox */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-start { justify-content: flex-start; }
+.space-x-6 > * + * { margin-left: 1.5rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+
+/* Taille et position */
+.absolute { position: absolute; }
+.relative { position: relative; }
+.z-10 { z-index: 10; }
+.z-50 { z-index: 50; }
+.top-0 { top: 0; }
+.top-1 { top: 0.25rem; }
+.top-3 { top: 0.75rem; }
+.top-5 { top: 1.25rem; }
+.top-full { top: 100%; }
+.bottom-1 { bottom: 0.25rem; }
+.bottom-2 { bottom: 0.5rem; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+.h-6 { height: 1.5rem; }
+.w-6 { width: 1.5rem; }
+.h-5 { height: 1.25rem; }
+.w-5 { width: 1.25rem; }
+.h-full { height: 100%; }
+.w-full { width: 100%; }
+.h-0\.5 { height: 0.125rem; }
+
+/* Transformations */
+.transform { transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1); }
+.-translate-x-full { transform: translateX(-100%); }
+.-translate-y-full { transform: translateY(-100%); }
+.translate-y-\[-50\%\] { transform: translateY(-50%); }
+.transition-all { transition-property: all; }
+.transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; }
+.duration-300 { transition-duration: 300ms; }
+.duration-500 { transition-duration: 500ms; }
+
+/* Typographie */
+.text-center { text-align: center; }
+.text-xs { font-size: 0.75rem; line-height: 0rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.whitespace-nowrap { white-space: nowrap; }
+
+/* Couleurs */
+.bg-white { background-color: #fff; }
+.bg-brown { background-color: var(--color-brown); }
+.bg-light-beige { background-color: var(--color-light-beige); }
+.bg-header-start { background-color: var(--color-header-start); }
+.bg-header-light { background-color: var(--color-header-light); }
+.bg-header-mid { background-color: var(--color-header-mid); }
+.text-brown { color: var(--color-brown); }
+.text-green { color: var(--color-green); }
+.text-white { color: #fff; }
+
+/* Bordures */
+.rounded-sm { border-radius: 0.125rem; }
+
+/* Ombres */
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+/* Opacité */
+.opacity-0 { opacity: 0; }
+
+/* Affichage */
+.hidden { display: none; }
+.block { display: block; }
+
+/* Media queries */
+@media (min-width: 768px) {
+  .md\:flex { display: flex; }
+  .md\:hidden { display: none; }
+  .md\:flex-row { flex-direction: row; }
+  .md\:mb-0 { margin-bottom: 0; }
+  .md\:text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+  .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex { display: flex; }
+  .lg\:hidden { display: none; }
+}

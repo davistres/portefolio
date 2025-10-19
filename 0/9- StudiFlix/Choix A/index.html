@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiflix - Vos formations pour l'avenir</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">STUDIFLIX</a>
+                <ul class="nav-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Formations <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <!-- IA -->
+                            <li class="dropdown-submenu">
+                                <a href="#">IA <i class="fas fa-caret-right"></i></a>
+                                <ul class="dropdown-menu-level2">
+                                     <li><a href="#">Introduction à l'IA</a></li>
+                                     <li><a href="#">Machine Learning</a></li>
+                                     <li><a href="#">Deep Learning</a></li>
+                                </ul>
+                            </li>
+                            <!-- Code -->
+                             <li class="dropdown-submenu">
+                                <a href="#">Code & Développement <i class="fas fa-caret-right"></i></a>
+                                <ul class="dropdown-menu-level2">
+                                     <li><a href="#">HTML & CSS</a></li>
+                                     <li><a href="#">JavaScript</a></li>
+                                     <li><a href="#">PHP</a></li>
+                                     <li><a href="#">Python</a></li>
+                                </ul>
+                            </li>
+                            <!-- Marketing -->
+                             <li class="dropdown-submenu">
+                                <a href="#">Marketing Digital <i class="fas fa-caret-right"></i></a>
+                                <ul class="dropdown-menu-level2">
+                                     <li><a href="#">SEO</a></li>
+                                     <li><a href="#">Marketing de Contenu</a></li>
+                                     <li><a href="#">Réseaux Sociaux</a></li>
+                                     <li><a href="#">Publicité en Ligne</a></li>
+                                </ul>
+                            </li>
+                            <!-- Bien-être -->
+                             <li class="dropdown-submenu">
+                                <a href="#">Bien-être & Dev. Perso <i class="fas fa-caret-right"></i></a>
+                                <ul class="dropdown-menu-level2">
+                                     <li><a href="#">Méditation & Pleine Conscience</a></li>
+                                     <li><a href="#">Gestion du Stress</a></li>
+                                     <li><a href="#">Organisation & Productivité</a></li>
+                                </ul>
+                            </li>
+                             <!-- Langues -->
+                            <li class="dropdown-submenu">
+                                <a href="#">Apprentissage des Langues <i class="fas fa-caret-right"></i></a>
+                                <ul class="dropdown-menu-level2">
+                                     <li><a href="#">Français</a></li>
+                                     <li><a href="#">Anglais</a></li>
+                                     <li><a href="#">Japonais</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Le savoir à portée de clic. Développez votre potentiel.</h1>
+                <p>Des milliers de formations vidéo, pour tous les budgets et toutes les ambitions.</p>
+                <button class="cta-button">Explorer les formations</button>
+            </div>
+        </section>
+
+        <!-- ==================== CONTENT SECTION ==================== -->
+        <section class="content-section">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <select name="category" class="filter-select">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="ia">IA</option>
+                    <option value="code">Code & Développement</option>
+                    <option value="marketing">Marketing Digital</option>
+                    <option value="bien-etre">Bien-être</option>
+                    <option value="langues">Langues</option>
+                </select>
+                 <select name="price" class="filter-select">
+                    <option value="all">Tous les prix</option>
+                    <option value="free">Gratuit</option>
+                    <option value="paid">Payant</option>
+                </select>
+            </div>
+
+            <!-- Courses Grid -->
+            <h2>Les plus populaires</h2>
+            <div class="courses-grid">
+                
+                <!-- Card IA: Intro (Gratuit) -->
+                <div class="course-card" data-category="ia" data-subcategory="intro-ia" data-price="free">
+                    <img src="https://i.ytimg.com/vi/NBX-p1tG_do/hq720.jpg" alt="Vignette IA pour les nuls">
+                    <div class="card-content">
+                        <h3>L'IA pour les Nuls : Mythes vs Réalité</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card IA: Machine Learning (Payant) -->
+                <div class="course-card" data-category="ia" data-subcategory="machine-learning" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/NBX-p1tG_do/hq720.jpg" alt="Vignette Machine Learning">
+                    <div class="card-content">
+                        <h3>Cours Complet de Machine Learning avec Python</h3>
+                        <p class="price">79,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="ia" data-subcategory="intro-ia" data-price="free">
+                    <img src="https://i.ytimg.com/vi/NBX-p1tG_do/hq720.jpg" alt="Vignette IA pour les nuls">
+                    <div class="card-content">
+                        <h3>L'IA pour les Nuls : Mythes vs Réalité</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-category="ia" data-subcategory="machine-learning" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/NBX-p1tG_do/hq720.jpg" alt="Vignette Machine Learning">
+                    <div class="card-content">
+                        <h3>Cours Complet de Machine Learning avec Python</h3>
+                        <p class="price">79,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="ia" data-subcategory="deep-learning" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/zNl-a8hJz9U/hq720.jpg" alt="Vignette Deep Learning">
+                    <div class="card-content">
+                        <h3>Deep Learning : Qu'est-ce que c'est ?</h3>
+                        <p class="price">99,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card Code: HTML/CSS (Payant) -->
+                <div class="course-card" data-category="code" data-subcategory="html-css" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/qsbkZ7gA9go/hq720.jpg" alt="Vignette Cours HTML & CSS">
+                    <div class="card-content">
+                        <h3>HTML5 & CSS3 : Créez votre site de A à Z</h3>
+                        <p class="price">49,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Code: JavaScript (Payant) -->
+                <div class="course-card" data-category="code" data-subcategory="javascript" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/aSA1T_h9o4A/hq720.jpg" alt="Vignette Cours JavaScript">
+                    <div class="card-content">
+                        <h3>JavaScript : Devenez un Développeur Front-End</h3>
+                        <p class="price">59,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="code" data-subcategory="html-css" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/qsbkZ7gA9go/hq720.jpg" alt="Vignette Cours HTML & CSS">
+                    <div class="card-content">
+                        <h3>HTML5 & CSS3 : Créez votre site de A à Z</h3>
+                        <p class="price">49,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="code" data-subcategory="javascript" data-price="free">
+                    <img src="https://i.ytimg.com/vi/PkZNo7MFNFc/hq720.jpg" alt="Vignette Cours JavaScript">
+                    <div class="card-content">
+                        <h3>JavaScript Tutorial for Beginners (EN)</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-category="code" data-subcategory="php" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/cwo_84Vl8Gk/hq720.jpg" alt="Vignette Cours PHP">
+                    <div class="card-content">
+                        <h3>PHP & MySQL : Le Cours Complet</h3>
+                        <p class="price">69,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="code" data-subcategory="python" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/oUJd54F1S4I/hq720.jpg" alt="Vignette Cours Python">
+                    <div class="card-content">
+                        <h3>Python pour Débutants : Le Guide Complet</h3>
+                        <p class="price">79,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card Marketing: SEO (Payant) -->
+                <div class="course-card" data-category="marketing" data-subcategory="seo" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/J5b3a4-6k-4/hq720.jpg" alt="Vignette Cours SEO">
+                    <div class="card-content">
+                        <h3>SEO : La méthode pour être N°1 sur Google</h3>
+                        <p class="price">89,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Marketing: Social Media (Payant) -->
+                <div class="course-card" data-category="marketing" data-subcategory="social-media" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/8j_1e4o4J4k/hq720.jpg" alt="Vignette Marketing Instagram">
+                    <div class="card-content">
+                        <h3>Marketing sur Instagram : Guide Complet</h3>
+                        <p class="price">39,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+ <div class="course-card" data-category="marketing" data-subcategory="seo" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/J5b3a4-6k-4/hq720.jpg" alt="Vignette Cours SEO">
+                    <div class="card-content">
+                        <h3>SEO : La méthode pour être N°1 sur Google</h3>
+                        <p class="price">89,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="marketing" data-subcategory="contenu" data-price="free">
+                    <img src="https://i.ytimg.com/vi/mH-USGNotQA/hq720.jpg" alt="Vignette Marketing de contenu">
+                    <div class="card-content">
+                        <h3>Le Marketing de Contenu pour les Débutants</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="marketing" data-subcategory="publicite" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/m0O0YssAhdI/hq720.jpg" alt="Vignette Google Ads">
+                    <div class="card-content">
+                        <h3>Devenir Expert en Publicité Google Ads</h3>
+                        <p class="price">129,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card Bien-être: Méditation (Gratuit) -->
+                <div class="course-card" data-category="bien-etre" data-subcategory="meditation" data-price="free">
+                    <img src="https://i.ytimg.com/vi/69_t-s7pc2U/hq720.jpg" alt="Vignette Méditation">
+                    <div class="card-content">
+                        <h3>Méditation Guidée pour Débutants (10 min)</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-category="bien-etre" data-subcategory="meditation" data-price="free">
+                    <img src="https://i.ytimg.com/vi/inpok4MKV-w/hq720.jpg" alt="Vignette Méditation">
+                    <div class="card-content">
+                        <h3>Méditation Guidée pour apaiser votre esprit</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="bien-etre" data-subcategory="gestion-stress" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/Ld4nWAZ1Xis/hq720.jpg" alt="Vignette Gestion du Stress">
+                    <div class="card-content">
+                        <h3>Gérer son Stress : Techniques Scientifiques</h3>
+                        <p class="price">39,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-category="bien-etre" data-subcategory="productivite" data-price="free">
+                    <img src="https://i.ytimg.com/vi/tS24U_RU6vA/hq720.jpg" alt="Vignette Productivité">
+                    <div class="card-content">
+                        <h3>La Méthode Pomodoro pour Travailler Mieux</h3>
+                        <p class="price free">Gratuit</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Card Langues: Anglais (Payant) -->
+                <div class="course-card" data-category="langues" data-subcategory="anglais" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/ERvdCHv_sLo/hq720.jpg" alt="Vignette Cours Anglais">
+                    <div class="card-content">
+                        <h3>Master English Grammar in 100 Minutes</h3>
+                        <p class="price">29,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="langues" data-subcategory="francais" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/vFzLz2o4I0A/hq720.jpg" alt="Vignette Apprendre le Français">
+                    <div class="card-content">
+                        <h3>Français Authentique : Les Bases</h3>
+                        <p class="price">45,00 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="langues" data-subcategory="anglais" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/ERvdCHv_sLo/hq720.jpg" alt="Vignette Cours Anglais">
+                    <div class="card-content">
+                        <h3>Master English Grammar in 100 Minutes (EN)</h3>
+                        <p class="price">29,99 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="langues" data-subcategory="japonais" data-price="paid">
+                    <img src="https://i.ytimg.com/vi/o_hGzY53-sI/hq720.jpg" alt="Vignette Apprendre le Japonais">
+                    <div class="card-content">
+                        <h3>Apprendre TOUS les Hiragana en 1 Heure</h3>
+                        <p class="price">35,00 €</p>
+                        <div class="card-buttons">
+                            <button class="btn-details">Plus de détails</button>
+                            <button class="btn-add-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="#">Audiodescription</a>
+                        <a href="#">Relations Investisseurs</a>
+                        <a href="#">Mentions légales</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Centre d'aide</a>
+                        <a href="#">Recrutement</a>
+                        <a href="#">Préférences de cookies</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Cartes cadeaux</a>
+                        <a href="#">Conditions d'utilisation</a>
+                        <a href="#">Informations sur l'entreprise</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Presse</a>
+                        <a href="#">Confidentialité</a>
+                        <a href="#">Nous contacter</a>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    © 2024-2025 Studiflix, Inc.
+                </div>
+            </div>
+        </footer>
+
+<!-- ==================== SCRIPT (nouveau) ==================== -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const dropdownToggle = document.querySelector('.dropdown-toggle');
+                const dropdownMenu = document.querySelector('.dropdown-menu');
+
+                dropdownToggle.addEventListener('click', function (event) {
+                    // Empêche le lien de naviguer
+                    event.preventDefault();
+                    // Affiche ou cache le menu
+                    dropdownMenu.classList.toggle('show');
+                    // Empêche le clic de se propager à la fenêtre, ce qui fermerait le menu immédiatement
+                    event.stopPropagation();
+                });
+
+                // Ferme le menu si on clique n'importe où ailleurs sur la page
+                window.addEventListener('click', function () {
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                });
+            });
+        </script>
+
+</body>
+</html>

@@ -1,2 +1,75 @@
-0/
-1/
+# Git
+.git
+
+# ========================================
+# Node.js et dépendances
+# ========================================
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ========================================
+# Fichiers de configuration de build
+# ========================================
+postcss.config.js
+tailwind.config.js
+webpack.config.js
+vite.config.js
+rollup.config.js
+
+# ========================================
+# Dossiers de sources (on garde les fichiers compilés)
+# ========================================
+src/
+source/
+
+# ========================================
+# Fichiers système et éditeurs
+# ========================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ========================================
+# Fichiers temporaires
+# ========================================
+*.log
+*.tmp
+*.temp
+.cache/
+dist/
+build/
+
+# ========================================
+# Fichiers spécifiques au projet
+# ========================================
+# Exclure le dossier 0 SAUF les fichiers nécessaires pour les iframes
+0/*
+!0/1- nanakorobi/
+!0/2- wireframe mockup/
+!0/3- Excercices/
+!0/4- chart js et plotly js/
+!0/5- stationf copie/
+!0/6- CV/
+!0/7- MemoryGame avec mode/
+!0/8- Babasaki/
+!0/9- StudiFlix/
+!0/10- Zoo/
+!0/11- ecoride/
+!0/12- Ibaraki/
+
+# Exclure node_modules dans tous les sous-dossiers de 0/
+0/**/node_modules/
+0/**/package.json
+0/**/package-lock.json
+0/**/postcss.config.js
+0/**/tailwind.config.js
+0/**/src/

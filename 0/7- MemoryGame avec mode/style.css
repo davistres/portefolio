@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#back-to-menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#back-to-menu-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Style pour le H1 principal, géré par JS */
+#game-container > h1 {
+    margin-bottom: 20px;
+}
+
+#game-info {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: rotateY(0deg);
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-content {
+    opacity: 0;
+    max-width: 90%;
+    max-height: 90%;
+    transition: opacity 0.3s 0.2s;
+}
+
+.card.flip .card-content {
+    opacity: 1;
+}
+
+.card.matched {
+    border: solid 4px rgb(0, 255, 0);
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+    background-color: #f9f9f9;
+}
+
+#mode-selection {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#mode-selection h2 {
+    margin-top: 0;
+}
+
+#mode-selection button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#mode-selection button:hover {
+    background-color: #45a049;
+}
+
+
+#high-scores-container {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+}
+#high-scores-container h3, #high-scores-container h4 {
+    text-align: center;
+}
+#high-scores-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+#high-scores-container li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+#high-scores-container li:last-child {
+    border-bottom: none;
+}
+
+.board-disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
