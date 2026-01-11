@@ -27,11 +27,7 @@ build/
 *.tmp
 *.temp
 
-# ========================================
-# Fichiers de script serveur à ignorer
-# ========================================
-START_SERVER_NODE.bat
-START_SERVER.bat
+
 
 # ========================================
 # Règles pour le dossier '0'
