@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>David D'AMORE - Développeur Full Stack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description"
+    content="Développeur full stack spécialisé en JavaScript/TypeScript avec NestJS (pour le back), je maîtrise aussi React avec Next.js (côté front)." />
+  <meta name="keywords"
+    content="développeur, full stack, javascript, typescript, nestjs, react, nextjs, portfolio, david d'amore" />
+  <meta name="author" content="David D'AMORE" />
+  <link rel="shortcut icon" href="favicon.png">
+
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css">
+  <link rel="stylesheet" href="css/transition-animations.css" type="text/css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/custom.css" type="text/css">
+
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+  <!-- Animation de chargement -->
+  <div class="preloader">
+    <div class="preloader-animation">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+
+  <div id="page" class="page">
+    <!-- En-tête -->
+    <header id="site_header" class="header mobile-menu-hide header-color-light">
+      <div class="my-photo tilt-effect">
+        <img src="images/main_photo.webp" alt="Photo de David D'AMORE">
+      </div>
+
+      <div class="site-title-block">
+        <h1 class="site-title">David D'AMORE</h1>
+      </div>
+
+      <!-- Navigation -->
+      <div class="site-nav">
+        <!-- Menu principal -->
+        <ul id="nav" class="site-main-menu">
+          <li>
+            <a class="pt-trigger" href="#home" data-animation="21"><i
+                class="menu-icon pe-7s-icon pe-7s-home"></i>Accueil</a><!-- La valeur de href doit correspondre au data-id de la section, sans le # -->
+          </li>
+          <li>
+            <a class="pt-trigger" href="#about_me" data-animation="17"><i class="menu-icon pe-7s-icon pe-7s-user"></i>À
+              propos</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="#resume" data-animation="18"><i class="menu-icon pe-7s-icon pe-7s-id"></i>CV</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="#portfolio" data-animation="19"><i
+                class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
+          </li>
+          <li>
+            <a class="pt-trigger" href="#contact" data-animation="20"><i
+                class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <!-- En-tête mobile -->
+    <div class="mobile-header mobile-visible">
+      <div class="mobile-logo-container">
+        <div class="mobile-site-title">David D'AMORE</div>
+      </div>
+
+      <a class="menu-toggle mobile-visible">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Flèches de navigation -->
+    <div class="fleches-nav">
+      <div class="fleche-left"><i class="pe-7s-icon pe-7s-angle-left"></i></div>
+      <div class="fleche-right"><i class="pe-7s-icon pe-7s-angle-right"></i></div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div id="main" class="site-main">
+      <!-- Conteneur pour le changement de page -->
+      <div class="pt-wrapper" style="background-image: url(images/main_bg_light.jpg);">
+        <!-- Les autres pages que j'ai appelé: Sous-pages -->
+        <div class="subpages">
+
+          <!-- Sous-page d'accueil -->
+          <section class="pt-page pt-page-1 section-without-bg section-paddings-0 table" data-id="home">
+            <div class="section-inner">
+              <div class="home-page-block">
+                <h2>David D'AMORE</h2>
+                <div class="owl-carousel text-rotation">
+                  <div class="item">
+                    <p class="home-page-description">Développeur Full Stack</p>
+                  </div>
+                  <div class="item">
+                    <p class="home-page-description">NestJS / React (Next.js)</p>
+                  </div>
+                  <div class="item">
+                    <p class="home-page-description">JavaScript / TypeScript</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sous-page "À propos de moi" -->
+          <section class="pt-page pt-page-2" data-id="about_me">
+            <div class="border-block-top-110"></div>
+            <div class="section-inner">
+              <div class="section-title-block">
+                <div class="section-title-wrapper clearfix">
+                  <h2 class="section-title">À propos de moi</h2>
+                  <h5 class="section-description">Développeur, Passionné, Créateur de solutions</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                  <div class="my-photo-block tilt-effect">
+                    <img src="images/main_photo.webp" alt="David D'AMORE">
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                  <h3>Développeur Full-Stack passionné</h3>
+                  <p class="align">Développeur Full-Stack expert de l'écosystème JavaScript / TypeScript, je suis
+                    passionné par l'architecture et la réalisation de solutions web end-to-end, alliant robustesse
+                    back-end et expériences utilisateur front-end fluides et performantes.</p>
+                  <p class="align">Ma spécialisation s'articule autour de NestJS pour la conception d'API
+                    RESTful/GraphQL scalables et maintenables, et de React avec Next.js pour construire des interfaces
+                    utilisateur dynamiques et optimisées.</p>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                  <ul class="info-list">
+                    <li><span class="title">Résidence</span><span class="value">France</span></li>
+                    <li><span class="title">Ville</span><span class="value">Orléans (45000)</span></li>
+                    <li><span class="title">E-mail</span><span class="value"><a
+                          href="mailto:csfwebdesign@gmail.com">csfwebdesign@gmail.com</a></span></li>
+                    <li><span class="title">Téléphone</span><span class="value">06 75 81 14 55</span></li>
+                    <li><span class="title">Statut</span><span class="value available">Disponible</span></li>
+                    <li><span class="title">Spécialité</span><span class="value">NestJS / React</span></li>
+                  </ul>
+
+                  <ul class="social-links">
+                    <li><a class="tip social-button" href="https://www.linkedin.com/in/david-d-amore-362307107/"
+                        title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="tip social-button" href="https://github.com/davistres" title="GitHub"
+                        target="_blank"><i class="fa fa-github"></i></a></li>
+                    <!-- <li><a class="tip social-button" href="https://www.youtube.com/@CSFWebdesign" title="YouTube"
+                        target="_blank"><i class="fa fa-youtube"></i></a></li> -->
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Bloc de compétences -->
+              <div class="block-title">
+                <h3>Compétences</h3>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block">
+                    <div class="service-info">
+                      <i class="service-icon pe-7s-icon pe-7s-server"></i>
+                      <h4>Développement Back-End</h4>
+                      <p>Conception d'API RESTful/GraphQL avec NestJS, architecture modulaire et TypeScript pour des
+                        back-ends robustes et scalables.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block">
+                    <div class="service-info">
+                      <i class="service-icon pe-7s-icon pe-7s-browser"></i>
+                      <h4>Développement Front-End</h4>
+                      <p>Interfaces utilisateur dynamiques avec React et Next.js, optimisées pour le SEO et les
+                        performances grâce au SSR/SSG.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block">
+                    <div class="service-info">
+                      <i class="service-icon pe-7s-icon pe-7s-tools"></i>
+                      <h4>Expertise IA & Automatisation</h4>
+                      <p>Maîtrise des outils IA (LLM, Augment), Prompt Engineering et automatisation avec n8n pour
+                        optimiser les workflows.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block">
+                    <div class="service-info">
+                      <i class="service-icon pe-7s-icon pe-7s-paint-bucket"></i>
+                      <h4>Design & Créativité</h4>
+                      <p>Maîtrise de la suite Adobe Creative Cloud (Photoshop, Illustrator, Premiere Pro) et design
+                        d'interface avec Figma.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sous-page CV -->
+          <section class="pt-page pt-page-3" data-id="resume">
+            <div class="border-block-top-110"></div>
+            <div class="section-inner">
+              <div class="section-title-block">
+                <div class="section-title-wrapper">
+                  <h2 class="section-title">CV</h2>
+                  <h5 class="section-description">Plus de 11 ans d'expérience</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Formation</h3>
+                  </div>
+                  <div class="timeline">
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2025</h5>
+                      <h4 class="event-name">Développeur Full-Stack</h4>
+                      <span class="event-description">Galileo Global Education</span>
+                      <p>Titre RNCP "Développeur web et web mobile" niveau 5. Formation complète en développement
+                        front-end et back-end.</p>
+                    </div>
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2013 - 2014</h5>
+                      <h4 class="event-name">Infographiste Multimédia</h4>
+                      <span class="event-description">Learnfactory (Toulouse)</span>
+                      <p>Formation approfondie sur Photoshop, Illustrator, Flash, InDesign, Dreamweaver et autres outils créatifs.</p>
+                    </div>
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2004 - 2007</h5>
+                      <h4 class="event-name">Licence A.G.E.S.</h4>
+                      <span class="event-description">Université de la Méditerranée</span>
+                      <p>Administration, Gestion, Économie et Sociale - Formation en gestion et économie.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Expérience</h3>
+                  </div>
+                  <div class="timeline">
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2018 - 2024</h5>
+                      <h4 class="event-name">Responsable Marketing Digital</h4>
+                      <span class="event-description">SARL NANAKOROBI YAOKI</span>
+                      <ul>
+                        <li>Pilotage stratégie de marque</li>
+                        <li>Développement de la stratégie digitale
+                          <ul class="sub-item">
+                            <li>Création d'un site e-commerce full-stack (en Symfony)</li>
+                            <li>Gestion plateforme web et community management</li>
+                          </ul>
+                        </li>
+                        <li>Création et production de supports marketing et promotionnels</li>
+                      </ul>
+                    </div>
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2012 - 2016</h5>
+                      <h4 class="event-name">Webdesigner & Développeur Front-End</h4>
+                      <span class="event-description">Auto-entrepreneur</span>
+                      <ul>
+                        <li>Conception et développement de solutions web</li>
+                        <li>Maquettage et intégration responsive</li>
+                        <li>Optimisation SEO</li>
+                        <li>Création d'identités visuelles</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Compétences Techniques</h3>
+                  </div>
+                  <div class="skills-info">
+
+                    <h4>HTML5 / CSS3</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-1"></div>
+                    </div>
+
+                    <h4>Bootstrap</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2-1"></div>
+                    </div>
+
+                    <h4>Tailwind CSS</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2-2"></div>
+                    </div>
+
+                    <h4>JavaScript / TypeScript</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-3"></div>
+                    </div>
+
+                    <h4>React / Next.js</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-4"></div>
+                    </div>
+
+
+                    <h4>NestJS</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-5"></div>
+                    </div>
+
+                    <h4>Laravel</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-6-1"></div>
+                    </div>
+
+                    <h4>Symfony</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-6-2"></div>
+                    </div>
+
+                    <h4>SQL</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-7"></div>
+                    </div>
+                  </div>
+
+                  <div class="block-title">
+                    <h3>Compétences Créatives</h3>
+                  </div>
+                  <div class="skills-info">
+                    <h4>Figma</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-10"></div>
+                    </div>
+
+                    <h4>Adobe Photoshop</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-8"></div>
+                    </div>
+
+                    <h4>Adobe Illustrator</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-9"></div>
+                    </div>
+
+                    <h4>Premiere Pro</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-11"></div>
+                    </div>
+
+                    <h4>After Effects</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="download-cv-block">
+                    <a class="button" target="_blank" href="docs/cv.pdf">Télécharger CV</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Sous-page Portfolio -->
+          <section class="pt-page pt-page-4" data-id="portfolio">
+            <div class="border-block-top-110"></div>
+            <div class="section-inner">
+              <div class="section-title-block">
+                <div class="section-title-wrapper">
+                  <h2 class="section-title">Portfolio</h2>
+                  <h5 class="section-description">Un échantillon de mes projets</h5>
+                </div>
+              </div>
+
+              <!-- Contenu du Portfolio -->
+              <div class="portfolio-content">
+
+                <!-- Filtres du Portfolio -->
+                <ul id="portfolio_filters" class="portfolio-filters">
+                  <li class="active">
+                    <a class="filter btn btn-sm btn-link active" data-group="all">TOUT</a>
+                  </li>
+                  <li>
+                    <a class="filter btn btn-sm btn-link" data-group="media">Projet</a>
+                  </li>
+                  <li>
+                    <a class="filter btn btn-sm btn-link" data-group="illustration">Exercice</a>
+                  </li>
+                  <li>
+                    <a class="filter btn btn-sm btn-link" data-group="video">Maquette</a>
+                  </li>
+                </ul>
+
+                <!-- Grille du Portfolio -->
+                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+                  <!-- Élément Portfolio 1 -->
+                  <figure class="item" data-groups='["all", "media"]'>
+                    <a class="ajax-page-load" href="portfolio-1.html">
+                      <img src="images/portfolio/1.jpg" alt="Nanakorobi Yaoki - Bento-fou">
+                      <div>
+                        <h5 class="name">Nanakorobi Yaoki</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-culture"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 2 -->
+                  <figure class="item" data-groups='["all", "video"]'>
+                    <a class="ajax-page-load" href="portfolio-2.html">
+                      <img src="images/portfolio/2.jpg" alt="Wireframe et Mockup">
+                      <div>
+                        <h5 class="name">Wireframe & Mockup</h5>
+                        <small>Maquette</small>
+                        <i class="pe-7s-icon pe-7s-paint-bucket"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 3 -->
+                  <figure class="item" data-groups='["all","illustration"]'>
+                    <a class="ajax-page-load" href="portfolio-3.html">
+                      <img src="images/portfolio/3.png" alt="Exercices Variés HTML/CSS/JS">
+                      <div>
+                        <h5 class="name">Exercices Variés</h5>
+                        <small>Exercice</small>
+                        <i class="pe-7s-icon pe-7s-study"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 4 -->
+                  <figure class="item" data-groups='["all", "illustration"]'>
+                    <a class="ajax-page-load" href="portfolio-4.html">
+                      <img src="images/portfolio/4.jpg" alt="Visualisation de Données">
+                      <div>
+                        <h5 class="name">Graphiques Interactifs</h5>
+                        <small>Exercice</small>
+                        <i class="pe-7s-icon pe-7s-graph2"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 5 -->
+                  <figure class="item" data-groups='["all", "illustration"]'>
+                    <a class="ajax-page-load" href="portfolio-5.html">
+                      <img src="images/portfolio/5.jpg" alt="Copie du Site Station F">
+                      <div>
+                        <h5 class="name">Copie Station F</h5>
+                        <small>Exercice</small>
+                        <i class="pe-7s-icon pe-7s-browser"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 6 -->
+                  <figure class="item" data-groups='["all", "media"]'>
+                    <a class="ajax-page-load" href="portfolio-6.html">
+                      <img src="images/portfolio/6.jpg" alt="CV David D'AMORE">
+                      <div>
+                        <h5 class="name">Mon CV</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-id"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 7 -->
+                  <figure class="item" data-groups='["all", "illustration"]'>
+                    <a class="ajax-page-load" href="portfolio-7.html">
+                      <img src="images/portfolio/7.jpg" alt="Memory Game Avancé">
+                      <div>
+                        <h5 class="name">Memory Game Avancé</h5>
+                        <small>Exercice</small>
+                        <i class="pe-7s-icon pe-7s-game"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 8 -->
+                  <figure class="item" data-groups='["all",  "media"]'>
+                    <a class="ajax-page-load" href="portfolio-8.html">
+                      <img src="images/portfolio/8.jpg" alt="Babasaki - Diaporama Artisans Japonais">
+                      <div>
+                        <h5 class="name">Babasaki</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-photo-gallery"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 9 -->
+                  <figure class="item" data-groups='["all","media"]'>
+                    <a class="ajax-page-load" href="portfolio-9.html">
+                      <img src="images/portfolio/9.jpg" alt="StudiFlix - Clone Netflix">
+                      <div>
+                        <h5 class="name">StudiFlix</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-play"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 10 -->
+                  <figure class="item" data-groups='["all", "media"]'>
+                    <a class="ajax-page-load" href="portfolio-10.html">
+                      <img src="images/portfolio/10.png" alt="Zoo Arcadia">
+                      <div>
+                        <h5 class="name">Zoo Arcadia</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-culture"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 11 -->
+                  <figure class="item" data-groups='["all","media"]'>
+                    <a class="ajax-page-load" href="portfolio-11.html">
+                      <img src="images/portfolio/11.jpg" alt="EcoRide - Plateforme de Covoiturage">
+                      <div>
+                        <h5 class="name">EcoRide</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-car"></i>
+                      </div>
+                    </a>
+                  </figure>
+
+                  <!-- Élément Portfolio 12 -->
+                  <figure class="item" data-groups='["all","media"]'>
+                    <a class="ajax-page-load" href="portfolio-12.html">
+                      <img src="images/portfolio/12.jpg" alt="Ibaraki Discovery - Tourisme au Japon">
+                      <div>
+                        <h5 class="name">Ibaraki Discovery</h5>
+                        <small>Projet</small>
+                        <i class="pe-7s-icon pe-7s-map-marker"></i>
+                      </div>
+                    </a>
+                  </figure>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- Sous-page Contact -->
+          <section class="pt-page pt-page-5" data-id="contact">
+            <div class="border-block-top-110"></div>
+            <div class="section-inner">
+              <div class="section-title-block">
+                <div class="section-title-wrapper">
+                  <h2 class="section-title">Contact</h2>
+                  <h5 class="section-description">Restons en contact</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="block-title">
+                    <h3>Mes coordonnées</h3>
+                  </div>
+                  <p>Développeur Full-Stack passionné et toujours à l'écoute de nouveaux défis techniques. N'hésitez pas
+                    à me contacter pour discuter de vos projets ou pour toute collaboration.</p>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-map-marker"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>Orléans, France (45000)</h5>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-mail"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>csfwebdesign@gmail.com</h5>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-call"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>06 75 81 14 55</h5>
+                    </div>
+                  </div>
+                  <div class="contact-info-block">
+                    <div class="ci-icon">
+                      <i class="pe-7s-icon pe-7s-check"></i>
+                    </div>
+                    <div class="ci-text">
+                      <h5>Disponible pour missions</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="block-title">
+                    <h3>Formulaire de contact</h3>
+                  </div>
+                  <form id="contact-form" method="post" action="contact_form/contact_form.php">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+                      <div class="form-group">
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Nom complet"
+                          required="required" data-error="Le nom est requis.">
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon pe-7s-user"></i>
+                        <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group">
+                        <input id="form_email" type="email" name="email" class="form-control"
+                          placeholder="Adresse e-mail" required="required"
+                          data-error="Une adresse e-mail valide est requise.">
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon pe-7s-mail"></i>
+                        <div class="help-block with-errors"></div>
+                      </div>
+
+                      <div class="form-group">
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Votre message"
+                          rows="4" required="required" data-error="Merci de laisser un message."></textarea>
+                        <div class="form-control-border"></div>
+                        <i class="form-control-icon pe-7s-comment"></i>
+                        <div class="help-block with-errors"></div>
+                      </div>
+
+                      <input type="submit" class="button btn-send" value="Envoyer le message">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/pages-switcher.js"></script>
+      <script src="js/imagesloaded.pkgd.min.js"></script>
+      <script src="js/validator.js"></script>
+      <script src="js/jquery.shuffle.min.js"></script>
+      <script src="js/masonry.pkgd.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/tilt.jquery.min.js"></script>
+      <script src="js/jquery.hoverdir.js"></script>
+      <script src="js/main.js"></script>
+</body>
+
+</html>

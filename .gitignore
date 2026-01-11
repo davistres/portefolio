@@ -1,0 +1,50 @@
+# ========================================
+# Fichiers système et éditeurs
+# ========================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.docx
+
+# ========================================
+# Dépendances et Fichiers de build
+# ========================================
+**/node_modules/
+dist/
+build/
+.cache/
+
+# ========================================
+# Fichiers temporaires et logs
+# ========================================
+*.log
+*.tmp
+*.temp
+
+# ========================================
+# Fichiers de script serveur à ignorer
+# ========================================
+START_SERVER_NODE.bat
+START_SERVER.bat
+
+# ========================================
+# Règles pour le dossier '0'
+# ========================================
+# Exclure tout le contenu du dossier '0' par défaut...
+0/*
+
+# ...puis ré-inclure spécifiquement les dossiers de projets qui existent.
+!0/3- Excercices/
+!0/4- chart js et plotly js/
+!0/5- stationf copie/
+!0/6- CV/
+!0/7- MemoryGame avec mode/
+!0/8- Babasaki/
+!0/9- StudiFlix/
+

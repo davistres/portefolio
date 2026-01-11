@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudiFlix - Plateforme d'apprentissage en ligne</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo à gauche -->
+            <div class="logo">
+                <a href="#">StudiFlix</a>
+            </div>
+            
+            <!-- Liens de navigation au centre -->
+            <div class="nav-links">
+                <a href="#" class="active">Accueil</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Formations <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#ia">Intelligence Artificielle</a>
+                        <a href="#developpement">Développement Web</a>
+                        <a href="#marketing">Marketing Digital</a>
+                        <a href="#bien-etre">Bien-être</a>
+                        <a href="#langues">Langues</a>
+                    </div>
+                </div>
+                <a href="#">À propos</a>
+                <a href="#">Contact</a>
+            </div>
+            
+            <!-- Actions de navigation (recherche, panier) -->
+            <div class="nav-actions">
+                <button class="search-btn" aria-label="Rechercher"><i class="fas fa-search"></i></button>
+                <button class="cart-btn" aria-label="Panier"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+            </div>
+            
+            <!-- Bouton de connexion à droite -->
+            <button class="login-btn">Connexion</button>
+            
+            <!-- Menu Burger pour mobile -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Apprenez sans limites</h1>
+            <p>Découvrez des milliers de cours en ligne dans tous les domaines, accessibles partout, tout le temps.</p>
+            <div class="hero-buttons">
+                <button class="btn primary-btn">Commencer maintenant</button>
+                <button class="btn secondary-btn">En savoir plus</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="category-filter">Catégorie :</label>
+                <select id="category-filter" class="filter-select">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="ia">Intelligence Artificielle</option>
+                    <option value="developpement">Développement Web</option>
+                    <option value="marketing">Marketing Digital</option>
+                    <option value="bien-etre">Bien-être</option>
+                    <option value="langues">Langues</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="subcategory-filter">Sous-catégorie :</label>
+                <select id="subcategory-filter" class="filter-select" disabled>
+                    <option value="all">Toutes les sous-catégories</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price-filter">Prix :</label>
+                <select id="price-filter" class="filter-select">
+                    <option value="all">Tous les prix</option>
+                    <option value="free">Gratuit</option>
+                    <option value="paid">Payant</option>
+                </select>
+            </div>
+            <button id="reset-filters" class="btn outline-btn">Réinitialiser</button>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <main class="courses-container">
+        <h2 class="section-title">Nos formations populaires</h2>
+        <div class="courses-grid" id="courses-grid">
+            <!-- Les cartes de cours seront générées dynamiquement par JavaScript -->
+        </div>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="video-container">
+                <iframe id="video-iframe" width="100%" height="500" src="" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-details">
+                <h3 id="video-title"></h3>
+                <p id="video-description"></p>
+                <div class="video-actions">
+                    <button class="btn primary-btn">Ajouter au panier</button>
+                    <span id="video-price" class="price"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Votre panier</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            <p class="empty-cart-message">Votre panier est vide</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total :</span>
+                <span id="cart-total-amount">0,00 €</span>
+            </div>
+            <button class="btn primary-btn checkout-btn">Passer la commande</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>StudiFlix</h4>
+                <p>La plateforme d'apprentissage en ligne qui vous accompagne dans votre développement professionnel et personnel.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Formations</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Catégories</h4>
+                <ul>
+                    <li><a href="#ia">Intelligence Artificielle</a></li>
+                    <li><a href="#developpement">Développement Web</a></li>
+                    <li><a href="#marketing">Marketing Digital</a></li>
+                    <li><a href="#bien-etre">Bien-être</a></li>
+                    <li><a href="#langues">Langues</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@studiflix.com</p>
+                <p>Tél: +33 1 23 45 67 89</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StudiFlix. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#">Confidentialité</a>
+                <a href="#">Conditions d'utilisation</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

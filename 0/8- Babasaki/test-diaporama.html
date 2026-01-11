@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Diaporama - Babasaki</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="diaporama.css">
+</head>
+
+<body class="bg-white text-brown">
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <div class="header-container">
+                <!-- Left Side: Logo and Contact Icons (Fixed Position) -->
+                <div class="left-side">
+                    <!-- Logo -->
+                    <div id="logo" class="z-10 transition-all duration-500">
+                        <a href="index.php" class="block logo-link">
+                            <div class="logo">
+                                <p class="logo-en">BABASAKI's woodworking factory</p>
+                                <p class="logo-jp">馬場先木工所</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Navigation (Fixed Position) -->
+                <div class="right-side">
+                    <!-- Hamburger Menu Button (Mobile) -->
+                    <div class="burger-container">
+                        <div id="menu-toggle" class="hamburger-menu">
+                            <div class="icon-left"></div>
+                            <div class="icon-right"></div>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav" aria-label="Menu principal">
+                        <a href="#about" class="nav-link">馬場先木工所とは</a>
+                        <a href="#" class="nav-link">制作実績・賞歴</a>
+                        <a href="#" class="nav-link">お問い合わせ</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Container principal du diaporama -->
+        <div class="slideshow-container fullscreen">
+            <!-- Slides -->
+            <div class="slide active">
+                <img src="diaporama/1.jpg" alt="Diaporama 1" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/2.jpg" alt="Diaporama 2" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/3.jpg" alt="Diaporama 3" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/4.jpg" alt="Diaporama 4" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/5.jpg" alt="Diaporama 5" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/6.jpg" alt="Diaporama 6" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/7.jpg" alt="Diaporama 7" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/8.jpg" alt="Diaporama 8" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/9.jpg" alt="Diaporama 9" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/10.jpg" alt="Diaporama 10" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="diaporama/11.jpg" alt="Diaporama 11" loading="lazy">
+            </div>
+
+            <!-- Texte central japonais vertical -->
+            <div class="central-text">
+                <div class="japanese-vertical-text">
+                    職人の手が生きる、確かな仕上がり
+                </div>
+            </div>
+
+            <!-- Contrôles de navigation -->
+            <button class="nav-btn prev-btn" aria-label="Image précédente">
+                <span>&#8249;</span>
+            </button>
+            <button class="nav-btn next-btn" aria-label="Image suivante">
+                <span>&#8250;</span>
+            </button>
+
+            <!-- Contrôles de lecture -->
+            <div class="controls">
+                <button class="control-btn play-pause-btn" aria-label="Lecture/Pause">
+                    <span class="play-icon">&#9654;</span>
+                    <span class="pause-icon">&#10074;&#10074;</span>
+                </button>
+                <button class="control-btn fullscreen-btn" aria-label="Plein écran">
+                    <span>&#9974;</span>
+                </button>
+            </div>
+
+            <!-- Indicateurs -->
+            <div class="indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
+                <button class="indicator" data-slide="4"></button>
+                <button class="indicator" data-slide="5"></button>
+                <button class="indicator" data-slide="6"></button>
+                <button class="indicator" data-slide="7"></button>
+                <button class="indicator" data-slide="8"></button>
+                <button class="indicator" data-slide="9"></button>
+                <button class="indicator" data-slide="10"></button>
+            </div>
+
+            <!-- Compteur de slides -->
+            <div class="slide-counter">
+                <span class="current-slide">1</span> / <span class="total-slides">11</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="diaporama.js"></script>
+</body>
+
+</html>

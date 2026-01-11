@@ -1,0 +1,132 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" href="portfolio-10.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-12.html"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="pe-7s-icon pe-7s-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>EcoRide - Plateforme de Covoiturage Écologique</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-8 portfolio-block">
+                <!-- Carousel des captures d'écran -->
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/ecoride-1.png" alt="EcoRide - Page d'accueil">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/ecoride-2.png" alt="EcoRide - Recherche de trajets">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/ecoride-3.png" alt="EcoRide - Profil utilisateur">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/ecoride-4.jpg" alt="EcoRide - Réservations">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/ecoride-5.jpg" alt="EcoRide - Messagerie">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/ecoride-6.png" alt="EcoRide - Tableau de bord">
+                    </div>
+                </div>
+
+                
+
+
+
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
+                    }
+
+                    jQuery(document).ready(function($){
+
+                        // Scroll de la page chargée en Ajax
+                        customAjaxScroll();
+
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+
+                    });
+
+                    jQuery(window).on('resize', function() {
+                        customAjaxScroll();
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-12 col-md-4 portfolio-block">
+                <!-- Description du projet -->
+                <div class="block-title">
+                    <h3>Description</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                </ul>
+
+                <p class="text-justify">EcoRide est mon projet le plus ambitieux : une plateforme complète de covoiturage écologique inspirée de BlaBlaCar. Développée avec Laravel et Vue.js, cette application full-stack propose un système complet de recherche de trajets, réservations, messagerie en temps réel, gestion de profils utilisateurs, système de notation et d'avis. Le projet inclut une architecture Docker, une API RESTful, un système d'authentification sécurisé, et une interface utilisateur moderne avec Tailwind CSS. C'est une démonstration complète de mes compétences en développement web full-stack.</p>
+
+
+                <!-- Note sur Docker -->
+                <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin-top: 20px;">
+                    <p style="margin: 0;"><strong>Note :</strong> Ce projet utilise Docker pour son environnement de développement. L'application complète nécessite un backend Laravel et une base de données, elle ne peut donc pas être affichée directement dans un iframe. Les captures d'écran ci-dessus présentent les principales fonctionnalités de la plateforme.</p>
+                </div>
+
+                <!-- Technologies -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologie</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>Laravel</a></li>
+                        <li><a>Vue.js</a></li>
+                        <li><a>PHP</a></li>
+                        <li><a>MySQL</a></li>
+                        <li><a>Tailwind CSS</a></li>
+                        <li><a>Docker</a></li>
+                        <li><a>API REST</a></li>
+                        <li><a>Alpine.js</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Boutons de partage -->
+                <div class="btn-group share-buttons">
+                    <div class="block-title">
+                        <h3>Partage</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <!-- <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

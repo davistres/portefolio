@@ -1,0 +1,162 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" href="portfolio-11.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-1.html"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="pe-7s-icon pe-7s-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Ibaraki Discovery - Tourisme au Japon</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-8 portfolio-block">
+                <!-- Captures d'écran du site -->
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/1- accueil_mobile.png" alt="Ibaraki Discovery - Page d'Accueil - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/2- decouvrez_mobile.png" alt="Ibaraki Discovery - Page Découverte - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/3- festival_mobile.png" alt="Ibaraki Discovery - Festivals - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/4- personnalise_mobile.png" alt="Ibaraki Discovery - Constructeur d'Itinéraire - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/5- about_mobile.png" alt="Ibaraki Discovery - A propos - Mobile">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/6- accueil.png" alt="Ibaraki Discovery - Page d'Accueil">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/7- decouvrez.png" alt="Ibaraki Discovery - Page Découverte">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/8- festival.png" alt="Ibaraki Discovery - Festivals">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/9- personnalise.png" alt="Ibaraki Discovery - Constructeur d'Itinéraire">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/10- about.png" alt="Ibaraki Discovery - A propos">
+                    </div>
+                    <!-- <div class="item">
+                        <div style="text-align: center; padding: 20px; background: #f5f5f5;">
+                            <h4 style="margin-bottom: 15px; color: #ff724c;">📄 Présentation du projet</h4>
+                            <iframe src="docs/IBARAKI DISCOVERY.pdf" style="width: 100%; height: 600px; border: 1px solid #ddd; margin-bottom: 15px;" title="Présentation du projet"></iframe>
+                            <a href="docs/IBARAKI DISCOVERY.pdf" target="_blank" class="button" style="display: inline-block; padding: 10px 20px; background: #ff724c; color: white; text-decoration: none; border-radius: 4px;">
+                                <i class="fa fa-download"></i> Télécharger le PDF
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div style="text-align: center; padding: 20px; background: #f5f5f5;">
+                            <h4 style="margin-bottom: 15px; color: #ff724c;">📄 Liste des lieux touristiques</h4>
+                            <iframe src="docs/Tourisme_IBARKI.pdf" style="width: 100%; height: 600px; border: 1px solid #ddd; margin-bottom: 15px;" title="Liste des lieux touristiques"></iframe>
+                            <a href="docs/Tourisme_IBARKI.pdf" target="_blank" class="button" style="display: inline-block; padding: 10px 20px; background: #ff724c; color: white; text-decoration: none; border-radius: 4px;">
+                                <i class="fa fa-download"></i> Télécharger le PDF
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+
+
+
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
+                    }
+
+                    jQuery(document).ready(function($){
+                        // Scroll de la page chargée en Ajax
+                        customAjaxScroll();
+
+                        // Initialiser le carousel Owl
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+                    });
+
+                    jQuery(window).on('resize', function() {
+                        customAjaxScroll();
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-12 col-md-4 portfolio-block">
+                <!-- Description du projet -->
+                <div class="block-title">
+                    <h3>Description</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                </ul>
+
+                <p class="text-justify"><strong>Ibaraki Discovery</strong> est une plateforme web innovante de promotion du tourisme durable dans la préfecture d'Ibaraki, Japon. Ce projet ambitieux vise à rediriger une partie du flux touristique des destinations surpeuplées (Tokyo, Kyoto) vers cette région authentique située à seulement 1h-1h30 de Tokyo.</p>
+
+                <p class="text-justify">Le site propose un <strong>système de filtrage avancé</strong> (par activités, régions, villes, saisons, accessibilité), une base de données de <strong>lieux touristiques</strong> et de <strong>festivals</strong>, et surtout un <strong>constructeur d'itinéraire personnalisé intelligent</strong> qui génère des circuits sur mesure en fonction des centres d'intérêt, du budget, de la durée et de la saison choisie. L'algorithme prend en compte les floraisons saisonnières, les festivals et événements spécifiques pour proposer l'expérience optimale.</p>
+
+                <p class="text-justify">L'application utilise <strong>React Router</strong> pour une navigation fluide, <strong>Framer Motion</strong> pour des animations élégantes, et <strong>Tailwind CSS</strong> pour un design moderne et responsive. Le projet référence une vaste gamme d'activités : nature & aventure (Mont Tsukuba, Hitachi Seaside Park), culture & histoire (Kashima Jingu, Grand Bouddha d'Ushiku), expériences authentiques (ateliers de poterie, dégustation de saké), et détente (onsen, gastronomie locale).</p>
+
+                <!-- Note sur React -->
+                <div class="alert" style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 20px;">
+                    <p style="margin: 0;"><strong>Note technique :</strong> Cette application React nécessite un build de production (<code>npm run build</code>) ou un serveur de développement (<code>npm run dev</code>) pour fonctionner. Les captures d'écran ci-dessus présentent les principales fonctionnalités de la plateforme.</p>
+                    <p style="margin: 10px 0 0 0;"><em>Ce projet est toujours en cours de développement actif.</em></p>
+                </div>
+
+
+                <!-- Technologies -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologie</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>React 18</a></li>
+                        <li><a>Vite</a></li>
+                        <li><a>React Router</a></li>
+                        <li><a>Tailwind CSS</a></li>
+                        <li><a>Framer Motion</a></li>
+                        <li><a>Lucide Icons</a></li>
+                        <li><a>Responsive Design</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Boutons de partage -->
+                <div class="btn-group share-buttons">
+                    <div class="block-title">
+                        <h3>Partage</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <!-- <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

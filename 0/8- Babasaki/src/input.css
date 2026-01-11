@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés pour le site Babasaki */
+/* Je code en français comme demandé dans les commentaires */
+
+/* Styles généraux */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    min-height: calc(100vh - 160px); /* Hauteur du viewport moins header et footer */
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Styles pour le header et la navigation */
+header .container {
+    width: 100%;
+    max-width: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Conteneur principal du header avec positions fixes */
+.header-container {
+    position: relative;
+    height: 80px;
+    width: 100%;
+}
+
+/* Logo et contacts à gauche */
+.left-side {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+}
+
+/* Navigation à droite */
+.right-side {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+}
+
+/* Style pour l'arrière-plan du menu mobile */
+.mobile-menu-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: url('../image/common/back_img.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    opacity: 0.3; /* Réduction de l'opacité pour mieux s'intégrer */
+    z-index: 0; /* Changé de -1 à 0 pour être cliquable */
+    cursor: pointer; /* Indique que l'élément est cliquable */
+}
+
+/* Animation pour le logo et les contacts */
+#logo.slide-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#contact-numbers.show {
+    transform: translateX(0);
+}
+
+/* Style pour le menu mobile */
+#mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Styles pour l'animation du menu burger */
+#menu-toggle.active .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 3px;
+}
+
+#menu-toggle.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 3px;
+}
+
+/* Styles responsives */
+@media (min-width: 768px) {
+    /* Les styles du header sont gérés dans styles.css - éviter la duplication */
+
+    /* Réduire la largeur du conteneur des numéros à 40% */
+    #contact-numbers {
+        width: 40% !important;
+    }
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 1024px) {
+    /* Styles spécifiques pour les grands écrans */
+    /* Les numéros de téléphone et fax s'affichent directement */
+}

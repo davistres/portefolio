@@ -1,0 +1,98 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" href="portfolio-7.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-9.html"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="pe-7s-icon pe-7s-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Babasaki - Diaporama Artisans Japonais</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-9 portfolio-block">
+                <!-- Diaporama interactif -->
+                <div class="portfolio-page-video" style="position: relative; padding-bottom: 60%; height: 0; overflow: hidden; min-height: 600px;">
+                <iframe class="embed-responsive-item" src="0/8- Babasaki/test-diaporama.html" title="Diaporama Babasaki" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+
+
+
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
+                    }
+
+                    jQuery(document).ready(function($){
+                        // Scroll de la page chargée en Ajax
+                        customAjaxScroll();
+                    });
+
+                    jQuery(window).on('resize', function() {
+                        customAjaxScroll();
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-12 col-md-3 portfolio-block">
+                <!-- Description du projet -->
+                <div class="block-title">
+                    <h3>Description</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                </ul>
+
+                <p class="text-justify">Refonte du site web pour Babasaki. Ce sont des artisans japonais traditionnels. C'est une partie du projet... Je met juste ici le hero slider (diaporama). C'est un diaporama élégant et fluide présentant leur savoir-faire artisanal. La conception respecte scrupuleusement leur charte graphique japonaise et leurs exigences esthétiques, tout en offrant une expérience utilisateur moderne et responsive. Le diaporama utilise des transitions douces pour mettre en avant la beauté de leur travail artisanal.</p>
+
+                <!-- Note sur Docker -->
+                <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin-top: 20px;">
+                    <p style="margin: 0;"><strong>Note :</strong> Ce projet utilise Docker pour son environnement de développement. Il ne peut donc pas être affichée directement dans un iframe. C'est la raison pour laquelle vous n'en voyez qu'une partie.</p>
+                </div>
+
+
+                <!-- Technologies -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologie</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>HTML5</a></li>
+                        <li><a>CSS3</a></li>
+                        <li><a>JavaScript</a></li>
+                        <li><a>Tailwind CSS</a></li>
+                        <li><a>PHP</a></li>
+                        <li><a>Responsive Design</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Boutons de partage -->
+                <div class="btn-group share-buttons">
+                    <div class="block-title">
+                        <h3>Partage</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <!-- <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

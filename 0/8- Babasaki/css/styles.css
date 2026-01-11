@@ -1,0 +1,558 @@
+/*
+   Styles personnalisés pour le site Babasaki
+   Je code en français comme demandé dans les commentaires
+*/
+
+/* Styles généraux */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+    overflow-x: hidden; /* Empêcher le débordement horizontal */
+    max-width: 100%; /* Utiliser 100% au lieu de 100vw pour éviter les problèmes de barre de défilement */
+    box-sizing: border-box; /* Inclure padding et border dans la largeur */
+}
+
+/* Règle globale pour empêcher tout débordement horizontal */
+*, *::before, *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Règle spécifique pour empêcher le débordement des éléments positionnés */
+.location-section-fullwidth,
+.map-container-fullwidth,
+.location-header,
+header,
+.header-wrapper,
+.header-container {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+}
+
+/* Body avec toutes les propriétés fusionnées */
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden; /* Force pour empêcher tout débordement */
+}
+
+/* Styles pour le logo */
+.logo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none !important; /* Supprime le soulignement bleu */
+    color: #8B4513 !important; /* Couleur marron pour le texte */
+    display: block;
+    width: 100%; /* Assure que le lien prend toute la largeur */
+}
+
+.logo-en, .logo-jp {
+    width: 100%; /* Les deux éléments prennent 100% de la largeur du parent */
+    display: block;
+    text-align: center;
+    line-height: 1.1; /* Ajustement de l'interligne pour réduire l'espace */
+    margin: 0; /* Supprime les marges par défaut des balises p */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+}
+
+.logo-jp {
+    margin-top: -2px; /* Réduit l'espace entre les deux lignes */
+    font-size: 1.5rem; /* Taille de police ajustée */
+    letter-spacing: 0.05em; /* Espacement des caractères pour ajuster la largeur */
+    white-space: nowrap;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.logo-en {
+    font-size: 0.75rem; /* Taille de police ajustée */
+    white-space: nowrap;
+    font-weight: 600; /* Semi-bold */
+    color: #8B4513;
+}
+
+/* Ajustements responsifs pour le logo */
+@media (min-width: 768px) {
+    .logo-en {
+        font-size: 0.875rem; /* Légèrement plus grand sur desktop */
+    }
+
+    .logo-jp {
+        font-size: 1.75rem; /* Légèrement plus grand sur desktop */
+    }
+}
+
+main {
+    flex: 1 0 auto;
+    min-height: auto; /* Laisser le contenu définir la hauteur */
+    padding-top: 0; /* Supprimé pour le diaporama fullscreen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement les éléments enfants */
+    position: relative; /* Pour le positionnement du diaporama */
+}
+
+/* Styles spécifiques pour le diaporama dans le main */
+main .slideshow-container {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style pour le conteneur principal */
+main .container {
+    width: 100%;
+    max-width: 1200px; /* Largeur maximale pour les grands écrans */
+    margin: 0 auto; /* Centre horizontalement */
+}
+
+/* Style pour le footer - maintenant géré principalement par Tailwind */
+footer {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 20; /* Au-dessus du diaporama pour être visible */
+}
+
+/* Styles pour le header et la navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+    z-index: 100;
+    /* Couleur unie pour mobile/tablette - l'image est dans mobile-menu-content */
+    background-color: var(--color-light-beige);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Styles pour les grands écrans (desktop) - quand le burger disparaît */
+@media (min-width: 774px) {
+    header {
+        /* Dégradé sophistiqué qui s'harmonise avec l'image back_img.jpg */
+        background: url('../image/common/back_img.jpg'),
+        linear-gradient(to right,
+            #F5F5DC 0%,
+            #F5F5DC 25%,
+            #F3F2EC 50%,
+            #F0EFE8 75%,
+            #F8F7F2 100%
+        );
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+        /* Le dégradé sera visible dans les zones non couvertes par l'image */
+    }
+}
+
+/* Header caché (mode fullscreen desktop) */
+header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Assurer que le header reste visible sur mobile */
+@media (max-width: 768px) {
+    header {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+}
+
+.header-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px; /* Padding réduit sur les côtés */
+    position: relative;
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    max-width: 100%; /* Empêcher le débordement */
+}
+
+
+
+
+/* Conteneur principal du header avec positions fixes */
+.header-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centre verticalement tous les éléments */
+    box-sizing: border-box; /* Inclure padding et border dans la largeur */
+    max-width: 100%; /* Empêcher le débordement */
+}
+
+/* Logo et contacts à gauche */
+.left-side {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 20;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Navigation à droite */
+.right-side {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 20;
+    padding-right: 5px; /* Padding droit pour la navigation desktop */
+}
+
+/* Styles pour les icônes de contact sur mobile */
+.contact-icons-mobile {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+@media (min-width: 396px) {
+    .contact-icons-mobile {
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-icons-mobile {
+        margin-left: 24px;
+    }
+}
+
+@media (min-width: 800px) {
+    .contact-icons-mobile {
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-icons-mobile {
+        display: none; /* Masquer sur desktop */
+    }
+}
+
+.contact-icon {
+    margin: 0 8px;
+}
+
+/* Styles pour les informations de contact sur desktop */
+.contact-info-desktop {
+    display: none;
+    align-items: center;
+    margin-left: 15px;
+}
+
+@media (min-width: 1024px) {
+    .contact-info-desktop {
+        display: flex; /* Afficher sur desktop */
+        margin-left: 100px;
+    }
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item + .contact-item {
+    margin-top: 5px;
+}
+
+/* Styles pour le bouton burger */
+.burger-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+@media (min-width: 774px) {
+    .burger-container {
+        display: none; /* Masquer sur desktop */
+    }
+}
+
+/* Styles pour la navigation desktop */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 24px; /* Espacement uniforme entre les éléments */
+}
+
+@media (min-width: 774px) {
+    .desktop-nav {
+        display: flex; /* Afficher sur desktop */
+    }
+}
+
+.nav-link {
+    color: var(--color-brown);
+    transition: color 0.3s;
+    margin-left: 0; /* Supprimer la marge existante */
+}
+
+.nav-link:hover {
+    color: var(--color-green);
+}
+
+/* Style pour l'arrière-plan du menu mobile */
+.mobile-menu-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: url('../image/common/back_img.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    opacity: 0.3; /* Réduction de l'opacité pour mieux s'intégrer */
+    z-index: 0; /* Pour être cliquable */
+    cursor: pointer; /* Indique que l'élément est cliquable */
+}
+
+/* Animation pour le logo et les contacts */
+#logo.slide-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#contact-numbers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--color-light-beige);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    width: 70%;
+    z-index: 30; /* Augmenté pour être au-dessus des autres éléments */
+    cursor: pointer !important; /* Indique que l'élément est cliquable */
+}
+
+#contact-numbers.show {
+    transform: translateX(0);
+}
+
+.contact-numbers-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Gradient adaptatif pour contact-numbers-container quand le burger n'est pas visible */
+@media (min-width: 774px) {
+    #contact-numbers.show {
+        /* Gradient correspondant à la portion 0%-40% du gradient du header */
+        /* Header: #F5F5DC 0%, #F5F5DC 25%, #F3F2EC 50%, #F0EFE8 75%, #F8F7F2 100% */
+        /* Contact-numbers fait 40% de la largeur du header */
+        /* À 40% du header: entre 25% (#F5F5DC) et 50% (#F3F2EC) */
+        /* Position relative: (40-25)/(50-25) = 15/25 = 0.6 = 60% */
+        /* Interpolation RGB: #F5F5DC vers #F3F2EC à 60% */
+        /* #F5F5DC = rgb(245,245,220), #F3F2EC = rgb(243,242,236) */
+        /* Résultat: rgb(244,244,228) = #F4F4E4 */
+        background: linear-gradient(to right,
+            #F5F5DC 0%,     /* Début identique au header */
+            #F5F5DC 62.5%,  /* 25% du header = 62.5% du container (25/40*100) */
+            #F4F4E4 100%    /* Couleur exacte à 40% du header */
+        );
+    }
+}
+
+.contact-numbers-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajouter un overlay transparent pour capturer les clics */
+.contact-numbers-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+}
+
+/* Espacement entre les lignes de contact */
+.contact-row + .contact-row {
+    margin-top: 10px;
+}
+
+.contact-text {
+    color: var(--color-brown);
+    font-weight: bold;
+}
+
+.contact-number {
+    font-size: 1.125rem;
+}
+
+/* Style pour le menu mobile */
+#mobile-menu {
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    top: 80px; /* Commence juste en dessous du header */
+    right: 0;
+    width: 200px;
+    background-color: var(--color-light-beige);
+    transform: translateX(100%); /* Animation de droite à gauche */
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 50; /* Valeur entre le header et le contenu principal */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    visibility: hidden;
+    overflow-y: auto; /* Permet de défiler si le contenu est trop long */
+}
+
+#mobile-menu.open {
+    transform: translateX(0); /* Changé de translateY à translateX */
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-content {
+    padding: 1rem;
+    padding-top: 0; /* Pas besoin d'espace supplémentaire car nous avons déjà padding-top sur #mobile-menu */
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.mobile-nav-link {
+    color: var(--color-brown);
+    font-size: 1.25rem;
+    transition: color 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.mobile-nav-link:hover {
+    color: var(--color-green);
+}
+
+/* Styles pour l'animation du menu burger */
+.hamburger-menu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 101; /* Valeur supérieure au header pour rester cliquable */
+    transition-duration: 0.5s;
+}
+
+.icon-left, .icon-right {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 3px;
+    width: 15px;
+    top: 15px;
+    background-color: var(--color-brown);
+}
+
+.icon-left {
+    left: 0;
+}
+
+.icon-right {
+    left: 15px;
+}
+
+.icon-left:before, .icon-right:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background-color: var(--color-brown);
+    content: "";
+    top: -8px;
+}
+
+.icon-left:after, .icon-right:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background-color: var(--color-brown);
+    content: "";
+    top: 8px;
+}
+
+/* Animation pour le menu burger */
+.hamburger-menu.open .icon-left {
+    transition-duration: 0.5s;
+    background: transparent;
+}
+
+.hamburger-menu.open .icon-left:before {
+    transform: rotateZ(45deg) scaleX(1.4) translate(0px, 0px);
+}
+
+.hamburger-menu.open .icon-left:after {
+    transform: rotateZ(-45deg) scaleX(1.4) translate(0px, 0px);
+}
+
+.hamburger-menu.open .icon-right {
+    transition-duration: 0.5s;
+    background: transparent;
+}
+
+.hamburger-menu.open .icon-right:before {
+    transform: rotateZ(-45deg) scaleX(1.4) translate(0px, 1px);
+}
+
+.hamburger-menu.open .icon-right:after {
+    transform: rotateZ(45deg) scaleX(1.4) translate(0px, -1px);
+}
+
+/* Styles responsives */
+@media (min-width: 768px) {
+    /* Les styles du header sont déjà définis plus haut - pas besoin de duplication */
+
+    /* Réduire la largeur du conteneur des numéros à 40% */
+    #contact-numbers {
+        width: 40% !important;
+    }
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 1024px) {
+
+    /* Ajustement du padding droit pour la navigation */
+    .right-side {
+        padding-right: 80px;
+    }
+}
+
+
+
+
+
+

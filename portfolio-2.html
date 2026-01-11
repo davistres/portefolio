@@ -1,0 +1,126 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" href="portfolio-1.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-3.html"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="pe-7s-icon pe-7s-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Wireframe et Mockup</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-8 portfolio-block">
+                <!-- Carousel des wireframes et mockups -->
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-1.jpg" alt="Maquette E-Learning - Écran 1">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-2.jpg" alt="Maquette E-Learning - Écran 2">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-3.jpg" alt="Maquette E-Learning - Écran 3">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-4.jpg" alt="Maquette E-Learning - Écran 4">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-5.jpg" alt="Maquette Zoo Arcadia">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-6.jpg" alt="Charte graphique Zoo Arcadia">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/wireframe-7.jpg" alt="Maquette EcoRide">
+                    </div>
+                    <!-- <div class="item">
+                        <img src="images/portfolio/full/wireframe-8.jpg" alt="Exemple d'exercice">
+                    </div> -->
+                </div>
+
+
+
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
+                    }
+
+                    jQuery(document).ready(function($){
+                        // Scroll de la page chargée en Ajax
+                        customAjaxScroll();
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+                    });
+
+                    jQuery(window).on('resize', function() {
+                        customAjaxScroll();
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-12 col-md-4 portfolio-block">
+                <!-- Description du projet -->
+                <div class="block-title">
+                    <h3>Description</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                </ul>
+
+                <p class="text-justify">Collection de wireframes et mockups réalisés avec Figma pour différents projets. Cette galerie présente mes maquettes pour l'application E-Learning, le site du Zoo Arcadia avec sa charte graphique complète et la plateforme EcoRide. Ces maquettes démontrent ma capacité à concevoir des interfaces utilisateur modernes, intuitives et respectueuses des principes UX/UI, en passant du wireframe basse fidélité au mockup haute fidélité.</p>
+
+
+                <!-- Technologies -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologie</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>Figma</a></li>
+                        <li><a>UX/UI Design</a></li>
+                        <li><a>Wireframing</a></li>
+                        <li><a>Mockup</a></li>
+                        <li><a>Design Mobile</a></li>
+                        <li><a>Charte Graphique</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Boutons de partage -->
+                <div class="btn-group share-buttons">
+                    <div class="block-title">
+                        <h3>Partage</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <!-- <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

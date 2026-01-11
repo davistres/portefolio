@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/evenements.js" type="module"></script>
+</head>
+<body>
+    <h1>Formulaire de contact</h1>
+
+    <form id="formulaire">
+        <fieldset id="infos">
+            <legend><h2>Informations</h2></legend>
+
+            <div id="div_nm">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="nom" placeholder="Dupont" required>
+            </div>
+
+            <div id="div_fnm">
+                <label for="firstname">Prénom:</label>
+                <input type="text" id="firstname" name="prénom" placeholder="Dupond" required>
+            </div>
+
+            <div id="choiceStatut">
+                <label for="statut">Statut:</label>
+                <div>
+                    <input type="radio" name="statut" id="particulier" required checked>
+                    <label for="particulier">Particulier</label>
+                </div>
+                <div>
+                    <input type="radio" name="statut" id="professionnel" required>
+                    <label for="professionnel">Professionnel</label>
+                </div>
+            </div>
+
+                <div id="div_st">
+                    <label for="societe">Société:</label>
+                    <input type="text" id="societe" name="societe" placeholder="Nom de la société" required>
+                </div>
+        </fieldset>
+
+        <fieldset id="message">
+            <legend><h2>Massage</h2></legend>
+
+            <div>
+                <label for="objet">Objet:</label>
+                <select type="text" name="objet" id="objet" required>
+                    <option value="demande_de_contact">Demande de contact</option>
+                    <option value="offre_d'emploi" selected>Offre d'emploi</option>
+                    <option value="envoi_d'une_brochure_tarifaire">Envoi d'une brochure tarifaire</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="dupont.dupond@gmail.com" required>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Ecrivez votre message ici..." required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </fieldset>
+    </form>
+</body>
+</html>

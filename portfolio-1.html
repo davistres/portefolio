@@ -1,0 +1,144 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" href="portfolio-12.html"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+                <a class="ajax-page-load" href="portfolio-2.html"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="pe-7s-icon pe-7s-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Nanakorobi Yaoki (Bento-fou)</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-8 portfolio-block">
+                <!-- Carousel des visuels -->
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-1.jpg" alt="Carte de visite - Recto">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-2.jpg" alt="Carte de visite - Verso">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-3.jpg" alt="Site E-commerce - Page 1">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-4.jpg" alt="Site E-commerce - Page 2">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-5.png" alt="Site E-commerce - Page 3">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-6.png" alt="Visuel pour notre com 1">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-7.png" alt="Visuel pour notre com 2">
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-8.jpg" alt="Visuel pour notre com 3">
+                    </div>
+                    <div class="item">
+                        <video controls style="width: 100%; max-height: 600px;">
+                            <source src="images/portfolio/full/BENTO-FOU.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <div class="item">
+                        <video controls style="width: 100%; max-height: 600px;">
+                            <source src="images/portfolio/full/Boosted.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <!-- <div class="item">
+                        <img src="images/portfolio/full/nanakorobi-9.png" alt="Visuel pour notre com 1">
+                    </div> -->
+                </div>
+
+
+
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
+                    }
+
+                    jQuery(document).ready(function($){
+
+                        // Scroll de la page chargée en Ajax
+                        customAjaxScroll();
+
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+
+                    });
+
+                    jQuery(window).on('resize', function() {
+                        customAjaxScroll();
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-12 col-md-4 portfolio-block">
+                <!-- Description du projet -->
+                <div class="block-title">
+                    <h3>Description</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                </ul>
+
+                <p class="text-justify">Nanakorobi Yaoki (Bento-fou) est un projet entrepreneurial complet de vente de plats préparés japonais à emporter, entièrement fait maison. J'ai participé à la création de la marque de A à Z : conception du logo et de l'identité visuelle, création des cartes de visite, développement du site e-commerce, production de visuels pour la communication, merchandising, et bien plus. Ce projet démontre mes compétences en design graphique, développement web, et gestion de projet entrepreneurial.</p>
+
+
+                <!-- Technologies -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologie</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>Adobe Illustrator</a></li>
+                        <li><a>Photoshop</a></li>
+                        <li><a>HTML/CSS</a></li>
+                        <li><a>E-commerce</a></li>
+                        <li><a>Branding</a></li>
+                        <li><a>Design Graphique</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Boutons de partage -->
+                <div class="btn-group share-buttons">
+                    <div class="block-title">
+                        <h3>Partage</h3>
+                    </div>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
+                    <!-- <a href="https://www.youtube.com/@CSFWebdesign" target="_blank" class="btn"><i class="fa fa-youtube"></i> </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
