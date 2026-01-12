@@ -1044,7 +1044,18 @@ text-align: justify;
   width: 70%;
 }
 
+/*Aération (espace) page CV*/
+.row {
+  margin-top: 2rem;
+}
 
+.more-space {
+  margin-top: 2rem;
+}
+
+.less-space {
+  margin-top: -0.8rem;
+}
 
 /* Page Portfolio */
 .portfolio-grid {

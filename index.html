@@ -25,6 +25,8 @@
 
   <script src="js/jquery-2.1.3.min.js"></script>
   <script src="js/modernizr.custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 </head>
 
 <body>
@@ -233,37 +235,58 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-6 col-md-4 subpage-block">
+                  <!-- Expérience -->
                   <div class="block-title">
-                    <h3>Formation</h3>
+                    <h3>Expériences</h3>
                   </div>
                   <div class="timeline">
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">2025</h5>
                       <h4 class="event-name">Développeur Full-Stack</h4>
-                      <span class="event-description">Galileo Global Education</span>
-                      <p>Titre RNCP "Développeur web et web mobile" niveau 5. Formation complète en développement
-                        front-end et back-end.</p>
-                    </div>
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">2013 - 2014</h5>
-                      <h4 class="event-name">Infographiste Multimédia</h4>
-                      <span class="event-description">Learnfactory (Toulouse)</span>
-                      <p>Formation approfondie sur Photoshop, Illustrator, Flash, InDesign, Dreamweaver et autres outils créatifs.</p>
-                    </div>
-                    <div class="timeline-event te-primary">
-                      <h5 class="event-date">2004 - 2007</h5>
-                      <h4 class="event-name">Licence A.G.E.S.</h4>
-                      <span class="event-description">Université de la Méditerranée</span>
-                      <p>Administration, Gestion, Économie et Sociale - Formation en gestion et économie.</p>
+                      <span class="event-description">Freelance</span>
+                      <ul>
+                        <li>Conseil technique et architecture de solutions / Migration et modernisation d'applications
+                          <ul class="sub-item">
+                            <li>Accompagnement des clients dans la définition de leurs besoins</li>
+                            <li>Proposition de solutions adaptées aux objectifs business</li>
+                            <li>Rédaction de spécifications techniques et de plans de développement</li>
+                            <li>Audit et refactoring / Intégration de nouvelles technologies et frameworks modernes</li>
+                          </ul>
+                        </li>
+                        <li>Développement d'applications web et mobiles et de solutions e-commerce personnalisées
+                          <ul class="sub-item">
+                            <li>Développement front-end interactif et mobile first / Création d'APIs RESTful et GraphQL</li>
+                            <li>Gestion et optimisation de bases de données relationnelles (SQL) et NoSQL</li>
+                            <li>Développement de boutiques en ligne performantes et sécurisées</li>
+                            <li>Mise en place de stratégies de SEO</li>
+                          </ul>
+                        </li>
+                        <li>Développement d'interfaces utilisateur avec un focus sur l'UX/UI
+                          <ul class="sub-item">
+                            <li>Création de maquettes et prototypes (wireframes, mockups) / Intégration pixel-perfect</li>
+                            <li>Amélioration continue et optimisation du parcours utilisateur et de l'expérience d'achat</li>
+                          </ul>
+                        </li>
+                        <li>Intégration de solutions basées sur l'IA (LLM, Prompt Engineering)
+                          <ul class="sub-item">
+                            <li>Intégration d'APIs et exploitation d'outils pour des fonctionnalités innovantes</li>
+                            <li>Conception et optimisation de prompts pour des modèles de langage</li>
+                          </ul>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-sm-6 col-md-4 subpage-block">
+
+
+
+
+              <div class="row">
+                <div class="col-sm-12 col-md-6 subpage-block">
+
+                  <!-- Autres expérience -->
                   <div class="block-title">
-                    <h3>Expérience</h3>
+                    <h3>Autres expériences</h3>
                   </div>
                   <div class="timeline">
                     <div class="timeline-event te-primary">
@@ -293,103 +316,115 @@
                       </ul>
                     </div>
                   </div>
+
+
+                  <!-- Formation -->
+                  <div class="block-title more-space">
+                    <h3>Formations</h3>
+                  </div>
+                  <div class="timeline">
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2025</h5>
+                      <h4 class="event-name">Développeur Full-Stack</h4>
+                      <span class="event-description">Galileo Global Education</span>
+                      <p>Titre RNCP "Développeur web et web mobile" niveau 5. Formation complète en développement
+                        front-end et back-end.</p>
+                    </div>
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2013 - 2014</h5>
+                      <h4 class="event-name">Infographiste Multimédia</h4>
+                      <span class="event-description">Learnfactory (Toulouse)</span>
+                      <p>Formation approfondie sur Photoshop, Illustrator, Flash, InDesign, Dreamweaver et autres outils créatifs.</p>
+                    </div>
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2004 - 2007</h5>
+                      <h4 class="event-name">Licence A.G.E.S.</h4>
+                      <span class="event-description">Université de la Méditerranée</span>
+                      <p>Administration, Gestion, Économie et Sociale - Formation en gestion et économie.</p>
+                    </div>
+                  </div>
+
+                  <!-- Ecosysteme de développement -->
+                  <div class="block-title more-space">
+                    <h3>Ecosystème de développement</h3>
+                  </div>
+                  <div>
+                      <ul class="less-space">
+                        <li>Compétences connexes
+                          <ul class="sub-item">
+                            <li>Git / GitHub</li>
+                            <li>Docker</li>
+                            <li>NPM / Webpack</li>
+                            <li>Wordpress / Woocommerce / Divi</li>
+                            <li>Testing / CI/CD</li>
+                          </ul>
+                        </li>
+                        <li>Méthodologie et workflows
+                          <ul class="sub-item">
+                            <li>Gestion de projet Agile : Trello / Jira / Notion</li>
+                            <li>Design d'interface avec Figma</li>                          </ul>
+                        </li>
+                        <li>IA et innovation technologique
+                          <ul class="sub-item">
+                            <li>Exploitation d'outils IA (LLM, Augment...)</li>
+                            <li>Prompt Engineering</li>
+                            <li>Automatisation / création (n8n, Midjourney...)</li>
+                          </ul>
+                        </li>
+                        <li>Compétences transversales
+                          <ul class="sub-item">
+                            <li>Communication et collaboration</li>
+                            <li>En constant apprentissage / Curiosité</li>
+                            <li>Rigueur et souci du détail</li>
+                            <li>Esprit logique et méthodique</li>
+                          </ul>
+                        </li>
+                      </ul>
+                  </div>
+
+
+
+
                 </div>
 
-                <div class="col-sm-6 col-md-4 subpage-block">
+                <div class="col-sm-12 col-md-6 subpage-block">
                   <div class="block-title">
                     <h3>Compétences Techniques</h3>
                   </div>
-                  <div class="skills-info">
-
-                    <h4>HTML5 / CSS3</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-1"></div>
+                  <div class="skills-charts-container">
+                    <div class="chart-wrapper">
+                      <h4 class="chart-title">EXPERTISE</h4>
+                      <canvas id="expertiseChart"></canvas>
                     </div>
-
-                    <h4>Bootstrap</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-2-1"></div>
+                    <div class="chart-wrapper">
+                      <h4 class="chart-title">FRONT</h4>
+                      <canvas id="frontChart"></canvas>
                     </div>
-
-                    <h4>Tailwind CSS</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-2-2"></div>
-                    </div>
-
-                    <h4>JavaScript / TypeScript</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-3"></div>
-                    </div>
-
-                    <h4>React / Next.js</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-4"></div>
-                    </div>
-
-
-                    <h4>NestJS</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-5"></div>
-                    </div>
-
-                    <h4>Laravel</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-6-1"></div>
-                    </div>
-
-                    <h4>Symfony</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-6-2"></div>
-                    </div>
-
-                    <h4>SQL</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-7"></div>
+                    <div class="chart-wrapper">
+                      <h4 class="chart-title">BACK</h4>
+                      <canvas id="backChart"></canvas>
                     </div>
                   </div>
 
-                  <div class="block-title">
+                  <div class="block-title more-space">
                     <h3>Compétences Créatives</h3>
                   </div>
-                  <div class="skills-info">
-                    <h4>Figma</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-10"></div>
-                    </div>
-
-                    <h4>Adobe Photoshop</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-8"></div>
-                    </div>
-
-                    <h4>Adobe Illustrator</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-9"></div>
-                    </div>
-
-                    <h4>Premiere Pro</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-11"></div>
-                    </div>
-
-                    <h4>After Effects</h4>
-                    <div class="skill-container">
-                      <div class="skill-percentage skill-12"></div>
-                    </div>
+                  <div class="creative-skills-container">
+                    <canvas id="creativeChart"></canvas>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-12 col-md-12">
-                  <div class="download-cv-block">
-                    <a class="button" target="_blank" href="docs/cv.pdf">C.V. en PDF</a>
+              <div class="btn-group cv-buttons-container">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="download-cv-block">
+                      <a class="button cv-button" target="_blank" href="docs/cv.pdf">C.V. en PDF</a>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12 col-md-12">
-                  <div class="download-cv-block">
-                    <a class="button" target="_blank" href="https://davistres.github.io/CV/">C.V. - Version web</a>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="download-cv-block">
+                      <a class="button cv-button" target="_blank" href="https://davistres.github.io/CV/">C.V. web</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -689,6 +724,7 @@
       <script src="js/tilt.jquery.min.js"></script>
       <script src="js/jquery.hoverdir.js"></script>
       <script src="js/main.js"></script>
+      <script src="js/charts.js"></script>
 </body>
 
 </html>

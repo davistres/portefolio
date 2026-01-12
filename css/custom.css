@@ -98,3 +98,119 @@
   height: auto;
 }
 
+/* 6. STYLES POUR LES GRAPHIQUES DE COMPÉTENCES */
+.skills-charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.chart-wrapper:hover,
+.creative-skills-container:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+
+.chart-wrapper:hover h4,
+.creative-skills-container:hover h4 {
+  Color: #fff;
+  transition: color 0.3s ease;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chart-wrapper canvas {
+  width: 280px !important;
+  height: 280px !important;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.creative-skills-container {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.creative-skills-container canvas {
+  width: 280px !important;
+  height: 280px !important;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .chart-wrapper,
+  .creative-skills-container {
+    max-width: 250px;
+  }
+
+  .chart-wrapper canvas,
+  .creative-skills-container canvas {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .chart-wrapper,
+  .creative-skills-container {
+    max-width: 220px;
+  }
+
+  .chart-wrapper canvas,
+  .creative-skills-container canvas {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
+/* 7. STYLES POUR LES BOUTONS CV */
+.cv-buttons-container {
+  margin-top: 30px;
+}
+
+.cv-buttons-container .download-cv-block {
+  margin-bottom: 0;
+}
+
+.cv-button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  white-space: nowrap;
+}
+
+
+@media only screen and (min-width: 320px) {
+  .cv-buttons-container .row {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .cv-buttons-container .row {
+    display: flex;
+    margin-bottom: 0rem;
+  }
+}
