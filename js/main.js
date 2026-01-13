@@ -31,31 +31,43 @@
 
     // Validation du formulaire de contact
     $(function () {
+        // Initialisation de EmailJS
+        emailjs.init("_-5Lnp1I5vC07PZY1");
 
         $('#contact-form').validator();
 
         $('#contact-form').on('submit', function (e) {
+            // Que si la validation du formulaire est OK
             if (!e.isDefaultPrevented()) {
-                var url = "contact_form/contact_form.php";
+                e.preventDefault(); // Empêche le rechargement de la page
 
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: $(this).serialize(),
-                    success: function (data)
-                    {
-                        var messageAlert = 'alert-' + data.type;
-                        var messageText = data.message;
-
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                        if (messageAlert && messageText) {
-                            $('#contact-form').find('.messages').html(alertBox);
-                            $('#contact-form')[0].reset();
-                        }
-                    }
+                var form = $(this);
+                var formData = {};
+                form.serializeArray().map(function(item) {
+                    formData[item.name] = item.value;
                 });
-                return false;
+
+                // Identifiant EmailJS
+                var serviceID = "service_d5v10aj";
+                var templateID = "template_c2n4p5f";
+
+                emailjs.send(serviceID, templateID, formData)
+                    .then(function(response) {
+                        // console.log('SUCCESS!', response.status, response.text);
+                        var messageAlert = 'alert-success';
+                        var messageText = "Votre message a bien été envoyé. Merci de m'avoir contacté.";
+                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        form.find('.messages').html(alertBox);
+                        form[0].reset();
+                    }, function(error) {
+                        // console.log('FAILED...', error);
+                        var messageAlert = 'alert-danger';
+                        var messageText = "Il y a eu une erreur lors de l'envoi du message. Veuillez réessayer plus tard. " + (error.text ? error.text : '');
+                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        form.find('.messages').html(alertBox);
+                    });
             }
+            return false; // Au cas où!!!! La valeur « faux » sera toujours envoyée par défaut pour empêcher la soumission du formulaire si celle-ci n'a pas été empêchée auparavant.
         });
     });
 
@@ -127,7 +139,7 @@
             $('#site_header').toggleClass('mobile-menu-hide');
         });
 
-        // Ferme (hide=cache) le menu mobile quand on clique sur un lien du menu
+        // Ferme (=cache) le menu mobile quand on clique sur un lien du menu
         $('.site-main-menu').on("click", "a", function (e) {
             mobileMenuHide();
         });
