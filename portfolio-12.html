@@ -16,38 +16,8 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-8 portfolio-block">
-                <!-- Captures d'écran du site -->
-                <div class="owl-carousel portfolio-page-carousel">
-                    <div class="item">
-                        <img src="images/portfolio/full/1- accueil_mobile.png" alt="Ibaraki Discovery - Page d'Accueil - Mobile">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/2- decouvrez_mobile.png" alt="Ibaraki Discovery - Page Découverte - Mobile">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/3- festival_mobile.png" alt="Ibaraki Discovery - Festivals - Mobile">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/4- personnalise_mobile.png" alt="Ibaraki Discovery - Constructeur d'Itinéraire - Mobile">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/5- about_mobile.png" alt="Ibaraki Discovery - A propos - Mobile">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/6- accueil.png" alt="Ibaraki Discovery - Page d'Accueil">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/7- decouvrez.png" alt="Ibaraki Discovery - Page Découverte">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/8- festival.png" alt="Ibaraki Discovery - Festivals">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/9- personnalise.png" alt="Ibaraki Discovery - Constructeur d'Itinéraire">
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/10- about.png" alt="Ibaraki Discovery - A propos">
-                    </div>
+                <div class="embed-responsive" style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+                    <iframe class="embed-responsive-item" src="https://davistres.github.io/ibaraki-discovery/" style="width: 100%; height: 100%; border: 0;"></iframe>
                 </div>
 
 
@@ -69,17 +39,6 @@
                     jQuery(document).ready(function($){
                         // Scroll de la page chargée en Ajax
                         customAjaxScroll();
-
-                        // Initialiser le carousel Owl
-                        $('.portfolio-page-carousel').owlCarousel({
-                            smartSpeed:1200,
-                            items: 1,
-                            loop: true,
-                            dots: true,
-                            nav: true,
-                            navText: false,
-                            margin: 10
-                        });
                     });
 
                     jQuery(window).on('resize', function() {
@@ -105,11 +64,7 @@
 
                 <p class="text-justify">L'application utilise <strong>React Router</strong> pour une navigation fluide, <strong>Framer Motion</strong> pour des animations élégantes, et <strong>Tailwind CSS</strong> pour un design moderne et responsive. Le projet référence une vaste gamme d'activités : nature & aventure (Mont Tsukuba, Hitachi Seaside Park), culture & histoire (Kashima Jingu, Grand Bouddha d'Ushiku), expériences authentiques (ateliers de poterie, dégustation de saké), et détente (onsen, gastronomie locale).</p>
 
-                <!-- Note sur React -->
-                <div class="alert" style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 20px;">
-                    <p style="margin: 0;"><strong>Note technique :</strong> Cette application React nécessite un build de production (<code>npm run build</code>) ou un serveur de développement (<code>npm run dev</code>) pour fonctionner. Les captures d'écran ci-dessus présentent les principales fonctionnalités de la plateforme.</p>
-                    <p style="margin: 10px 0 0 0;"><em>Ce projet est toujours en cours de développement actif.</em></p>
-                </div>
+
 
 
                 <!-- Technologies -->
