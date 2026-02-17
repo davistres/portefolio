@@ -93,7 +93,19 @@
 
 
 
+                
+
+
+
                                         customAjaxScroll();
+
+
+
+                
+
+
+
+                                    
 
 
 
@@ -109,43 +121,151 @@
 
 
 
-                                        carousel.owlCarousel({
+                                    
 
 
 
-                                            smartSpeed: 1200,
+                
 
 
 
-                                            items: 1,
+                                        // Ensure images and videos are loaded before initializing Owl Carousel
 
 
 
-                                            loop: true,
+                
 
 
 
-                                            dots: true,
+                                        carousel.imagesLoaded(function() {
 
 
 
-                                            nav: true,
+                
 
 
 
-                                            navText: false,
+                                            carousel.owlCarousel({
 
 
 
-                                            margin: 10,
+                
 
 
 
-                                            autoHeight: true
+                                                smartSpeed: 1200,
+
+
+
+                
+
+
+
+                                                items: 1,
+
+
+
+                
+
+
+
+                                                loop: true,
+
+
+
+                
+
+
+
+                                                dots: true,
+
+
+
+                
+
+
+
+                                                nav: true,
+
+
+
+                
+
+
+
+                                                navText: false,
+
+
+
+                
+
+
+
+                                                margin: 10,
+
+
+
+                
+
+
+
+                                                autoHeight: true
+
+
+
+                
+
+
+
+                                            });
+
+
+
+                
+
+
+
+                                    
+
+
+
+                
+
+
+
+                                            // The carousel is now initialized, call positionNavArrows
+
+
+
+                
+
+
+
+                                            positionNavArrows();
+
+
+
+                
 
 
 
                                         });
+
+
+
+                
+
+
+
+                                    
+
+
+
+                
+
+
+
+                                    
 
 
 
@@ -157,7 +277,15 @@
 
 
 
+                
+
+
+
                                             var allMedia = carousel.find('.owl-item img, .owl-item video');
+
+
+
+                
 
 
 
@@ -169,7 +297,19 @@
 
 
 
+                                    
+
+
+
+                
+
+
+
                                             var loadPromises = allMedia.map(function() {
+
+
+
+                
 
 
 
@@ -177,7 +317,15 @@
 
 
 
+                
+
+
+
                                                 var element = this;
+
+
+
+                
 
 
 
@@ -185,7 +333,15 @@
 
 
 
+                
+
+
+
                                                 var resolveHeight = function() {
+
+
+
+                
 
 
 
@@ -193,7 +349,15 @@
 
 
 
+                
+
+
+
                                                     deferred.resolve(height > 0 ? height : Infinity);
+
+
+
+                
 
 
 
@@ -205,7 +369,19 @@
 
 
 
+                                    
+
+
+
+                
+
+
+
                                                 if (element.tagName === 'VIDEO') {
+
+
+
+                
 
 
 
@@ -213,7 +389,15 @@
 
 
 
+                
+
+
+
                                                     else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
+
+
+
+                
 
 
 
@@ -221,7 +405,15 @@
 
 
 
+                
+
+
+
                                                     if (element.complete) resolveHeight();
+
+
+
+                
 
 
 
@@ -229,11 +421,23 @@
 
 
 
+                
+
+
+
                                                 }
 
 
 
+                
+
+
+
                                                 return deferred.promise();
+
+
+
+                
 
 
 
@@ -245,7 +449,19 @@
 
 
 
+                                    
+
+
+
+                
+
+
+
                                             $.when.apply($, loadPromises).done(function() {
+
+
+
+                
 
 
 
@@ -253,7 +469,15 @@
 
 
 
+                
+
+
+
                                                 if (heights.length > 0) {
+
+
+
+                
 
 
 
@@ -261,7 +485,15 @@
 
 
 
+                
+
+
+
                                                     if (minHeight > 0) {
+
+
+
+                
 
 
 
@@ -269,7 +501,15 @@
 
 
 
+                
+
+
+
                                                         var navContainer = carousel.find('.owl-nav');
+
+
+
+                
 
 
 
@@ -277,7 +517,15 @@
 
 
 
+                
+
+
+
                                                             'top': navTopPosition + 'px',
+
+
+
+                
 
 
 
@@ -285,7 +533,15 @@
 
 
 
+                
+
+
+
                                                             'transform': 'translateY(-50%)'
+
+
+
+                
 
 
 
@@ -293,7 +549,15 @@
 
 
 
+                
+
+
+
                                                     }
+
+
+
+                
 
 
 
@@ -301,7 +565,15 @@
 
 
 
+                
+
+
+
                                             });
+
+
+
+                
 
 
 
@@ -313,19 +585,47 @@
 
 
 
-                                        carousel.on('initialized.owl.carousel', function() {
+                                    
 
 
 
-                                            // Un délai pour s'assurer que les images sont bien en cours de chargement
+                
 
 
 
-                                            setTimeout(positionNavArrows, 100);
+                                        // No need for carousel.on('initialized.owl.carousel') here as it's called after imagesLoaded
 
 
 
-                                        });
+                
+
+
+
+                                        // carousel.on('initialized.owl.carousel', function() {
+
+
+
+                
+
+
+
+                                        //     setTimeout(positionNavArrows, 100);
+
+
+
+                
+
+
+
+                                        // });
+
+
+
+                
+
+
+
+                                    
 
 
 
@@ -337,7 +637,15 @@
 
 
 
+                
+
+
+
                                         $(window).on('resize', function() {
+
+
+
+                
 
 
 
@@ -345,7 +653,15 @@
 
 
 
+                
+
+
+
                                             clearTimeout(resizeTimeout);
+
+
+
+                
 
 
 
@@ -353,7 +669,15 @@
 
 
 
+                
+
+
+
                                         });
+
+
+
+                
 
 
 
