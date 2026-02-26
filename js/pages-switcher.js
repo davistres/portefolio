@@ -141,7 +141,18 @@ var PageTransitions = (function ($, options) {
             if(location.hash == location.hash.split('/')[0] + '/' + href.substr(0,href.length-5)){
                 var toLoad =  $(this).attr('href');
                 showContent();
-                ajaxLoadedContent.load(toLoad);
+                ajaxLoadedContent.load(toLoad, function() {
+                    // After the content is loaded, check for and call specific initialization functions.
+                    // This ensures scripts within the loaded AJAX content are executed in the correct context.
+                    if (typeof window.initNanakorobiCarousel === 'function') {
+                        window.initNanakorobiCarousel();
+                    }
+                    // If other portfolio pages have similar dedicated initialization functions,
+                    // add similar checks here. For example:
+                    // if (toLoad === 'portfolio-2.html' && typeof window.initPortfolio2Carousel === 'function') {
+                    //     window.initPortfolio2Carousel();
+                    // }
+                });
                 return false;
             }
         });
