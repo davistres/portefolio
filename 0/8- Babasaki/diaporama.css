@@ -102,8 +102,8 @@
 /* Images - Contraintes pour même taille et suppression bandes blanches */
 .slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Recadre l'image pour remplir le container sans déformation */
+    height: 100% !important;
+    object-fit: cover !important; /* Recadre l'image pour remplir le container sans déformation */
     object-position: center; /* Centre l'image */
     display: block;
     /* Empêcher tout débordement */
