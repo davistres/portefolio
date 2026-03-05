@@ -16,507 +16,509 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-8 portfolio-block">
-                <div class="embed-responsive" style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
-                    <iframe class="embed-responsive-item" src="https://covoit-ecoride-14c9c4043bde.herokuapp.com/" style="width: 100%; height: 100%; border: 0;"></iframe>
+                <div class="embed-responsive"
+                    style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+                    <iframe class="embed-responsive-item" src="https://covoit-ecoride-14c9c4043bde.herokuapp.com/"
+                        style="width: 100%; height: 100%; border: 0;"></iframe>
                 </div>
 
-                
 
 
 
-                                <script type="text/javascript">
 
-                
-
-
-
-                                    function customAjaxScroll() {
-
-                
+                <script type="text/javascript">
 
 
 
-                                        var windowWidth = $(window).width();
-
-                
 
 
-
-                                        if (windowWidth > 991) {
-
-                
+                    function customAjaxScroll() {
 
 
 
-                                            // Scroll personnalisé pour la page Ajax
-
-                
 
 
-
-                                            $("#ajax-page").mCustomScrollbar({
-
-                
+                        var windowWidth = $(window).width();
 
 
 
-                                                scrollInertia: 8,
-
-                
 
 
-
-                                                documentTouchScroll: false
-
-                
+                        if (windowWidth > 991) {
 
 
 
-                                            });
-
-                
 
 
-
-                                        } else {
-
-                
+                            // Scroll personnalisé pour la page Ajax
 
 
 
-                                            $("#ajax-page").mCustomScrollbar('destroy');
-
-                
 
 
+                            $("#ajax-page").mCustomScrollbar({
 
-                                        }
 
-                
+
+
+
+                                scrollInertia: 8,
+
+
+
+
+
+                                documentTouchScroll: false
+
+
+
+
+
+                            });
+
+
+
+
+
+                        } else {
+
+
+
+
+
+                            $("#ajax-page").mCustomScrollbar('destroy');
+
+
+
+
+
+                        }
+
+
+
+
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
+                    jQuery(document).ready(function ($) {
+
+
+
+
+
+                        customAjaxScroll();
+
+
+
+
+
+
+
+
+
+
+
+                        var carousel = $('.portfolio-page-carousel');
+
+
+
+
+
+
+
+
+
+
+
+                        carousel.owlCarousel({
+
+
+
+
+
+                            smartSpeed: 1200,
+
+
+
+
+
+                            items: 1,
+
+
+
+
+
+                            loop: true,
+
+
+
+
+
+                            dots: true,
+
+
+
+
+
+                            nav: true,
+
+
+
+
+
+                            navText: false,
+
+
+
+
+
+                            margin: 10,
+
+
+
+
+
+                            autoHeight: true
+
+
+
+
+
+                        });
+
+
+
+
+
+
+
+
+
+
+
+                        function positionNavArrows() {
+
+
+
+
+
+                            var allMedia = carousel.find('.owl-item img, .owl-item video');
+
+
+
+
+
+                            if (allMedia.length === 0) return;
+
+
+
+
+
+
+
+
+
+
+
+                            var loadPromises = allMedia.map(function () {
+
+
+
+
+
+                                var deferred = $.Deferred();
+
+
+
+
+
+                                var element = this;
+
+
+
+
+
+
+
+
+
+
+
+                                var resolveHeight = function () {
+
+
+
+
+
+                                    var height = $(element).height();
+
+
+
+
+
+                                    deferred.resolve(height > 0 ? height : Infinity);
+
+
+
+
+
+                                };
+
+
+
+
+
+
+
+
+
+
+
+                                if (element.tagName === 'VIDEO') {
+
+
+
+
+
+                                    if (element.readyState >= 1) resolveHeight();
+
+
+
+
+
+                                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
+
+
+
+
+
+                                } else { // IMG
+
+
+
+
+
+                                    if (element.complete) resolveHeight();
+
+
+
+
+
+                                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
+
+
+
+
+
+                                }
+
+
+
+
+
+                                return deferred.promise();
+
+
+
+
+
+                            }).get();
+
+
+
+
+
+
+
+
+
+
+
+                            $.when.apply($, loadPromises).done(function () {
+
+
+
+
+
+                                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
+
+
+
+
+
+                                if (heights.length > 0) {
+
+
+
+
+
+                                    var minHeight = Math.min.apply(null, heights);
+
+
+
+
+
+                                    if (minHeight > 0) {
+
+
+
+
+
+                                        var navTopPosition = minHeight / 2;
+
+
+
+
+
+                                        var navContainer = carousel.find('.owl-nav');
+
+
+
+
+
+                                        navContainer.css({
+
+
+
+
+
+                                            'top': navTopPosition + 'px',
+
+
+
+
+
+                                            'margin-top': '0',
+
+
+
+
+
+                                            'transform': 'translateY(-50%)'
+
+
+
+
+
+                                        });
+
+
 
 
 
                                     }
 
-                
 
 
 
-                
 
-                
+                                }
 
 
 
-                                    jQuery(document).ready(function($){
 
-                
 
+                            });
 
 
-                                        customAjaxScroll();
 
-                
 
 
+                        }
 
-                
 
-                
 
 
 
-                                        var carousel = $('.portfolio-page-carousel');
 
-                
 
 
 
-                
 
-                
 
+                        carousel.on('initialized.owl.carousel', function () {
 
 
-                                        carousel.owlCarousel({
 
-                
 
 
+                            // Un délai pour s'assurer que les images sont bien en cours de chargement
 
-                                            smartSpeed: 1200,
 
-                
 
 
 
-                                            items: 1,
+                            setTimeout(positionNavArrows, 100);
 
-                
 
 
 
-                                            loop: true,
 
-                
+                        });
 
 
 
-                                            dots: true,
 
-                
 
 
 
-                                            nav: true,
 
-                
 
 
 
-                                            navText: false,
+                        var resizeTimeout;
 
-                
 
 
 
-                                            margin: 10,
 
-                
+                        $(window).on('resize', function () {
 
 
 
-                                            autoHeight: true
 
-                
 
+                            customAjaxScroll();
 
 
-                                        });
 
-                
 
 
+                            clearTimeout(resizeTimeout);
 
-                
 
-                
 
 
 
-                                        function positionNavArrows() {
+                            resizeTimeout = setTimeout(positionNavArrows, 250);
 
-                
 
 
 
-                                            var allMedia = carousel.find('.owl-item img, .owl-item video');
 
-                
+                        });
 
 
 
-                                            if (allMedia.length === 0) return;
 
-                
 
+                    });
 
 
-                
 
-                
 
 
-
-                                            var loadPromises = allMedia.map(function() {
-
-                
-
-
-
-                                                var deferred = $.Deferred();
-
-                
-
-
-
-                                                var element = this;
-
-                
-
-
-
-                                                
-
-                
-
-
-
-                                                var resolveHeight = function() {
-
-                
-
-
-
-                                                    var height = $(element).height();
-
-                
-
-
-
-                                                    deferred.resolve(height > 0 ? height : Infinity);
-
-                
-
-
-
-                                                };
-
-                
-
-
-
-                
-
-                
-
-
-
-                                                if (element.tagName === 'VIDEO') {
-
-                
-
-
-
-                                                    if (element.readyState >= 1) resolveHeight();
-
-                
-
-
-
-                                                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
-
-                
-
-
-
-                                                } else { // IMG
-
-                
-
-
-
-                                                    if (element.complete) resolveHeight();
-
-                
-
-
-
-                                                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
-
-                
-
-
-
-                                                }
-
-                
-
-
-
-                                                return deferred.promise();
-
-                
-
-
-
-                                            }).get();
-
-                
-
-
-
-                
-
-                
-
-
-
-                                            $.when.apply($, loadPromises).done(function() {
-
-                
-
-
-
-                                                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
-
-                
-
-
-
-                                                if (heights.length > 0) {
-
-                
-
-
-
-                                                    var minHeight = Math.min.apply(null, heights);
-
-                
-
-
-
-                                                    if (minHeight > 0) {
-
-                
-
-
-
-                                                        var navTopPosition = minHeight / 2;
-
-                
-
-
-
-                                                        var navContainer = carousel.find('.owl-nav');
-
-                
-
-
-
-                                                        navContainer.css({
-
-                
-
-
-
-                                                            'top': navTopPosition + 'px',
-
-                
-
-
-
-                                                            'margin-top': '0',
-
-                
-
-
-
-                                                            'transform': 'translateY(-50%)'
-
-                
-
-
-
-                                                        });
-
-                
-
-
-
-                                                    }
-
-                
-
-
-
-                                                }
-
-                
-
-
-
-                                            });
-
-                
-
-
-
-                                        }
-
-                
-
-
-
-                
-
-                
-
-
-
-                                        carousel.on('initialized.owl.carousel', function() {
-
-                
-
-
-
-                                            // Un délai pour s'assurer que les images sont bien en cours de chargement
-
-                
-
-
-
-                                            setTimeout(positionNavArrows, 100);
-
-                
-
-
-
-                                        });
-
-                
-
-
-
-                
-
-                
-
-
-
-                                        var resizeTimeout;
-
-                
-
-
-
-                                        $(window).on('resize', function() {
-
-                
-
-
-
-                                            customAjaxScroll();
-
-                
-
-
-
-                                            clearTimeout(resizeTimeout);
-
-                
-
-
-
-                                            resizeTimeout = setTimeout(positionNavArrows, 250);
-
-                
-
-
-
-                                        });
-
-                
-
-
-
-                                    });
-
-                
-
-
-
-                                </script>
+                </script>
             </div>
 
             <div class="col-sm-12 col-md-4 portfolio-block">
@@ -525,12 +527,26 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://covoit-ecoride-14c9c4043bde.herokuapp.com/"
+                                target="_blank">heroku.ecoride</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">EcoRide est mon projet le plus ambitieux : une plateforme complète de covoiturage écologique inspirée de BlaBlaCar. Développée avec Laravel et Vue.js, cette application full-stack propose un système complet de recherche de trajets, réservations, messagerie en temps réel, gestion de profils utilisateurs, système de notation et d'avis. Le projet inclut une architecture Docker, une API RESTful, un système d'authentification sécurisé, et une interface utilisateur moderne avec Tailwind CSS. L'application a été déployée sur Heroku avec une base de données JawsDB MySQL. C'est une démonstration complète de mes compétences en développement web full-stack.</p>
+                <p class="text-justify">EcoRide est mon projet le plus ambitieux : une plateforme complète de
+                    covoiturage écologique inspirée de BlaBlaCar. Développée avec Laravel et Vue.js, cette application
+                    full-stack propose un système complet de recherche de trajets, réservations, messagerie en temps
+                    réel, gestion de profils utilisateurs, système de notation et d'avis. Le projet inclut une
+                    architecture Docker, une API RESTful, un système d'authentification sécurisé, et une interface
+                    utilisateur moderne avec Tailwind CSS. L'application a été déployée sur Heroku avec une base de
+                    données JawsDB MySQL. C'est une démonstration complète de mes compétences en développement web
+                    full-stack.</p>
 
                 <!-- Technologies -->
                 <div class="tags-block">
@@ -556,7 +572,8 @@
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
             </div>

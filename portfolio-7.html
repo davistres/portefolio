@@ -17,8 +17,11 @@
         <div class="row">
             <div class="col-sm-12 col-md-8 portfolio-block">
                 <!-- Jeu Memory interactif -->
-                <div class="portfolio-page-video" style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden; min-height: 600px;">
-                <iframe class="embed-responsive-item" src="0/7- MemoryGame avec mode/index.html" title="Memory Game Avancé" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+                <div class="portfolio-page-video"
+                    style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden; min-height: 600px;">
+                    <iframe class="embed-responsive-item" src="0/7- MemoryGame avec mode/index.html"
+                        title="Memory Game Avancé"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
                 </div>
 
                 <script type="text/javascript">
@@ -35,7 +38,7 @@
                         }
                     }
 
-                    jQuery(document).ready(function($){
+                    jQuery(document).ready(function ($) {
                         customAjaxScroll();
 
                         var carousel = $('.portfolio-page-carousel');
@@ -55,11 +58,11 @@
                             var allMedia = carousel.find('.owl-item img, .owl-item video');
                             if (allMedia.length === 0) return;
 
-                            var loadPromises = allMedia.map(function() {
+                            var loadPromises = allMedia.map(function () {
                                 var deferred = $.Deferred();
                                 var element = this;
-                                
-                                var resolveHeight = function() {
+
+                                var resolveHeight = function () {
                                     var height = $(element).height();
                                     deferred.resolve(height > 0 ? height : Infinity);
                                 };
@@ -74,7 +77,7 @@
                                 return deferred.promise();
                             }).get();
 
-                            $.when.apply($, loadPromises).done(function() {
+                            $.when.apply($, loadPromises).done(function () {
                                 var heights = [].slice.call(arguments).filter(h => h !== Infinity);
                                 if (heights.length > 0) {
                                     var minHeight = Math.min.apply(null, heights);
@@ -91,13 +94,13 @@
                             });
                         }
 
-                        carousel.on('initialized.owl.carousel', function() {
+                        carousel.on('initialized.owl.carousel', function () {
                             // Un délai pour s'assurer que les images sont bien en cours de chargement
                             setTimeout(positionNavArrows, 100);
                         });
 
                         var resizeTimeout;
-                        $(window).on('resize', function() {
+                        $(window).on('resize', function () {
                             customAjaxScroll();
                             clearTimeout(resizeTimeout);
                             resizeTimeout = setTimeout(positionNavArrows, 250);
@@ -112,13 +115,24 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://davistres.github.io/MemoryGame-avec-mode/"
+                                target="_blank">github.memory</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">Jeu de Memory interactif développé en JavaScript vanilla avec trois modes de jeu distincts : Mode Libre (sans contrainte), Mode 15 (limité à 15 coups) et Mode Timer (chronométré). Le jeu inclut un système de sauvegarde des meilleurs scores en localStorage, une interface responsive et des animations CSS fluides. Ce projet démontre ma maîtrise du JavaScript ES6+, de la manipulation du DOM et de la gestion d'état côté client.</p>
-                
+                <p class="text-justify">Jeu de Memory interactif développé en JavaScript vanilla avec trois modes de jeu
+                    distincts : Mode Libre (sans contrainte), Mode 15 (limité à 15 coups) et Mode Timer (chronométré).
+                    Le jeu inclut un système de sauvegarde des meilleurs scores en localStorage, une interface
+                    responsive et des animations CSS fluides. Ce projet démontre ma maîtrise du JavaScript ES6+, de la
+                    manipulation du DOM et de la gestion d'état côté client.</p>
+
 
                 <!-- Technologies -->
                 <div class="tags-block">
@@ -134,14 +148,15 @@
                         <li><a>Animations CSS</a></li>
                     </ul>
                 </div>
-                
+
 
                 <!-- Boutons de partage -->
                 <div class="btn-group share-buttons">
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
             </div>

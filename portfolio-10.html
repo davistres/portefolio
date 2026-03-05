@@ -16,8 +16,10 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-8 portfolio-block">
-                <div class="embed-responsive embed-responsive-16by9" style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
-                    <iframe class="embed-responsive-item" src="https://davistres.github.io/ARCADIA/" allowfullscreen></iframe>
+                <div class="embed-responsive"
+                    style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+                    <iframe class="embed-responsive-item" src="https://davistres.github.io/ARCADIA/"
+                        title="Arcadia - Site Web du Zoo" style="width: 100%; height: 100%; border: 0;"></iframe>
                 </div>
             </div>
 
@@ -28,12 +30,29 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://davistres.github.io/ARCADIA/"
+                                target="_blank">github.arcadia</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">Site web complet pour le Zoo Arcadia. Ce projet présente une application web moderne avec un système de routing côté client, permettant une navigation fluide entre les différentes sections : accueil, habitats, services, contact. Le site inclut également des interfaces d'administration pour les employés et vétérinaires, avec un système d'authentification sécurisé. L'interface est entièrement responsive et offre une expérience utilisateur immersive pour découvrir les animaux et habitats du zoo.</p>
+                <p class="text-justify">Application Web Single Page (SPA) développée "from scratch". Ce projet met en
+                    avant une architecture moderne sans framework, intégrant un système de routing dynamique côté client
+                    entièrement personnalisé pour une navigation fluide et instantanée entre les sections (Accueil,
+                    Habitats, Services, Contact).
+
+                    Le site intègre des interfaces différenciées (Administrateur, Employé, Vétérinaire) grâce à un
+                    prototype de gestion de rôles et de session local simulant un flux d'authentification.
+
+                    L'interface, pensée en approche Mobile-First, est entièrement responsive. L'ensemble du projet est
+                    conteneurisé via Docker et servi par Nginx, démontrant ma maîtrise de l'environnement de déploiement
+                    et des bonnes pratiques DevOps de base.</p>
 
                 <!-- Technologies -->
                 <div class="tags-block">
@@ -43,9 +62,13 @@
                     <ul class="tags">
                         <li><a>HTML5</a></li>
                         <li><a>CSS3</a></li>
-                        <li><a>JavaScript</a></li>
+                        <li><a>JavaScript (ES6+)</a></li>
                         <li><a>SPA Routing</a></li>
                         <li><a>Responsive Design</a></li>
+                        <li><a>LocalStorage</a></li>
+                        <li><a>Docker</a></li>
+                        <li><a>Docker Compose</a></li>
+                        <li><a>Nginx</a></li>
                     </ul>
                 </div>
 
@@ -55,10 +78,11 @@
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
-            </div>  
+            </div>
         </div>
     </div>
 </div>

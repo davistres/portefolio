@@ -18,96 +18,98 @@
             <div class="col-sm-12 col-md-8 portfolio-block">
 
                 <!-- Site interactif -->
-                <div class="portfolio-page-video" style="position: relative; padding-bottom: 60%; height: 0; overflow: hidden; min-height: 700px; margin-top: 20px;">
-                <iframe class="embed-responsive-item" src="0/5- stationf copie/index.html" title="Copie du Site Station F" style="width: 100%; height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;"></iframe>
+                <div class="embed-responsive"
+                    style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+                    <iframe class="embed-responsive-item" src="0/5- stationf copie/index.html"
+                        title="Copie du Site Station F" style="width: 100%; height: 100%; border: 0;"></iframe>
                 </div>
 
 
 
-<script type="text/javascript">
-    function customAjaxScroll() {
-        var windowWidth = $(window).width();
-        if (windowWidth > 991) {
-            // Scroll personnalisé pour la page Ajax
-            $("#ajax-page").mCustomScrollbar({
-                scrollInertia: 8,
-                documentTouchScroll: false
-            });
-        } else {
-            $("#ajax-page").mCustomScrollbar('destroy');
-        }
-    }
-
-    jQuery(document).ready(function($){
-        customAjaxScroll();
-
-        var carousel = $('.portfolio-page-carousel');
-
-        // S'assure que toutes les images et vidéos du carrousel sont chargées avant d'initialiser Owl Carousel
-        carousel.imagesLoaded(function() {
-            carousel.owlCarousel({
-                smartSpeed: 1200,
-                items: 1,
-                loop: true,
-                dots: true,
-                nav: true,
-                navText: false,
-                margin: 10,
-                autoHeight: true
-            });
-
-            // Le carrousel est maintenant initialisé et les images sont chargées, donc positionne les flèches de navigation
-            positionNavArrows();
-        });
-
-        function positionNavArrows() {
-            var allMedia = carousel.find('.owl-item img, .owl-item video');
-            if (allMedia.length === 0) return;
-
-            var loadPromises = allMedia.map(function() {
-                var deferred = $.Deferred();
-                var element = this;
-                
-                var resolveHeight = function() {
-                    var height = $(element).height();
-                    deferred.resolve(height > 0 ? height : Infinity);
-                };
-
-                if (element.tagName === 'VIDEO') {
-                    if (element.readyState >= 1) resolveHeight();
-                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
-                } else { // IMG
-                    if (element.complete) resolveHeight();
-                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
-                }
-                return deferred.promise();
-            }).get();
-
-            $.when.apply($, loadPromises).done(function() {
-                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
-                if (heights.length > 0) {
-                    var minHeight = Math.min.apply(null, heights);
-                    if (minHeight > 0) {
-                        var navTopPosition = minHeight / 2;
-                        var navContainer = carousel.find('.owl-nav');
-                        navContainer.css({
-                            'top': navTopPosition + 'px',
-                            'margin-top': '0',
-                            'transform': 'translateY(-50%)'
-                        });
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
                     }
-                }
-            });
-        }
 
-        var resizeTimeout;
-        $(window).on('resize', function() {
-            customAjaxScroll();
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(positionNavArrows, 250);
-        });
-    });
-</script>
+                    jQuery(document).ready(function ($) {
+                        customAjaxScroll();
+
+                        var carousel = $('.portfolio-page-carousel');
+
+                        // S'assure que toutes les images et vidéos du carrousel sont chargées avant d'initialiser Owl Carousel
+                        carousel.imagesLoaded(function () {
+                            carousel.owlCarousel({
+                                smartSpeed: 1200,
+                                items: 1,
+                                loop: true,
+                                dots: true,
+                                nav: true,
+                                navText: false,
+                                margin: 10,
+                                autoHeight: true
+                            });
+
+                            // Le carrousel est maintenant initialisé et les images sont chargées, donc positionne les flèches de navigation
+                            positionNavArrows();
+                        });
+
+                        function positionNavArrows() {
+                            var allMedia = carousel.find('.owl-item img, .owl-item video');
+                            if (allMedia.length === 0) return;
+
+                            var loadPromises = allMedia.map(function () {
+                                var deferred = $.Deferred();
+                                var element = this;
+
+                                var resolveHeight = function () {
+                                    var height = $(element).height();
+                                    deferred.resolve(height > 0 ? height : Infinity);
+                                };
+
+                                if (element.tagName === 'VIDEO') {
+                                    if (element.readyState >= 1) resolveHeight();
+                                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
+                                } else { // IMG
+                                    if (element.complete) resolveHeight();
+                                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
+                                }
+                                return deferred.promise();
+                            }).get();
+
+                            $.when.apply($, loadPromises).done(function () {
+                                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
+                                if (heights.length > 0) {
+                                    var minHeight = Math.min.apply(null, heights);
+                                    if (minHeight > 0) {
+                                        var navTopPosition = minHeight / 2;
+                                        var navContainer = carousel.find('.owl-nav');
+                                        navContainer.css({
+                                            'top': navTopPosition + 'px',
+                                            'margin-top': '0',
+                                            'transform': 'translateY(-50%)'
+                                        });
+                                    }
+                                }
+                            });
+                        }
+
+                        var resizeTimeout;
+                        $(window).on('resize', function () {
+                            customAjaxScroll();
+                            clearTimeout(resizeTimeout);
+                            resizeTimeout = setTimeout(positionNavArrows, 250);
+                        });
+                    });
+                </script>
             </div>
 
             <div class="col-sm-12 col-md-4 portfolio-block">
@@ -116,13 +118,24 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://davistres.github.io/stationf_homecopie_nojs/"
+                                target="_blank">github.stationf</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">Reproduction du site officiel de Station F, le plus grand campus de startups au monde situé à Paris.</p>
-                <p class="text-justify">Ce projet m'a permis de pratiquer et d'améliorer mes compétences en responsive design et en développement web (en HTML et en CSS), afin de copier la structure et le design du site original. J'ai recréé les différentes sections du site, y compris la présentation du campus, les programmes d'accompagnement et les espaces de travail.</p>
+                <p class="text-justify">Reproduction du site officiel de Station F (de l'époque), le plus grand campus
+                    de startups au monde situé à Paris.</p>
+                <p class="text-justify">Ce projet m'a permis de pratiquer et d'améliorer mes compétences en responsive
+                    design et en développement web (en HTML et en CSS), afin de copier la structure et le design du site
+                    original. J'ai recréé les différentes sections du site, y compris la présentation du campus, les
+                    programmes d'accompagnement et les espaces de travail.</p>
 
 
                 <!-- Technologies -->
@@ -143,7 +156,8 @@
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
             </div>
