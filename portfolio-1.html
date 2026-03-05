@@ -56,90 +56,90 @@
                     </div>
                 </div>
 
-<script type="text/javascript">
-    function initNanakorobiCarousel() {
-        function customAjaxScroll() {
-            var windowWidth = $(window).width();
-            if (windowWidth > 991) {
-                // Scroll personnalisé pour la page Ajax
-                $("#ajax-page").mCustomScrollbar({
-                    scrollInertia: 8,
-                    documentTouchScroll: false
-                });
-            } else {
-                $("#ajax-page").mCustomScrollbar('destroy');
-            }
-        }
+                <script type="text/javascript">
+                    function initNanakorobiCarousel() {
+                        function customAjaxScroll() {
+                            var windowWidth = $(window).width();
+                            if (windowWidth > 991) {
+                                // Scroll personnalisé pour la page Ajax
+                                $("#ajax-page").mCustomScrollbar({
+                                    scrollInertia: 8,
+                                    documentTouchScroll: false
+                                });
+                            } else {
+                                $("#ajax-page").mCustomScrollbar('destroy');
+                            }
+                        }
 
-        customAjaxScroll();
+                        customAjaxScroll();
 
-        var carousel = $('.portfolio-page-carousel');
+                        var carousel = $('.portfolio-page-carousel');
 
-        // S'assure que toutes les images et vidéos du carrousel sont chargées avant d'initialiser Owl Carousel
-        carousel.imagesLoaded(function() {
-            carousel.owlCarousel({
-                smartSpeed: 1200,
-                items: 1,
-                loop: true,
-                dots: true,
-                nav: true,
-                navText: false,
-                margin: 10,
-                autoHeight: true
-            });
+                        // S'assure que toutes les images et vidéos du carrousel sont chargées avant d'initialiser Owl Carousel
+                        carousel.imagesLoaded(function () {
+                            carousel.owlCarousel({
+                                smartSpeed: 1200,
+                                items: 1,
+                                loop: true,
+                                dots: true,
+                                nav: true,
+                                navText: false,
+                                margin: 10,
+                                autoHeight: true
+                            });
 
-            // Le carrousel est maintenant initialisé et les images sont chargées, donc positionne les flèches de navigation
-            positionNavArrows();
-        });
+                            // Le carrousel est maintenant initialisé et les images sont chargées, donc positionne les flèches de navigation
+                            positionNavArrows();
+                        });
 
-        function positionNavArrows() {
-            var allMedia = carousel.find('.owl-item img, .owl-item video');
-            if (allMedia.length === 0) return;
+                        function positionNavArrows() {
+                            var allMedia = carousel.find('.owl-item img, .owl-item video');
+                            if (allMedia.length === 0) return;
 
-            var loadPromises = allMedia.map(function() {
-                var deferred = $.Deferred();
-                var element = this;
-                
-                var resolveHeight = function() {
-                    var height = $(element).height();
-                    deferred.resolve(height > 0 ? height : Infinity);
-                };
+                            var loadPromises = allMedia.map(function () {
+                                var deferred = $.Deferred();
+                                var element = this;
 
-                if (element.tagName === 'VIDEO') {
-                    if (element.readyState >= 1) resolveHeight();
-                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
-                } else { // IMG
-                    if (element.complete) resolveHeight();
-                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
-                }
-                return deferred.promise();
-            }).get();
+                                var resolveHeight = function () {
+                                    var height = $(element).height();
+                                    deferred.resolve(height > 0 ? height : Infinity);
+                                };
 
-            $.when.apply($, loadPromises).done(function() {
-                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
-                if (heights.length > 0) {
-                    var minHeight = Math.min.apply(null, heights);
-                    if (minHeight > 0) {
-                        var navTopPosition = minHeight / 2;
-                        var navContainer = carousel.find('.owl-nav');
-                        navContainer.css({
-                            'top': navTopPosition + 'px',
-                            'margin-top': '0',
-                            'transform': 'translateY(-50%)'
+                                if (element.tagName === 'VIDEO') {
+                                    if (element.readyState >= 1) resolveHeight();
+                                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
+                                } else { // IMG
+                                    if (element.complete) resolveHeight();
+                                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
+                                }
+                                return deferred.promise();
+                            }).get();
+
+                            $.when.apply($, loadPromises).done(function () {
+                                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
+                                if (heights.length > 0) {
+                                    var minHeight = Math.min.apply(null, heights);
+                                    if (minHeight > 0) {
+                                        var navTopPosition = minHeight / 2;
+                                        var navContainer = carousel.find('.owl-nav');
+                                        navContainer.css({
+                                            'top': navTopPosition + 'px',
+                                            'margin-top': '0',
+                                            'transform': 'translateY(-50%)'
+                                        });
+                                    }
+                                }
+                            });
+                        }
+
+                        var resizeTimeout;
+                        $(window).on('resize', function () {
+                            customAjaxScroll();
+                            clearTimeout(resizeTimeout);
+                            resizeTimeout = setTimeout(positionNavArrows, 250);
                         });
                     }
-                }
-            });
-        }
-
-        var resizeTimeout;
-        $(window).on('resize', function() {
-            customAjaxScroll();
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(positionNavArrows, 250);
-        });
-    }
-</script>
+                </script>
             </div>
 
             <div class="col-sm-12 col-md-4 portfolio-block">
@@ -148,33 +148,63 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://github.com/davistres"
+                                target="_blank">github.com/davistres</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">Nanakorobi Yaoki (Bento-fou) est un projet entrepreneurial complet de vente de plats préparés japonais à emporter, entièrement fait maison. J'ai participé à la création de la marque de A à Z : conception du logo et de l'identité visuelle, création des cartes de visite, développement du site e-commerce, production de visuels pour la communication, merchandising, et bien plus. Ce projet démontre mes compétences en développement web, design graphique et gestion de projet entrepreneurial.</p>
+                <p class="text-justify">Nanakorobi Yaoki (Bento-fou) est un projet entrepreneurial complet de vente de
+                    plats préparés japonais à emporter, entièrement fait maison. J'ai participé à la création de la
+                    marque de A à Z : conception du logo et de l'identité visuelle, création des cartes de visite,
+                    développement du site e-commerce, production de visuels pour la communication, merchandising, et
+                    bien plus. Ce projet démontre mes compétences en développement web, design graphique et gestion de
+                    projet entrepreneurial.</p>
                 <p class="text-justify">Ce projet a duré de 2018 à 2024.</p>
                 <br>
-                <p class="text-justify">Le site e-commerce, développé dans un premier temps sous WordPress (Divi) et WooCommerce puis migré vers le framework Symfony et le CMS Sylius, était une plateforme complémentaire à notre activité principale de restauration rapide. Il permettait de vendre en ligne des produits asiatiques non alimentaires et disposait d'un système de paiement sécurisé, d'une gestion des stocks et d'une interface d'administration intuitive.</p>
-                <p class="text-justify">De plus, il était couplet à des produits liées à une plateforme de print on demand (POD) qui permettait de personnaliser des produits (t-shirts, pulls, mugs, etc.) avec nos designs.</p>
-                
+                <p class="text-justify">Le site e-commerce, développé dans un premier temps sous WordPress (Divi) et
+                    WooCommerce puis migré vers le framework Symfony et le CMS Sylius, était une plateforme
+                    complémentaire à notre activité principale de restauration rapide. Il permettait de vendre en ligne
+                    des produits asiatiques non alimentaires et disposait d'un système de paiement sécurisé, d'une
+                    gestion des stocks et d'une interface d'administration intuitive.</p>
+                <p class="text-justify">De plus, il était couplet à des produits liées à une plateforme de print on
+                    demand (POD) qui permettait de personnaliser des produits (t-shirts, pulls, mugs, etc.) avec nos
+                    designs.</p>
+
                 <!-- Technologies -->
                 <div class="tags-block">
                     <div class="block-title">
-                        <h3>Technologie</h3>
+                        <h3>Technologies / Compétences</h3>
                     </div>
                     <ul class="tags">
-                        <li><a>PHP </a></li>
+                        <li><a>PHP</a></li>
                         <li><a>Symfony / Sylius</a></li>
                         <li><a>MySQL</a></li>
                         <li><a>JavaScript</a></li>
                         <li><a>HTML/CSS</a></li>
                         <li><a>E-commerce</a></li>
+                        <li><a>Wordpress</a></li>
+                        <li><a>WooCommerce</a></li>
                         <li><a>Branding</a></li>
                         <li><a>Design Graphique</a></li>
-                        <li><a>Adobe Illustrator</a></li>
+                        <li><a>Illustrator</a></li>
                         <li><a>Photoshop</a></li>
+                        <li><a>Adobe XD</a></li>
+                        <li><a>Premiere Pro</a></li>
+                        <li><a>Print on Demand</a></li>
+                        <li><a>Merchandising</a></li>
+                        <li><a>Gestion de projet</a></li>
+                        <li><a>Marketing</a></li>
+                        <li><a>Stratégie de marque</a></li>
+                        <li><a>Stratégie de communication</a></li>
+                        <li><a>Stratégie de vente</a></li>
+                        <li><a>Stratégie de marketing</a></li>
                     </ul>
                 </div>
 
@@ -184,7 +214,8 @@
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
             </div>

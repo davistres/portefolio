@@ -50,90 +50,90 @@
                     </div>
                 </div>
 
-<script type="text/javascript">
-    function customAjaxScroll() {
-        var windowWidth = $(window).width();
-        if (windowWidth > 991) {
-            // Scroll personnalisé pour la page Ajax
-            $("#ajax-page").mCustomScrollbar({
-                scrollInertia: 8,
-                documentTouchScroll: false
-            });
-        } else {
-            $("#ajax-page").mCustomScrollbar('destroy');
-        }
-    }
-
-    jQuery(document).ready(function($){
-        customAjaxScroll();
-
-        var carousel = $('.portfolio-page-carousel');
-
-        // S'assure que toutes les images et vidéos du carrousel sont chargées avant d'initialiser Owl Carousel
-        carousel.imagesLoaded(function() {
-            carousel.owlCarousel({
-                smartSpeed: 1200,
-                items: 1,
-                loop: true,
-                dots: true,
-                nav: true,
-                navText: false,
-                margin: 10,
-                autoHeight: true
-            });
-
-            // Le carrousel est maintenant initialisé et les images sont chargées, donc positionne les flèches de navigation
-            positionNavArrows();
-        });
-
-        function positionNavArrows() {
-            var allMedia = carousel.find('.owl-item img, .owl-item video');
-            if (allMedia.length === 0) return;
-
-            var loadPromises = allMedia.map(function() {
-                var deferred = $.Deferred();
-                var element = this;
-                
-                var resolveHeight = function() {
-                    var height = $(element).height();
-                    deferred.resolve(height > 0 ? height : Infinity);
-                };
-
-                if (element.tagName === 'VIDEO') {
-                    if (element.readyState >= 1) resolveHeight();
-                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
-                } else { // IMG
-                    if (element.complete) resolveHeight();
-                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
-                }
-                return deferred.promise();
-            }).get();
-
-            $.when.apply($, loadPromises).done(function() {
-                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
-                if (heights.length > 0) {
-                    var minHeight = Math.min.apply(null, heights);
-                    if (minHeight > 0) {
-                        var navTopPosition = minHeight / 2;
-                        var navContainer = carousel.find('.owl-nav');
-                        navContainer.css({
-                            'top': navTopPosition + 'px',
-                            'margin-top': '0',
-                            'transform': 'translateY(-50%)'
-                        });
+                <script type="text/javascript">
+                    function customAjaxScroll() {
+                        var windowWidth = $(window).width();
+                        if (windowWidth > 991) {
+                            // Scroll personnalisé pour la page Ajax
+                            $("#ajax-page").mCustomScrollbar({
+                                scrollInertia: 8,
+                                documentTouchScroll: false
+                            });
+                        } else {
+                            $("#ajax-page").mCustomScrollbar('destroy');
+                        }
                     }
-                }
-            });
-        }
 
-        var resizeTimeout;
-        $(window).on('resize', function() {
-            customAjaxScroll();
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(positionNavArrows, 250);
-        });
-    });
-</script>
+                    jQuery(document).ready(function ($) {
+                        customAjaxScroll();
+
+                        var carousel = $('.portfolio-page-carousel');
+
+                        // S'assure que toutes les images et vidéos du carrousel sont chargées avant d'initialiser Owl Carousel
+                        carousel.imagesLoaded(function () {
+                            carousel.owlCarousel({
+                                smartSpeed: 1200,
+                                items: 1,
+                                loop: true,
+                                dots: true,
+                                nav: true,
+                                navText: false,
+                                margin: 10,
+                                autoHeight: true
+                            });
+
+                            // Le carrousel est maintenant initialisé et les images sont chargées, donc positionne les flèches de navigation
+                            positionNavArrows();
+                        });
+
+                        function positionNavArrows() {
+                            var allMedia = carousel.find('.owl-item img, .owl-item video');
+                            if (allMedia.length === 0) return;
+
+                            var loadPromises = allMedia.map(function () {
+                                var deferred = $.Deferred();
+                                var element = this;
+
+                                var resolveHeight = function () {
+                                    var height = $(element).height();
+                                    deferred.resolve(height > 0 ? height : Infinity);
+                                };
+
+                                if (element.tagName === 'VIDEO') {
+                                    if (element.readyState >= 1) resolveHeight();
+                                    else $(element).on('loadedmetadata', resolveHeight).on('error', () => deferred.resolve(Infinity));
+                                } else { // IMG
+                                    if (element.complete) resolveHeight();
+                                    else $(element).on('load', resolveHeight).on('error', () => deferred.resolve(Infinity));
+                                }
+                                return deferred.promise();
+                            }).get();
+
+                            $.when.apply($, loadPromises).done(function () {
+                                var heights = [].slice.call(arguments).filter(h => h !== Infinity);
+                                if (heights.length > 0) {
+                                    var minHeight = Math.min.apply(null, heights);
+                                    if (minHeight > 0) {
+                                        var navTopPosition = minHeight / 2;
+                                        var navContainer = carousel.find('.owl-nav');
+                                        navContainer.css({
+                                            'top': navTopPosition + 'px',
+                                            'margin-top': '0',
+                                            'transform': 'translateY(-50%)'
+                                        });
+                                    }
+                                }
+                            });
+                        }
+
+                        var resizeTimeout;
+                        $(window).on('resize', function () {
+                            customAjaxScroll();
+                            clearTimeout(resizeTimeout);
+                            resizeTimeout = setTimeout(positionNavArrows, 250);
+                        });
+                    });
+                </script>
             </div>
 
             <div class="col-sm-12 col-md-4 portfolio-block">
@@ -142,18 +142,44 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://github.com/davistres" target="_blank">github.com/davistres</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://github.com/davistres"
+                                target="_blank">github.com/davistres</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">Une collection de wireframes et mockups réalisés sur Figma. Vous trouverez dans cette galerie mes travaux pour divers projets : une application d'e-learning, le site du Zoo Arcadia (et son prototype), un blog, la plateforme EcoRide, ou encore les sites Osez Noël et Yummy Nouilles. De la conception basse fidélité au mockup haute fidélité, ces réalisations illustrent ma capacité à créer des interfaces utilisateurs modernes, intuitives et pensées pour l'UX/UI.</p>
+                <p class="text-justify">Échantillons de Wireframes et Mockups réalisés sur Figma
+                    pour une grande diversité de projets web et mobiles.</p>
+                <p class="text-justify">Ce portfolio d'interfaces illustre mon processus de conception centrée
+                    utilisateur (UX/UI), en passant de la maquette basse fidélité au prototype final interactif :</p>
+                <ul class="text-justify"
+                    style="margin-left: 15px; padding-left: 0; font-family: 'PT Sans', Helvetica, sans-serif; font-size: 0.875em; color: #555; line-height: 1.5em; font-weight: 300;">
+                    <li style="margin-bottom: 5px;"><strong>Projets d'application :</strong> Interfaces pour la
+                        plateforme EcoRide et une application d'E-learning dédiée.</li>
+                    <li style="margin-bottom: 5px;"><strong>Projets de sites vitrines :</strong> Landing pages et
+                        prototypes interactifs pour le Zoo Arcadia, un Blog et le projet événementiel "Osez Noël".</li>
+                    <li style="margin-bottom: 5px;"><strong>Projets E-Commerce :</strong> Conceptions responsive
+                        (Desktop & Mobile) pour le projet "Yummy Nouilles".</li>
+                </ul>
+                <p class="text-justify"
+                    style="margin-top: 40px; margin-bottom: 40px;font-size: 0.75em; color: #555; line-height: 1.5em; font-weight: 300;">
+                    Dans l'ordre de passage, on retrouve: l'application d'E-learning, le site vitrine du Zoo Arcadia, le
+                    encore Arcadia avec son prototype interactif, la structure d'un blog, les wireframes et les mockups
+                    de mon projet le plus complet: "EcoRide", la page d'accueil du projet "Osez Noël", d'autres pages du
+                    site "Osez Noël" et enfin trois image du site E-commerce "Yummy Nouilles" (pour sa version desktop,
+                    mobile et ses wireframes). </p>
 
 
                 <!-- Technologies -->
                 <div class="tags-block">
                     <div class="block-title">
-                        <h3>Technologie</h3>
+                        <h3>Technologies / Compétences</h3>
                     </div>
                     <ul class="tags">
                         <li><a>Figma</a></li>
@@ -171,7 +197,8 @@
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
             </div>

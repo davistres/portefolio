@@ -17,8 +17,10 @@
         <div class="row">
             <div class="col-sm-12 col-md-8 portfolio-block">
                 <!-- CV HTML interactif -->
-                <div class="embed-responsive" style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
-                    <iframe class="embed-responsive-item" src="0/6- CV/index.html" title="CV David D'AMORE" style="width: 100%; height: 100%; border: 0;"></iframe>
+                <div class="embed-responsive"
+                    style="height: 80vh; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+                    <iframe class="embed-responsive-item" src="https://davistres.github.io/CV/" title="CV David D'AMORE"
+                        style="width: 100%; height: 100%; border: 0;"></iframe>
                 </div>
 
 
@@ -37,7 +39,7 @@
                         }
                     }
 
-                    jQuery(document).ready(function($){
+                    jQuery(document).ready(function ($) {
                         customAjaxScroll();
 
                         var carousel = $('.portfolio-page-carousel');
@@ -57,11 +59,11 @@
                             var allMedia = carousel.find('.owl-item img, .owl-item video');
                             if (allMedia.length === 0) return;
 
-                            var loadPromises = allMedia.map(function() {
+                            var loadPromises = allMedia.map(function () {
                                 var deferred = $.Deferred();
                                 var element = this;
-                                
-                                var resolveHeight = function() {
+
+                                var resolveHeight = function () {
                                     var height = $(element).height();
                                     deferred.resolve(height > 0 ? height : Infinity);
                                 };
@@ -76,7 +78,7 @@
                                 return deferred.promise();
                             }).get();
 
-                            $.when.apply($, loadPromises).done(function() {
+                            $.when.apply($, loadPromises).done(function () {
                                 var heights = [].slice.call(arguments).filter(h => h !== Infinity);
                                 if (heights.length > 0) {
                                     var minHeight = Math.min.apply(null, heights);
@@ -93,13 +95,13 @@
                             });
                         }
 
-                        carousel.on('initialized.owl.carousel', function() {
+                        carousel.on('initialized.owl.carousel', function () {
                             // Un délai pour s'assurer que les images sont bien en cours de chargement
                             setTimeout(positionNavArrows, 100);
                         });
 
                         var resizeTimeout;
-                        $(window).on('resize', function() {
+                        $(window).on('resize', function () {
                             customAjaxScroll();
                             clearTimeout(resizeTimeout);
                             resizeTimeout = setTimeout(positionNavArrows, 250);
@@ -114,13 +116,34 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> David D'AMORE</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="https://davistres.github.io/CV/" target="_blank">github.cv</a></p></li>
-                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                    <li>
+                        <p><i class="fa fa-user"></i> David D'AMORE</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-globe"></i> <a href="https://davistres.github.io/CV/"
+                                target="_blank">github.cv</a></p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-calendar"></i> 2024</p>
+                    </li>
                 </ul>
 
-                <p class="text-justify">Mon curriculum vitae créé entièrement en HTML5 et CSS vanilla, sans framework. Ce CV interactif présente mon parcours professionnel, mes compétences techniques et mes réalisations de manière moderne et responsive.</p>
-                <p class="text-justify">Une autre version du C.V. est également disponible en version PDF pour téléchargement.</p>
+                <p class="text-justify">Conception et développement de mon Curriculum Vitae interactif, réalisé de A à Z
+                    en HTML5 et CSS3 pur (Vanilla), sans l'utilisation de frameworks.</p>
+                <p class="text-justify">L'objectif principal était de créer un support de présentation moderne,
+                    performant et 100% responsive, reflétant techniquement mes compétences en intégration web. Ce projet
+                    met en œuvre :</p>
+                <ul class="text-justify"
+                    style="margin-left: 15px; padding-left: 0; font-family: 'PT Sans', Helvetica, sans-serif; font-size: 0.875em; color: #555; line-height: 1.5em; font-weight: 300;">
+                    <li style="margin-bottom: 5px;"><strong>Mise en page CSS :</strong> Structuration avancée
+                        (Grid/Flexbox) pour une lisibilité optimale sur tous les supports.</li>
+                    <li style="margin-bottom: 5px;"><strong>Performance :</strong> Temps de chargement instantané grâce
+                        à l'absence de dépendances externes.</li>
+                    <li style="margin-bottom: 5px;"><strong>Design UI/UX :</strong> Interface épurée et navigation
+                        intuitive pour mettre en valeur mon parcours professionnel.</li>
+                </ul>
+                <p class="text-justify"><em>Une version PDF classique est également disponible au téléchargement
+                        ci-dessous.</em></p>
 
 
                 <!-- Téléchargement PDF -->
@@ -134,13 +157,14 @@
                 <!-- Technologies -->
                 <div class="tags-block">
                     <div class="block-title">
-                        <h3>Technologie</h3>
+                        <h3>Technologies / Compétences</h3>
                     </div>
                     <ul class="tags">
-                        <li><a>HTML5</a></li>
-                        <li><a>CSS3</a></li>
+                        <li><a>HTML5 Sémantique</a></li>
+                        <li><a>CSS3 Vanilla</a></li>
+                        <li><a>Flexbox & Grid</a></li>
                         <li><a>Responsive Design</a></li>
-                        <li><a>Vanilla CSS</a></li>
+                        <li><a>UI/UX Design</a></li>
                     </ul>
                 </div>
 
@@ -150,7 +174,8 @@
                     <div class="block-title">
                         <h3>Partage</h3>
                     </div>
-                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i class="fa fa-linkedin"></i> </a>
+                    <a href="https://www.linkedin.com/in/david-d-amore-362307107/" target="_blank" class="btn"><i
+                            class="fa fa-linkedin"></i> </a>
                     <a href="https://github.com/davistres" target="_blank" class="btn"><i class="fa fa-github"></i> </a>
                 </div>
             </div>
